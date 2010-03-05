@@ -1,0 +1,350 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (234.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (203.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-02 21:22:02) [GET]
+
+ActionController::RoutingError (No route matches "/company" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 21:22:45) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mPGError: ERROR: relation "companies" does not exist
+LINE 1: SELECT * FROM "companies" 
+ ^
+: SELECT * FROM "companies" [0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "companies" does not exist
+LINE 1: SELECT * FROM "companies" 
+                      ^
+: SELECT * FROM "companies" ):
+  app/controllers/companies_controller.rb:5:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (281.3ms)[0m   [0;1mCREATE TABLE "companies" ("id" serial primary key, "code" character varying(255), "description" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (15.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100303021950')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 21:24:41) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 1781ms (View: 1766, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2010-03-02 21:24:56) [GET]
+Rendering template within layouts/companies
+Rendering companies/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-03-02 21:25:19) [POST]
+  Parameters: {"company"=>{"code"=>"CM", "description"=>"Cat Mountain"}, "commit"=>"Create", "authenticity_token"=>"hNeyN38zkOLXTJNKGJK+h6OdfgOj0VfAwk1GJWScR9s="}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mINSERT INTO "companies" ("created_at", "code", "updated_at", "description") VALUES('2010-03-03 02:25:19.187500', E'CM', '2010-03-03 02:25:19.187500', E'Cat Mountain') RETURNING "id"[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/1
+Completed in 141ms (DB: 94) | 302 Found [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-02 21:25:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/companies/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 21:25:42) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2010-03-02 21:36:01) [GET]
+Rendering template within layouts/companies
+Rendering companies/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-03-02 21:36:03) [POST]
+  Parameters: {"company"=>{"code"=>"", "description"=>""}, "commit"=>"Create", "authenticity_token"=>"hNeyN38zkOLXTJNKGJK+h6OdfgOj0VfAwk1GJWScR9s="}
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/companies
+Rendering companies/new
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-03-02 21:37:56) [POST]
+  Parameters: {"company"=>{"code"=>"MF", "description"=>"Mindfire"}, "commit"=>"Create", "authenticity_token"=>"hNeyN38zkOLXTJNKGJK+h6OdfgOj0VfAwk1GJWScR9s="}
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "companies" ("created_at", "code", "updated_at", "description") VALUES('2010-03-03 02:37:56.250000', E'MF', '2010-03-03 02:37:56.250000', E'Mindfire') RETURNING "id"[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 94ms (DB: 78) | 302 Found [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-02 21:37:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (15.6ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/companies/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 21:37:59) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2010-03-02 21:38:02) [GET]
+Rendering template within layouts/companies
+Rendering companies/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-03-02 21:38:13) [POST]
+  Parameters: {"company"=>{"code"=>"MF", "description"=>"Murf Forest"}, "commit"=>"Create", "authenticity_token"=>"hNeyN38zkOLXTJNKGJK+h6OdfgOj0VfAwk1GJWScR9s="}
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (15.6ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/companies
+Rendering companies/new
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Delete all (0.0ms)[0m   [0;1mDELETE FROM "companies" [0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'CM') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO "companies" ("created_at", "code", "updated_at", "description") VALUES('2010-03-03 02:49:46.359375', E'CM', '2010-03-03 02:49:46.359375', E'Cat Mountain') RETURNING "id"[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO "companies" ("created_at", "code", "updated_at", "description") VALUES('2010-03-03 02:49:46.375000', E'MF', '2010-03-03 02:49:46.375000', E'Mindfire') RETURNING "id"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100303024542')[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 21:50:50) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 21:50:52) [GET]
+  [4;35;1mCompany Load (15.6ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-02 21:50:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCompany Load (15.6ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 3) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/companies/3/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 21:50:57) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:25:47) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:28:10) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:32:27) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:35:47) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 141ms (View: 125, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:35:49) [GET]
+  [4;36;1mCompany Load (15.6ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2010-03-02 22:35:58) [GET]
+Rendering template within layouts/companies
+Rendering companies/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2010-03-02 22:36:08) [POST]
+  Parameters: {"company"=>{"code"=>"TEST", "description"=>"Test"}, "commit"=>"Create", "authenticity_token"=>"hNeyN38zkOLXTJNKGJK+h6OdfgOj0VfAwk1GJWScR9s="}
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'TEST') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "companies" ("created_at", "code", "updated_at", "description") VALUES('2010-03-03 03:36:08.515625', E'TEST', '2010-03-03 03:36:08.515625', E'Test') RETURNING "id"[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/5
+Completed in 109ms (DB: 78) | 302 Found [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-02 22:36:08) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/5]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:36:11) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:37:54) [GET]
+  [4;35;1mCompany Load (15.6ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:39:20) [GET]
+  [4;36;1mCompany Load (15.6ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:39:21) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:39:55) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
