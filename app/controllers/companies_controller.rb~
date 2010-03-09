@@ -62,7 +62,7 @@ class CompaniesController < ApplicationController
     logger.debug "Hello"
     logger.debug params.to_yaml
     logger.debug "Hello"
-    logger.debug params["company"]["code"].upcase!
+    logger.debug params[:company][:code].upcase!
     # params["company"["code"]].to_upper!
     
     respond_to do |format|

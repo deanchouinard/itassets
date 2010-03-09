@@ -348,3 +348,880 @@ Processing CompaniesController#index (for 127.0.0.1 at 2010-03-02 22:39:55) [GET
 Rendering template within layouts/companies
 Rendering companies/index
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+/!\ FAILSAFE /!\  Sun Mar 07 22:16:29 -0500 2010
+  Status: 500 Internal Server Error
+  FATAL:  database "itassets_development" does not exist
+
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /var/lib/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Sun Mar 07 22:17:53 -0500 2010
+  Status: 500 Internal Server Error
+  FATAL:  database "itassets_development" does not exist
+
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /var/lib/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (19.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (129.1ms)[0m   [0;1mCREATE TABLE "companies" ("id" serial primary key, "code" character varying(255), "description" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100303021950')[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddTestData (20100303024542)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Delete all (0.5ms)[0m   [0;1mDELETE FROM "companies" [0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'CM') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "companies" ("created_at", "code", "updated_at", "description") VALUES('2010-03-08 03:19:34.281386', E'CM', '2010-03-08 03:19:34.281386', E'Cat Mountain') RETURNING "id"[0m
+  [4;35;1mCompany Load (0.2ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "companies" ("created_at", "code", "updated_at", "description") VALUES('2010-03-08 03:19:34.286100', E'MF', '2010-03-08 03:19:34.286100', E'Mindfire') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100303024542')[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-07 22:19:59) [GET]
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 111ms (View: 105, DB: 1) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-07 22:34:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/companies/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-07 22:34:15) [PUT]
+  Parameters: {"company"=>{"code"=>"MF", "description"=>"Mindfire "}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: MF
+  description: "Mindfire "
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF' AND "companies".id <> 2) LIMIT 1[0m
+  [4;35;1mCompany Update (0.3ms)[0m   [0mUPDATE "companies" SET "updated_at" = '2010-03-08 03:34:15.557323', "description" = E'Mindfire ' WHERE "id" = 2[0m
+  [4;36;1mSQL (15.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 29ms (DB: 17) | 302 Found [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-07 22:34:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/companies/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-07 22:36:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/companies/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-07 22:36:34) [PUT]
+  Parameters: {"company"=>{"code"=>"MF", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;35;1mCompany Load (1.2ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: MF
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Load (0.6ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF' AND "companies".id <> 2) LIMIT 1[0m
+  [4;36;1mCompany Update (0.2ms)[0m   [0;1mUPDATE "companies" SET "updated_at" = '2010-03-08 03:36:34.942007', "description" = E'Mindfire' WHERE "id" = 2[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 19ms (DB: 23) | 302 Found [http://localhost/companies/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-07 22:36:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-07 22:37:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/companies/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-07 22:37:26) [PUT]
+  Parameters: {"company"=>{"code"=>"MF", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: MF
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF' AND "companies".id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 50ms (DB: 1) | 302 Found [http://localhost/companies/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-07 22:37:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-07 22:39:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/companies/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:35:08) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NameError (undefined local variable or method `company' for #<CompaniesController:0xb715a4ac>):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:36:04) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NameError (undefined local variable or method `company' for #<CompaniesController:0xb74c9c64>):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:38:29) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NoMethodError (undefined method `[]' for :company:Symbol):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:39:39) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NameError (undefined local variable or method `company' for #<CompaniesController:0xb70f68d0>):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#update (for 127.0.0.1 at 2010-03-08 21:41:00) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+
+SyntaxError (/home/dean/ruby/itassets/app/controllers/companies_controller.rb:67: syntax error, unexpected tIDENTIFIER, expecting ']'
+    respond_to do |format|
+              ^):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:41:57) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NoMethodError (undefined method `[]' for :company:Symbol):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:42:19) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NoMethodError (undefined method `to_upper!' for nil:NilClass):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:42:39) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NoMethodError (undefined method `to_upper!' for nil:NilClass):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:45:58) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+codemfdescriptionMindfire
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Load (0.6ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'mf' AND "companies".id <> 2) LIMIT 1[0m
+  [4;36;1mCompany Update (0.2ms)[0m   [0;1mUPDATE "companies" SET "updated_at" = '2010-03-09 02:45:58.420277', "code" = E'mf' WHERE "id" = 2[0m
+  [4;35;1mSQL (21.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 36ms (DB: 23) | 302 Found [http://localhost/companies/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-08 21:45:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#edit (for 127.0.0.1 at 2010-03-08 21:46:44) [GET]
+  Parameters: {"id"=>"2"}
+
+SyntaxError (/home/dean/ruby/itassets/app/controllers/companies_controller.rb:65: syntax error, unexpected ':', expecting ']'
+    logger.debug params[:company:code]]
+                                 ^):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-08 21:50:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/companies/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:50:25) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+mf
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'mf' AND "companies".id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/companies/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-08 21:50:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-08 21:50:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/companies/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:50:47) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NoMethodError (undefined method `to_upper' for "mf":String):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:51:13) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+
+NoMethodError (undefined method `upper' for "mf":String):
+  app/controllers/companies_controller.rb:65:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:52:27) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+MF
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'mf' AND "companies".id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/companies/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-08 21:52:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (1.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-08 21:55:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/companies/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:55:41) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+MF
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF' AND "companies".id <> 2) LIMIT 1[0m
+  [4;35;1mCompany Update (0.3ms)[0m   [0mUPDATE "companies" SET "updated_at" = '2010-03-09 02:55:41.621227', "code" = E'MF' WHERE "id" = 2[0m
+  [4;36;1mSQL (8.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 26ms (DB: 10) | 302 Found [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-08 21:55:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 50ms (View: 2, DB: 1) | 200 OK [http://localhost/companies/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-03-08 21:56:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/edit
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/companies/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-03-08 21:56:26) [PUT]
+  Parameters: {"company"=>{"code"=>"mf", "description"=>"Mindfire"}, "commit"=>"Update", "authenticity_token"=>"SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=", "id"=>"2"}
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Hello
+--- !map:HashWithIndifferentAccess 
+company: !map:HashWithIndifferentAccess 
+  code: mf
+  description: Mindfire
+commit: Update
+authenticity_token: SD9RJvoBvbVdx2XtOg2xXCOSkg6ck59DElD9r2v6ahg=
+_method: put
+action: update
+id: "2"
+controller: companies
+Hello
+MF
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Load (0.6ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."code" = E'MF' AND "companies".id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/2
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/companies/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-08 21:56:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/companies/2]
