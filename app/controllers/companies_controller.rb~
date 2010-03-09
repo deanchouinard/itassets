@@ -62,8 +62,9 @@ class CompaniesController < ApplicationController
     logger.debug "Hello"
     logger.debug params.to_yaml
     logger.debug "Hello"
-    logger.debug params[:company][:code].upcase!
+    # logger.debug params["company"]["code"].upcase!
     # params["company"["code"]].to_upper!
+    code_to_upper(:params)
     
     respond_to do |format|
       if @company.update_attributes(params[:company])
@@ -88,4 +89,9 @@ class CompaniesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  protected
+    def code_to_upper(para)
+      para[:company][:code].upcase!
+    end
 end
