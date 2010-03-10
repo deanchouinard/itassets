@@ -41,7 +41,9 @@ class CompaniesController < ApplicationController
   # POST /companies.xml
   def create
     @company = Company.new(params[:company])
-
+    logger.debug @company.code
+    @company.code.upcase!
+    
     respond_to do |format|
       if @company.save
         flash[:notice] = 'Company was successfully created.'
@@ -90,7 +92,7 @@ class CompaniesController < ApplicationController
     end
   end
   
-  protected
+  private
     def code_to_upper(para)
       para[:company][:code].upcase!
     end

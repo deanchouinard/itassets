@@ -4,14 +4,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Companies: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold', 'itassets' %>
+  <title>IT Assets</title>
+  <%= stylesheet_link_tag 'itassets', :media => "all" %>
 </head>
-<body>
-
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
-
+<body id="store">
+  <div id="banner">
+    <%= @page_title || "IT Assets" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="http://www....">Home</a><br />
+      <a href="http://www....">FAQ</a><br />
+      <a href="http://www....">News</a><br />
+    </div>
+    <div id="main"
+      <p style="color: green"><%= flash[:notice] %></p>
+      <%= yield :layout %>
+    </div>
+  </div>
 </body>
 </html>
