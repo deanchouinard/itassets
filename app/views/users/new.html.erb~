@@ -1,0 +1,26 @@
+<div class="depot-form">
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+	<fieldset>
+	<legend>Enter User Details</legend>
+
+  <div>
+    <%= f.label :name %>:
+    <%= f.text_field :name, :size => 40 %>
+  </div>
+  <div>
+    <%= f.label :password %><br />
+    <%= f.text_field :hashed_password %>
+  </p>
+  <p>
+    <%= f.label :salt %><br />
+    <%= f.text_field :salt %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', users_path %>

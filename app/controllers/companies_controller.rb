@@ -61,7 +61,7 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find(params[:id])
     
-    logger.debug "Hello"
+		logger.debug "Hello"
     logger.debug params.to_yaml
     logger.debug "Hello"
     # logger.debug params["company"]["code"].upcase!
