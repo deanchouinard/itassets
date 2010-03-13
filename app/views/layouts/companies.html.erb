@@ -17,8 +17,11 @@
       <a href="http://www....">FAQ</a><br />
       <a href="http://www....">News</a><br />
     </div>
-    <div id="main"
-      <p style="color: green"><%= flash[:notice] %></p>
+    <div id="main">
+			<% if flash[:notice] -%>
+				<div id="notice"><%= flash[:notice] %></div>
+			<% end -%>
+
       <%= yield :layout %>
     </div>
   </div>

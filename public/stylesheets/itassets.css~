@@ -140,6 +140,8 @@ h1 {
   list-style: square;
 }
 
+/* Adds */
+
 #banner {
   background: #9c9;
   padding-top: 10px;
@@ -177,4 +179,46 @@ h1 {
 #side a {
   color: #bfb;
   font-size: small;
+}
+
+#notice {
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #f0f0f0;
+	font: bold smaller sans-serif;
+}
+
+/* Styles for forms */
+
+.itassets-form fieldset {
+	background: #efe;
+}
+
+.itassets-form legend {
+	color: #dfd;
+	background: #141;
+	font-family: sans-serif;
+	padding: 0.2em 1em;
+}
+
+.itassets-form label {
+	width: 5em;
+	float: left;
+	text-align: right;
+	padding-top: 0.2em;
+	margin-right: 0.1em;
+	display: block;
+}
+
+.itassets-form select, .itassets-form textarea, .itassets-form input {
+	margin-left: 0.5em;
+}
+
+.itassets-form .submit {
+	margin-left: 4em;
+}
+
+.itassets-form div {
+	margin: 0.5em 0;
 }

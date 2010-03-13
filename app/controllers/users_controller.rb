@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	#  a comment
   # GET /users
   # GET /users.xml
   def index

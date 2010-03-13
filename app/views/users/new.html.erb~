@@ -11,16 +11,16 @@
     <%= f.text_field :name, :size => 40 %>
   </div>
   <div>
-    <%= f.label :password %><br />
-    <%= f.text_field :hashed_password %>
-  </p>
-  <p>
-    <%= f.label :salt %><br />
-    <%= f.text_field :salt %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+    <%= f.label :password, 'Password' %>:
+    <%= f.password_field :password, :size => 40 %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation, 'Confirm' %>:
+    <%= f.password_field :password_confirmation, :size => 40 %>
+  </div>
+  <div>
+    <%= f.submit "Add User", :class => "submit" %>
+  </div>
 <% end %>
+</div>
 
-<%= link_to 'Back', users_path %>
