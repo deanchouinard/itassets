@@ -16,7 +16,8 @@ class AdminController < ApplicationController
 
   def index
 		@user = User.find(session[:user_id])
-		# logger.debug user.to_yaml
+		# on the login, user is found, and we redirect to index; then we find the user again
+		# and get the object so we can display his user name on the page.
   end
 
 end

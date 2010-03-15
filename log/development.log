@@ -2158,3 +2158,12 @@ Processing CompaniesController#show (for 127.0.0.1 at 2010-03-13 00:14:31) [GET]
 Rendering template within layouts/companies
 Rendering companies/show
 Completed in 34ms (View: 10, DB: 16) | 200 OK [http://localhost/companies/5]
+  [4;36;1mSQL (9.8ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-13 00:21:21) [GET]
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 63ms (View: 56, DB: 12) | 200 OK [http://localhost/companies]
