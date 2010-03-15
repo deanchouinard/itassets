@@ -16,7 +16,14 @@
       <a href="http://www....">Home</a><br />
       <a href="http://www....">FAQ</a><br />
       <a href="http://www....">News</a><br />
-    </div>
+  
+			<% if session[:user_id] %>
+				<br />
+				<%= link_to 'Companies', :controller => 'companies' %> <br />
+				<br />
+				<%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+			<% end %>
+		</div>
     <div id="main">
 			<% if flash[:notice] -%>
 				<div id="notice"><%= flash[:notice] %></div>

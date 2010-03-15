@@ -2,6 +2,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.xml
   def index
+		@page_title = "Companies"
     @companies = Company.all
 
     respond_to do |format|
