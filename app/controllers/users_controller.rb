@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
+		@page_title = "Users"
     @users = User.find(:all, :order => :name)
 
     respond_to do |format|
@@ -76,7 +77,12 @@ class UsersController < ApplicationController
   # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
+		begin
+			@user.destroy
+			flash[:notice] = "User #{@user.name} deleted"
+		rescue Exception => e
+			flash[:notice] = e.message
+		end
 
     respond_to do |format|
       format.html { redirect_to(users_url) }

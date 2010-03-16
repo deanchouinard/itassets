@@ -1,12 +1,11 @@
+<div id="itassets-list">
 <h1>Listing users</h1>
-
 <table>
   <tr>
     <th>Name</th>
   </tr>
-
-<% @users.each do |user| %>
-  <tr>
+	<% @users.each do |user| %>
+		<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h user.name %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
@@ -18,3 +17,33 @@
 <br />
 
 <%= link_to 'New user', new_user_path %>
+
+#####################
+
+
+	<h1>Listing companies</h1>
+ 	<table>
+	<% @companies.each do |company| %>
+  	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+  		
+	    <td class="list-description">
+  	  	<dl>
+    			<dt><%=h company.code %></dt>
+    			<dd><%=h company.description %></dd>
+    		</dl>
+    	</td>
+    
+    	<td class="list-actions">
+    		<%= link_to 'Show', company %><br/>
+    		<%= link_to 'Edit', edit_company_path(company) %><br/>
+    		<%= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete %>
+  		</td>
+  	</tr>
+	<% end %>
+	</table>
+</div>
+
+<br />
+
+<%= link_to 'New company', new_company_path %>
+

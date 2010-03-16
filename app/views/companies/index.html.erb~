@@ -1,4 +1,4 @@
-<div id="company-list">
+<div id="product-list">
 	<h1>Listing companies</h1>
  	<table>
 	<% @companies.each do |company| %>

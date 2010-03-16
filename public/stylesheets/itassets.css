@@ -8,49 +8,49 @@ h1 {
 
 /* Styles for products/index */
 
-#product-list table {
+#itassets-list table {
         border-collapse: collapse;
 }
 
-#product-list table tr td {
+#itassets-list table tr td {
         padding: 5px;
         vertical-align: top;
 }
 
-#product-list .list-image {
+#itassets-list .list-image {
   width:        60px;
   height:       70px;
 }
 
-#product-list .list-description {
+#itassets-list .list-description {
   width:        60%;
 }
 
-#product-list .list-description dl {
+#itassets-list .list-description dl {
         margin: 0;
 }
 
-#product-list .list-description dt {
+#itassets-list .list-description dt {
 	color:        #244;
 	font-weight:  bold;
 	font-size:    larger;
 }
 
-#product-list .list-description dd {
+#itassets-list .list-description dd {
         margin: 0;
 }
 
-#product-list .list-actions {
+#itassets-list .list-actions {
   font-size:    x-small;
   text-align:   right;
   padding-left: 1em;
 }
 
-#product-list .list-line-even {
+#itassets-list .list-line-even {
   background:   #e0f8f8;
 }
 
-#product-list .list-line-odd {
+#itassets-list .list-line-odd {
   background:   #f8b0f8;
 }
 
