@@ -1,8 +1,9 @@
 class CompaniesController < ApplicationController
-	@page_title = "Companies"
   # GET /companies
   # GET /companies.xml
+	@page_title = "Companies"
   def index
+		
     @companies = Company.all
 
     respond_to do |format|
