@@ -1,0 +1,33 @@
+<p>
+  <b>Code:</b>
+  <%=h @site.code %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%=h @site.address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%=h @site.address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @site.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @site.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%=h @site.zipcode %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>

@@ -1,0 +1,30 @@
+<h1>Listing sites</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+  </tr>
+
+<% @sites.each do |site| %>
+  <tr>
+    <td><%=h site.code %></td>
+    <td><%=h site.address1 %></td>
+    <td><%=h site.address2 %></td>
+    <td><%=h site.city %></td>
+    <td><%=h site.state %></td>
+    <td><%=h site.zipcode %></td>
+    <td><%= link_to 'Show', site %></td>
+    <td><%= link_to 'Edit', edit_site_path(site) %></td>
+    <td><%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New site', new_site_path %>
