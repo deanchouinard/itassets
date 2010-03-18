@@ -1,4 +1,4 @@
-<div class="depot-form">
+<div class="itassets-form">
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
@@ -10,6 +10,10 @@
     <%= f.label :name %>:
     <%= f.text_field :name, :size => 40 %>
   </div>
+	<div>
+		<%= f.label :admin %>
+		<%= f.check_box(:admin, {}, true, false) %>
+	</div>
   <div>
     <%= f.label :password, 'Password' %>:
     <%= f.password_field :password, :size => 40 %>

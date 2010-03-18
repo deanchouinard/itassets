@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100311022224) do
+ActiveRecord::Schema.define(:version => 20100318023039) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
@@ -28,12 +28,24 @@ ActiveRecord::Schema.define(:version => 20100311022224) do
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
+  create_table "sites", :force => true do |t|
+    t.string   "code",       :limit => 8
+    t.string   "address1",   :limit => 80
+    t.string   "address2",   :limit => 80
+    t.string   "city",       :limit => 30
+    t.string   "state",      :limit => 2
+    t.string   "zipcode",    :limit => 10
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "hashed_password"
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin",           :default => false
   end
 
 end
