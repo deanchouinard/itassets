@@ -1,0 +1,23 @@
+<p>
+  <b>Code:</b>
+  <%=h @office.code %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @office.description %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @office.company_id %>
+</p>
+
+<p>
+  <b>Site:</b>
+  <%=h @office.site_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_office_path(@office) %> |
+<%= link_to 'Back', offices_path %>
