@@ -3976,3 +3976,23 @@ Migrating to CreateOffices (20100319020156)
   [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100319020156')[0m
   [4;36;1mSQL (13.0ms)[0m   [0;1mCOMMIT[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SitesController#index (for 127.0.0.1 at 2010-03-18 22:37:48) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/companies
+Rendering sites/index
+Completed in 63ms (View: 45, DB: 3) | 200 OK [http://localhost/sites]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-18 22:37:50) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.5ms)[0m   [0;1mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+Completed in 43ms (View: 12, DB: 3) | 200 OK [http://localhost/offices]
