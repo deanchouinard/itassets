@@ -14,7 +14,9 @@ class OfficesController < ApplicationController
   # GET /offices/1.xml
   def show
     @office = Office.find(params[:id])
-
+		@site_code = Site.find(@office.site_id)
+		@company_desc = Company.find(@office.company_id)
+		
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @office }
@@ -25,7 +27,13 @@ class OfficesController < ApplicationController
   # GET /offices/new.xml
   def new
     @office = Office.new
-
+		@sites = Site.all
+		@companies = Company.all
+		# logger.debug @sites.to_yaml
+		@site_list = @sites.map {|si| [si.code, si.id]}
+		# logger.debug @site_list.to_yaml
+		@company_list = @companies.map {|co| [co.description, co.id]}
+		
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @office }

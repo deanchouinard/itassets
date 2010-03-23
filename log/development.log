@@ -3996,3 +3996,1337 @@ Processing OfficesController#index (for 127.0.0.1 at 2010-03-18 22:37:50) [GET]
 Rendering template within layouts/companies
 Rendering offices/index
 Completed in 43ms (View: 12, DB: 3) | 200 OK [http://localhost/offices]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 21:48:21) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 39ms (View: 10, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 21:50:34) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+Rendering template within layouts/companies
+Rendering offices/new
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #19 of app/views/offices/new.html.erb:
+16:     <%= f.text_field :company_id %>
+17:   </p>
+18:   <p>
+19: 		<%= form.select(:site, @sites) %>
+20:     <%= f.label :site_id %><br />
+21:     <%= f.text_field :site_id %>
+22:   </p>
+
+    app/views/offices/new.html.erb:19:in `form'
+    app/views/offices/new.html.erb:19
+    app/views/offices/new.html.erb:3
+    app/controllers/offices_controller.rb:32:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-03-22 22:02:30) [GET]
+
+SyntaxError (/home/dean/ruby/itassets/app/controllers/offices_controller.rb:31: syntax error, unexpected '}', expecting tCOLON2 or '[' or '.'
+/home/dean/ruby/itassets/app/controllers/offices_controller.rb:38: syntax error, unexpected kEND, expecting '}'
+/home/dean/ruby/itassets/app/controllers/offices_controller.rb:90: syntax error, unexpected kEND, expecting '}'):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:03:35) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- NY
+Rendering template within layouts/companies
+Rendering offices/new
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #19 of app/views/offices/new.html.erb:
+16:     <%= f.text_field :company_id %>
+17:   </p>
+18:   <p>
+19: 		<%= form.select(:site, @sites) %>
+20:     <%= f.label :site_id %><br />
+21:     <%= f.text_field :site_id %>
+22:   </p>
+
+    app/views/offices/new.html.erb:19:in `form'
+    app/views/offices/new.html.erb:19
+    app/views/offices/new.html.erb:3
+    app/controllers/offices_controller.rb:34:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:05:48) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- - 1
+  - NY
+Rendering template within layouts/companies
+Rendering offices/new
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #19 of app/views/offices/new.html.erb:
+16:     <%= f.text_field :company_id %>
+17:   </p>
+18:   <p>
+19: 		<%= form.select(:site, @sites) %>
+20:     <%= f.label :site_id %><br />
+21:     <%= f.text_field :site_id %>
+22:   </p>
+
+    app/views/offices/new.html.erb:19:in `form'
+    app/views/offices/new.html.erb:19
+    app/views/offices/new.html.erb:3
+    app/controllers/offices_controller.rb:34:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (3.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:06:40) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- - 1
+  - NY
+Rendering template within layouts/companies
+Rendering offices/new
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #19 of app/views/offices/new.html.erb:
+16:     <%= f.text_field :company_id %>
+17:   </p>
+18:   <p>
+19: 		<%= form.select(:site, @site_list) %>
+20:     <%= f.label :site_id %><br />
+21:     <%= f.text_field :site_id %>
+22:   </p>
+
+    app/views/offices/new.html.erb:19:in `form'
+    app/views/offices/new.html.erb:19
+    app/views/offices/new.html.erb:3
+    app/controllers/offices_controller.rb:34:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:07:40) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- - 1
+  - NY
+Rendering template within layouts/companies
+Rendering offices/new
+ERROR: compiling _run_erb_app47views47offices47new46html46erb RAISED compile error
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:26: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:29: syntax error, unexpected kENSURE, expecting ')'
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:31: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47offices47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New office</h1>\n\n"
+
+;  form_for(@office) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :code ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :code ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :description ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :description ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_id ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :company_id ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n\t\t"
+
+
+; @output_buffer.concat(( form.select(:site, @site_list) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.label :site_id ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( # f.text_field :site_id ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', offices_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/dean/ruby/itassets/app/views/offices/new.html.erb:31:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/dean/ruby/itassets/app/controllers/offices_controller.rb:34:in `new'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/abstract_store.rb:122:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:26: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:29: syntax error, unexpected kENSURE, expecting ')'
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:31: syntax error, unexpected kEND, expecting ')') on line #26 of app/views/offices/new.html.erb:
+23:   <p>
+24:     <%= f.submit 'Create' %>
+25:   </p>
+26: <% end %>
+27: 
+28: <%= link_to 'Back', offices_path %>
+
+    app/views/offices/new.html.erb:31:in `compile!'
+    app/controllers/offices_controller.rb:34:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:08:22) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- - 1
+  - NY
+Rendering template within layouts/companies
+Rendering offices/new
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #20 of app/views/offices/new.html.erb:
+17:   </p>
+18:   <p>
+19:     <%= f.label :site_id %><br />
+20: 		<%= form.select(:site, @site_list) %>
+21: 
+22:   </p>
+23:   <p>
+
+    app/views/offices/new.html.erb:20:in `form'
+    app/views/offices/new.html.erb:20
+    app/views/offices/new.html.erb:3
+    app/controllers/offices_controller.rb:34:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:08:54) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- - 1
+  - NY
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 37ms (View: 10, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:09:55) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- - 1
+  - NY
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 41ms (View: 10, DB: 4) | 200 OK [http://localhost/offices/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:11:47) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 75ms (View: 11, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SitesController#index (for 127.0.0.1 at 2010-03-22 22:11:51) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/companies
+Rendering sites/index
+Completed in 23ms (View: 8, DB: 2) | 200 OK [http://localhost/sites]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SitesController#new (for 127.0.0.1 at 2010-03-22 22:11:54) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/companies
+Rendering sites/new
+Completed in 23ms (View: 7, DB: 2) | 200 OK [http://localhost/sites/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SitesController#create (for 127.0.0.1 at 2010-03-22 22:12:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"yCNUHoR5PcWJrTEu7NNaIVABIFdz4PLJBRfokb+tTBI=", "site"=>{"city"=>"New Deleware", "address1"=>"100 Fifth Street", "address2"=>"", "code"=>"NED", "zipcode"=>"02388", "state"=>"MD"}}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "sites" ("address1", "city", "address2", "created_at", "code", "zipcode", "updated_at", "state") VALUES(E'100 Fifth Street', E'New Deleware', E'', '2010-03-23 02:12:23.883280', E'NED', E'02388', '2010-03-23 02:12:23.883280', E'MD') RETURNING "id"[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sites/2
+Completed in 34ms (DB: 12) | 302 Found [http://localhost/sites]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SitesController#show (for 127.0.0.1 at 2010-03-22 22:12:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering sites/show
+Completed in 38ms (View: 5, DB: 11) | 200 OK [http://localhost/sites/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-22 22:12:26) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+Completed in 20ms (View: 2, DB: 2) | 200 OK [http://localhost/offices]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:12:28) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+- !ruby/object:Site 
+  attributes: 
+    address1: 100 Fifth Street
+    city: New Deleware
+    address2: ""
+    created_at: 2010-03-23 02:12:23.88328
+    code: NED
+    zipcode: 02388
+    updated_at: 2010-03-23 02:12:23.88328
+    id: "2"
+    state: MD
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+- - NED
+  - 2
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 34ms (View: 6, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:13:38) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+- !ruby/object:Site 
+  attributes: 
+    address1: 100 Fifth Street
+    city: New Deleware
+    address2: ""
+    created_at: 2010-03-23 02:12:23.88328
+    code: NED
+    zipcode: 02388
+    updated_at: 2010-03-23 02:12:23.88328
+    id: "2"
+    state: MD
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+- - NED
+  - 2
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 37ms (View: 10, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:16:01) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+- !ruby/object:Site 
+  attributes: 
+    address1: 100 Fifth Street
+    city: New Deleware
+    address2: ""
+    created_at: 2010-03-23 02:12:23.88328
+    code: NED
+    zipcode: 02388
+    updated_at: 2010-03-23 02:12:23.88328
+    id: "2"
+    state: MD
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+- - NED
+  - 2
+
+NoMethodError (undefined method `name' for #<Company:0xb727970c>):
+  app/controllers/offices_controller.rb:33:in `new'
+  app/controllers/offices_controller.rb:33:in `map'
+  app/controllers/offices_controller.rb:33:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2010-03-22 22:16:57) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/companies
+Rendering companies/index
+Completed in 39ms (View: 23, DB: 3) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-03-22 22:17:01) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 6) [0m
+Rendering template within layouts/companies
+Rendering companies/show
+Completed in 64ms (View: 7, DB: 3) | 200 OK [http://localhost/companies/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-22 22:17:08) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+Completed in 19ms (View: 2, DB: 2) | 200 OK [http://localhost/offices]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:17:29) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+- !ruby/object:Site 
+  attributes: 
+    address1: 100 Fifth Street
+    city: New Deleware
+    address2: ""
+    created_at: 2010-03-23 02:12:23.88328
+    code: NED
+    zipcode: 02388
+    updated_at: 2010-03-23 02:12:23.88328
+    id: "2"
+    state: MD
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+- - NED
+  - 2
+Rendering template within layouts/companies
+Rendering offices/new
+ERROR: compiling _run_erb_app47views47offices47new46html46erb RAISED compile error
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:16: syntax error, unexpected ';', expecting ')'
+...any_id, @company_list ).to_s); @output_buffer.concat "\n  </...
+                              ^
+Function body:           def _run_erb_app47views47offices47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New office</h1>\n\n"
+
+;  form_for(@office) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :code ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :code ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :description ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :description ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_id ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.select(:company_id, @company_list ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :site_id ).to_s); @output_buffer.concat "<br />\n\t\t"
+; @output_buffer.concat(( f.select(:site_id, @site_list) ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', offices_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/dean/ruby/itassets/app/views/offices/new.html.erb:31:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/dean/ruby/itassets/app/controllers/offices_controller.rb:35:in `new'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/abstract_store.rb:122:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/dean/ruby/itassets/app/views/offices/new.html.erb:16: syntax error, unexpected ';', expecting ')'
+...any_id, @company_list ).to_s); @output_buffer.concat "\n  </...
+                              ^) on line #16 of app/views/offices/new.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :company_id %><br />
+16:     <%= f.select(:company_id, @company_list %>
+17:   </p>
+18:   <p>
+19:     <%= f.label :site_id %><br />
+
+    app/views/offices/new.html.erb:31:in `compile!'
+    app/controllers/offices_controller.rb:35:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:18:26) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+- !ruby/object:Site 
+  attributes: 
+    address1: 100 Fifth Street
+    city: New Deleware
+    address2: ""
+    created_at: 2010-03-23 02:12:23.88328
+    code: NED
+    zipcode: 02388
+    updated_at: 2010-03-23 02:12:23.88328
+    id: "2"
+    state: MD
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+- - NED
+  - 2
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 40ms (View: 10, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:19:00) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+- !ruby/object:Site 
+  attributes: 
+    address1: 100 Fifth Street
+    city: New Deleware
+    address2: ""
+    created_at: 2010-03-23 02:12:23.88328
+    code: NED
+    zipcode: 02388
+    updated_at: 2010-03-23 02:12:23.88328
+    id: "2"
+    state: MD
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+- - NED
+  - 2
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 36ms (View: 6, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#create (for 127.0.0.1 at 2010-03-22 22:19:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"yCNUHoR5PcWJrTEu7NNaIVABIFdz4PLJBRfokb+tTBI=", "office"=>{"code"=>"first", "company_id"=>"2", "description"=>"first company", "site_id"=>"2"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "offices" ("created_at", "code", "updated_at", "company_id", "description", "site_id") VALUES('2010-03-23 02:19:19.364880', E'first', '2010-03-23 02:19:19.364880', 2, E'first company', 2) RETURNING "id"[0m
+  [4;35;1mSQL (4.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/offices/1
+Completed in 27ms (DB: 7) | 302 Found [http://localhost/offices]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#show (for 127.0.0.1 at 2010-03-22 22:19:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering offices/show
+Completed in 24ms (View: 7, DB: 3) | 200 OK [http://localhost/offices/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-22 22:19:34) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+Completed in 24ms (View: 7, DB: 3) | 200 OK [http://localhost/offices]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#new (for 127.0.0.1 at 2010-03-22 22:19:37) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" [0m
+--- 
+- !ruby/object:Site 
+  attributes: 
+    address1: 32 Second Ave
+    city: New York
+    address2: ""
+    created_at: 2010-03-19 01:37:59.576048
+    code: NY
+    zipcode: "02111"
+    updated_at: 2010-03-19 01:37:59.576048
+    id: "1"
+    state: NY
+  attributes_cache: {}
+
+- !ruby/object:Site 
+  attributes: 
+    address1: 100 Fifth Street
+    city: New Deleware
+    address2: ""
+    created_at: 2010-03-23 02:12:23.88328
+    code: NED
+    zipcode: 02388
+    updated_at: 2010-03-23 02:12:23.88328
+    id: "2"
+    state: MD
+  attributes_cache: {}
+
+--- 
+- - NY
+  - 1
+- - NED
+  - 2
+Rendering template within layouts/companies
+Rendering offices/new
+Completed in 36ms (View: 6, DB: 3) | 200 OK [http://localhost/offices/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#create (for 127.0.0.1 at 2010-03-22 22:19:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"yCNUHoR5PcWJrTEu7NNaIVABIFdz4PLJBRfokb+tTBI=", "office"=>{"code"=>"second", "company_id"=>"4", "description"=>"second company", "site_id"=>"1"}}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "offices" ("created_at", "code", "updated_at", "company_id", "description", "site_id") VALUES('2010-03-23 02:19:48.839766', E'second', '2010-03-23 02:19:48.839766', 4, E'second company', 1) RETURNING "id"[0m
+  [4;36;1mSQL (8.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/offices/2
+Completed in 32ms (DB: 11) | 302 Found [http://localhost/offices]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#show (for 127.0.0.1 at 2010-03-22 22:19:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Rendering template within layouts/companies
+Rendering offices/show
+Completed in 21ms (View: 3, DB: 3) | 200 OK [http://localhost/offices/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#show (for 127.0.0.1 at 2010-03-22 22:27:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.4ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 4) [0m
+Rendering template within layouts/companies
+Rendering offices/show
+Completed in 36ms (View: 6, DB: 5) | 200 OK [http://localhost/offices/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#show (for 127.0.0.1 at 2010-03-22 22:28:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 4) [0m
+Rendering template within layouts/companies
+Rendering offices/show
+Completed in 33ms (View: 6, DB: 3) | 200 OK [http://localhost/offices/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#show (for 127.0.0.1 at 2010-03-22 22:29:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 4) [0m
+Rendering template within layouts/companies
+Rendering offices/show
+Completed in 68ms (View: 41, DB: 3) | 200 OK [http://localhost/offices/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#show (for 127.0.0.1 at 2010-03-22 22:29:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 4) [0m
+Rendering template within layouts/companies
+Rendering offices/show
+Completed in 36ms (View: 8, DB: 3) | 200 OK [http://localhost/offices/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-22 22:36:19) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.4ms)[0m   [0;1mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+
+ActionView::TemplateError (undefined method `companies' for #<Office:0xb6fedc68>) on line #16 of app/views/offices/index.html.erb:
+13:     <td><%=h office.code %></td>
+14:     <td><%=h office.description %></td>
+15:     <td><%=h office.company_id %></td>
+16: 		<td><%=h office.companies.description %></td>
+17:     <td><%=h office.site_id %></td>
+18:     <td><%= link_to 'Show', office %></td>
+19:     <td><%= link_to 'Edit', edit_office_path(office) %></td>
+
+    app/views/offices/index.html.erb:16
+    app/views/offices/index.html.erb:11:in `each'
+    app/views/offices/index.html.erb:11
+    app/controllers/offices_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-22 22:38:23) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+
+ActionView::TemplateError (undefined method `description' for 2:Fixnum) on line #16 of app/views/offices/index.html.erb:
+13:     <td><%=h office.code %></td>
+14:     <td><%=h office.description %></td>
+15:     <td><%=h office.company_id %></td>
+16: 		<td><%=h office.company_id.description %></td>
+17:     <td><%=h office.site_id %></td>
+18:     <td><%= link_to 'Show', office %></td>
+19:     <td><%= link_to 'Edit', edit_office_path(office) %></td>
+
+    app/views/offices/index.html.erb:16
+    app/views/offices/index.html.erb:11:in `each'
+    app/views/offices/index.html.erb:11
+    app/controllers/offices_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-22 22:40:31) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.4ms)[0m   [0;1mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mCompany Load (0.2ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 4) [0m
+Completed in 39ms (View: 21, DB: 3) | 200 OK [http://localhost/offices]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing OfficesController#index (for 127.0.0.1 at 2010-03-22 22:42:15) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" [0m
+Rendering template within layouts/companies
+Rendering offices/index
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 2) [0m
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;35;1mCompany Load (0.2ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 4) [0m
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+Completed in 44ms (View: 27, DB: 3) | 200 OK [http://localhost/offices]

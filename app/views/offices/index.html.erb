@@ -13,7 +13,9 @@
     <td><%=h office.code %></td>
     <td><%=h office.description %></td>
     <td><%=h office.company_id %></td>
+		<td><%=h office.company.description %></td>
     <td><%=h office.site_id %></td>
+    <td><%=h office.site.code %></td>
     <td><%= link_to 'Show', office %></td>
     <td><%= link_to 'Edit', edit_office_path(office) %></td>
     <td><%= link_to 'Destroy', office, :confirm => 'Are you sure?', :method => :delete %></td>

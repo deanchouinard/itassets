@@ -13,11 +13,12 @@
   </p>
   <p>
     <%= f.label :company_id %><br />
-    <%= f.text_field :company_id %>
+    <%= f.select(:company_id, @company_list) %>
   </p>
   <p>
     <%= f.label :site_id %><br />
-    <%= f.text_field :site_id %>
+		<%= f.select(:site_id, @site_list) %>
+
   </p>
   <p>
     <%= f.submit 'Create' %>
