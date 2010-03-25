@@ -8,8 +8,8 @@
 		<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
 			<td class="list-description">
-				<%=h user.name %> <br />
-				<%=h user.admin.to_s %>
+				<b>Name: </b><%=h user.name %> <br />
+				Administrator: <%=h user.admin.to_s %>
 			</td>
 			<td class="list-actions">
 				<%= link_to 'Show', user %><br />

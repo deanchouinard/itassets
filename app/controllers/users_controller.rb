@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
-	#  a comment
+	before_filter :set_title
   # GET /users
   # GET /users.xml
   def index
-		@page_title = "Users"
-    @users = User.find(:all, :order => :name)
+		@users = User.find(:all, :order => :name)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -89,4 +88,9 @@ class UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	
+	def set_title
+		@page_title = "Users"
+	end
+	
 end

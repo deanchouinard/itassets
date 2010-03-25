@@ -1,4 +1,6 @@
 class OfficesController < ApplicationController
+	before_filter :set_title
+	
   # GET /offices
   # GET /offices.xml
   def index
@@ -15,7 +17,8 @@ class OfficesController < ApplicationController
   def show
     @office = Office.find(params[:id])
 		@site_code = Site.find(@office.site_id)
-		@company_desc = Company.find(@office.company_id)
+		# didn't need this if use belongs_to methods
+		# @company_desc = Company.find(@office.company_id)
 		
     respond_to do |format|
       format.html # show.html.erb
@@ -90,4 +93,9 @@ class OfficesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	
+	def set_title
+		@page_title = "Offices"
+	end
+	
 end

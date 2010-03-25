@@ -1,9 +1,10 @@
 class CompaniesController < ApplicationController
+	before_filter :set_title
   # GET /companies
   # GET /companies.xml
 	
   def index
-		@page_title = "Companies"
+		
     @companies = Company.all
 
     respond_to do |format|
@@ -94,6 +95,10 @@ class CompaniesController < ApplicationController
     end
   end
   
+	def set_title
+		@page_title = "Companies"
+	end
+	
   private
     def code_to_upper(para)
       para[:company][:code].upcase!

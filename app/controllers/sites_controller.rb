@@ -1,4 +1,5 @@
 class SitesController < ApplicationController
+	before_filter :set_title
   # GET /sites
   # GET /sites.xml
   def index
@@ -82,4 +83,9 @@ class SitesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	
+	def set_title
+		@page_title = "Sites"
+	end
+	
 end
