@@ -9,11 +9,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100319020156) do
+ActiveRecord::Schema.define(:version => 20100326025909) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "computers", :force => true do |t|
+    t.string   "manufacturer",  :limit => 40, :null => false
+    t.string   "model",         :limit => 40
+    t.string   "description"
+    t.string   "form_type",     :limit => 20, :null => false
+    t.string   "serial_number", :limit => 40
+    t.string   "cpu",           :limit => 20
+    t.string   "ram",           :limit => 10
+    t.string   "hdd",           :limit => 10
+    t.string   "optical",       :limit => 20
+    t.string   "os",            :limit => 20, :null => false
+    t.string   "service_tag",   :limit => 20
+    t.date     "purchase_date"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

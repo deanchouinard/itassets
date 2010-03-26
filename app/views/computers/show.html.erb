@@ -1,0 +1,68 @@
+<p>
+  <b>Manufacturer:</b>
+  <%=h @computer.manufacturer %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @computer.model %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @computer.description %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @computer.form_type %>
+</p>
+
+<p>
+  <b>Serial number:</b>
+  <%=h @computer.serial_number %>
+</p>
+
+<p>
+  <b>Cpu:</b>
+  <%=h @computer.cpu %>
+</p>
+
+<p>
+  <b>Ram:</b>
+  <%=h @computer.ram %>
+</p>
+
+<p>
+  <b>Hdd:</b>
+  <%=h @computer.hdd %>
+</p>
+
+<p>
+  <b>Optical:</b>
+  <%=h @computer.optical %>
+</p>
+
+<p>
+  <b>Os:</b>
+  <%=h @computer.os %>
+</p>
+
+<p>
+  <b>Service tag:</b>
+  <%=h @computer.service_tag %>
+</p>
+
+<p>
+  <b>Purchase date:</b>
+  <%=h @computer.purchase_date %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%=h @computer.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_computer_path(@computer) %> |
+<%= link_to 'Back', computers_path %>

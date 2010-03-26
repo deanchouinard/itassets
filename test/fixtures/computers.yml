@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  manufacturer: MyString
+  model: MyString
+  description: MyString
+  type: MyString
+  serial_number: MyString
+  cpu: MyString
+  ram: MyString
+  hdd: MyString
+  optical: MyString
+  os: MyString
+  service_tag: MyString
+  purchase_date: 2010-03-25
+  comments: MyText
+
+two:
+  manufacturer: MyString
+  model: MyString
+  description: MyString
+  type: MyString
+  serial_number: MyString
+  cpu: MyString
+  ram: MyString
+  hdd: MyString
+  optical: MyString
+  os: MyString
+  service_tag: MyString
+  purchase_date: 2010-03-25
+  comments: MyText

@@ -1,0 +1,63 @@
+<h1>New computer</h1>
+
+<% form_for(@computer) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :manufacturer %><br />
+    <%= f.text_field :manufacturer %>
+  </p>
+  <p>
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :form_type %><br />
+    <%= f.text_field :form_type %>
+  </p>
+  <p>
+    <%= f.label :serial_number %><br />
+    <%= f.text_field :serial_number %>
+  </p>
+  <p>
+    <%= f.label :cpu %><br />
+    <%= f.text_field :cpu %>
+  </p>
+  <p>
+    <%= f.label :ram %><br />
+    <%= f.text_field :ram %>
+  </p>
+  <p>
+    <%= f.label :hdd %><br />
+    <%= f.text_field :hdd %>
+  </p>
+  <p>
+    <%= f.label :optical %><br />
+    <%= f.text_field :optical %>
+  </p>
+  <p>
+    <%= f.label :os %><br />
+    <%= f.text_field :os %>
+  </p>
+  <p>
+    <%= f.label :service_tag %><br />
+    <%= f.text_field :service_tag %>
+  </p>
+  <p>
+    <%= f.label :purchase_date %><br />
+    <%= f.date_select :purchase_date %>
+  </p>
+  <p>
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', computers_path %>

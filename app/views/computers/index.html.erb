@@ -1,0 +1,44 @@
+<h1>Listing computers</h1>
+
+<table>
+  <tr>
+    <th>Manufacturer</th>
+    <th>Model</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Serial number</th>
+    <th>Cpu</th>
+    <th>Ram</th>
+    <th>Hdd</th>
+    <th>Optical</th>
+    <th>Os</th>
+    <th>Service tag</th>
+    <th>Purchase date</th>
+    <th>Comments</th>
+  </tr>
+
+<% @computers.each do |computer| %>
+  <tr>
+    <td><%=h computer.manufacturer %></td>
+    <td><%=h computer.model %></td>
+    <td><%=h computer.description %></td>
+    <td><%=h computer.form_type %></td>
+    <td><%=h computer.serial_number %></td>
+    <td><%=h computer.cpu %></td>
+    <td><%=h computer.ram %></td>
+    <td><%=h computer.hdd %></td>
+    <td><%=h computer.optical %></td>
+    <td><%=h computer.os %></td>
+    <td><%=h computer.service_tag %></td>
+    <td><%=h computer.purchase_date %></td>
+    <td><%=h computer.comments %></td>
+    <td><%= link_to 'Show', computer %></td>
+    <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
+    <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New computer', new_computer_path %>
