@@ -1,0 +1,18 @@
+<p>
+  <b>Lu key:</b>
+  <%=h @lookup.lu_key %>
+</p>
+
+<p>
+  <b>Lu value:</b>
+  <%=h @lookup.lu_value %>
+</p>
+
+<p>
+  <b>Lu active:</b>
+  <%=h @lookup.lu_active %>
+</p>
+
+
+<%= link_to 'Edit', edit_lookup_path(@lookup) %> |
+<%= link_to 'Back', lookups_path %>

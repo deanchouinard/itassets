@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326025909) do
+ActiveRecord::Schema.define(:version => 20100326133104) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20100326025909) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "lookups", :force => true do |t|
+    t.string   "lu_key",     :limit => 80,                   :null => false
+    t.string   "lu_value",   :limit => 80,                   :null => false
+    t.boolean  "lu_active",                :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lookups", ["lu_key"], :name => "index_lookups_on_lu_key"
 
   create_table "offices", :force => true do |t|
     t.string   "code",        :limit => 16

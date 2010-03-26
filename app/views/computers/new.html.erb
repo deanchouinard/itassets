@@ -5,7 +5,7 @@
 
   <p>
     <%= f.label :manufacturer %><br />
-    <%= f.text_field :manufacturer %>
+    <%= f.select(:manufacturer, @manf_list) %>
   </p>
   <p>
     <%= f.label :model %><br />
@@ -17,7 +17,7 @@
   </p>
   <p>
     <%= f.label :form_type %><br />
-    <%= f.text_field :form_type %>
+    <%= f.select(:form_type, @form_type_list) %>
   </p>
   <p>
     <%= f.label :serial_number %><br />
@@ -41,7 +41,7 @@
   </p>
   <p>
     <%= f.label :os %><br />
-    <%= f.text_field :os %>
+    <%= f.select(:os, @os_list) %>
   </p>
   <p>
     <%= f.label :service_tag %><br />

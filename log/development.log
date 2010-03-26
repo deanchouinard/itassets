@@ -1,0 +1,19 @@
+# Logfile created on Fri Mar 26 09:31:04 -0400 2010  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+Migrating to CreateSessions (20100310024205)
+Migrating to CreateUsers (20100311022224)
+Migrating to CreateSites (20100317021114)
+Migrating to AddAdminToUser (20100318023039)
+Migrating to CreateOffices (20100319020156)
+Migrating to CreateComputers (20100326022311)
+Migrating to ChangeTypeColumn (20100326025909)
+Migrating to CreateLookups (20100326133104)
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (30.6ms)[0m   [0;1mCREATE TABLE "lookups" ("id" serial primary key, "lu_key" character varying(80) NOT NULL, "lu_value" character varying(80) NOT NULL, "lu_active" boolean DEFAULT 't', "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (63.8ms)[0m   [0mCREATE INDEX "index_lookups_on_lu_key" ON "lookups" ("lu_key")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326133104')[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  lu_key: MyString
+  lu_value: MyString
+  lu_active: false
+
+two:
+  lu_key: MyString
+  lu_value: MyString
+  lu_active: false

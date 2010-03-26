@@ -1,0 +1,24 @@
+<h1>Editing lookup</h1>
+
+<% form_for(@lookup) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :lu_key %><br />
+    <%= f.text_field :lu_key %>
+  </p>
+  <p>
+    <%= f.label :lu_value %><br />
+    <%= f.text_field :lu_value %>
+  </p>
+  <p>
+    <%= f.label :lu_active %><br />
+    <%= f.check_box :lu_active %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @lookup %> |
+<%= link_to 'Back', lookups_path %>

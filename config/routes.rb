@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :lookups
+
   map.resources :computers
 
   map.resources :offices

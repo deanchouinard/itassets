@@ -1,4 +1,7 @@
 class ComputersController < ApplicationController
+	before_filter :set_title
+	before_filter :load_lookups, :only => [ :new, :edit ]
+	
   # GET /computers
   # GET /computers.xml
   def index
@@ -83,4 +86,26 @@ class ComputersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	
+	def set_title
+		@page_title = "Computers"
+	end
+	
+	def load_lookups
+		#l_form_type_list = Lookup.find(:all, :select => "lu_value", 
+		 #                             :conditions => ["lu_key = 'COMPUTERTYPE' and lu_active = true"])
+		#@form_type_list = l_form_type_list.map {|tl| tl.lu_value}
+		
+		
+# 		@form_type_list = Lookup.find(:all, :select => "lu_value", 
+# 		                              :conditions => ["lu_key = 'COMPUTERTYPE'
+# 		                              and lu_active = true"]).map {|tl| tl.lu_value}
+		
+		@form_type_list = Lookup.get_lu_values("COMPUTERTYPE")
+		@manf_list = Lookup.get_lu_values("COMPUTERMANF")
+		@os_list = Lookup.get_lu_values("COMPUTEROS")
+		
+		logger.debug @form_type_list
+	end
+		                              
 end
