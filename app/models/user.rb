@@ -1,6 +1,9 @@
 require 'digest/sha1'
 # a comment
 class User < ActiveRecord::Base
+	has_many :computer_allocations
+	has_many :computers, :through => :computer_allocations
+	
 	validates_presence_of			:name
 	validates_uniqueness_of	:name
 	
@@ -35,6 +38,17 @@ class User < ActiveRecord::Base
 		if User.count.zero?
 			raise "Can't delete last user"
 		end
+	end
+	
+	def self.load_sel_list
+		self.find(:all).map {|us| [us.name, us.id]}
+	end
+	
+	def self.display_str(id)
+		user = self.find(id)
+		user.first_name + " " +
+       user.last_name + " (" +
+       user.name + ")"
 	end
 	
 private

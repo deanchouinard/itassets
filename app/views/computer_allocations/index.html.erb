@@ -1,0 +1,28 @@
+<h1>Listing computer_allocations</h1>
+
+<table>
+  <tr>
+    <th>Computer</th>
+    <th>User</th>
+    <th>Allocated</th>
+    <th>Returned</th>
+    <th>Comments</th>
+  </tr>
+
+<% @computer_allocations.each do |computer_allocation| %>
+  <tr>
+    <td><%=h computer_allocation.computer_id %></td>
+    <td><%=h computer_allocation.user_id %></td>
+    <td><%=h computer_allocation.allocated %></td>
+    <td><%=h computer_allocation.returned %></td>
+    <td><%=h computer_allocation.comments %></td>
+    <td><%= link_to 'Show', computer_allocation %></td>
+    <td><%= link_to 'Edit', edit_computer_allocation_path(computer_allocation) %></td>
+    <td><%= link_to 'Destroy', computer_allocation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New computer_allocation', new_computer_allocation_path %>

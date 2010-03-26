@@ -1,8 +1,19 @@
 <p>
-  <b>Name:</b>
+  <b>Login Name:</b>
   <%=h @user.name %>
 </p>
-
+ <div>
+    <b>First Name:</b>
+    <%=h @user.first_name %>
+  </div>
+  <div>
+    <b>Last Name:</b>
+    <%=h @user.last_name %>
+  </div>
+  <div>
+    <b>Email:</b>
+    <%=h @user.email %>
+  </div>
 <p>
   <b>Hashed password:</b>
   <%=h @user.hashed_password %>

@@ -1,0 +1,31 @@
+<p>
+  <b>Computer:</b>
+  <%=h @computer_allocation.computer_id %> <br />
+  <%=h @computer_allocation.computer.manufacturer.strip +
+			" " + @computer_allocation.computer.form_type.strip +
+			" " + @computer_allocation.computer.os.strip %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h User.display_str(@computer_allocation.user_id) %> <br />
+</p>
+
+<p>
+  <b>Allocated:</b>
+  <%=h @computer_allocation.allocated %>
+</p>
+
+<p>
+  <b>Returned:</b>
+  <%=h @computer_allocation.returned %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%=h @computer_allocation.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_computer_allocation_path(@computer_allocation) %> |
+<%= link_to 'Back', computer_allocations_path %>

@@ -1,0 +1,31 @@
+<h1>New computer_allocation</h1>
+
+<% form_for(@computer_allocation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :computer_id %><br />
+    <%= f.select(:computer_id, @computer_list) %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.select(:user_id, @user_list) %>
+  </p>
+  <p>
+    <%= f.label :allocated %><br />
+    <%= f.date_select :allocated %>
+  </p>
+  <p>
+    <%= f.label :returned %><br />
+    <%= f.date_select :returned %>
+  </p>
+  <p>
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', computer_allocations_path %>

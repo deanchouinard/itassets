@@ -9,11 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326133104) do
+ActiveRecord::Schema.define(:version => 20100326204228) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "computer_allocations", :force => true do |t|
+    t.integer  "computer_id", :null => false
+    t.integer  "user_id",     :null => false
+    t.date     "allocated"
+    t.date     "returned"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,13 +86,25 @@ ActiveRecord::Schema.define(:version => 20100326133104) do
     t.datetime "updated_at"
   end
 
+  create_table "softwares", :force => true do |t|
+    t.string   "publisher",     :limit => 80, :null => false
+    t.string   "title_version", :limit => 80, :null => false
+    t.date     "purchase_date"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "hashed_password"
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "admin",           :default => false
+    t.boolean  "admin",                         :default => false
+    t.string   "first_name",      :limit => 40
+    t.string   "last_name",       :limit => 40
+    t.string   "email",           :limit => 40
   end
 
 end

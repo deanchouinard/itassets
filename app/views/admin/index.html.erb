@@ -1,3 +1,5 @@
-<h1>Welcome, <%= @user.name %> </h1>
+<h1>Welcome, <%= @user.first_name.strip + " " +
+									@user.last_name.strip + " (" +
+									@user.name.strip + ")" %> </h1>
 It's <%= Time.now %>
   

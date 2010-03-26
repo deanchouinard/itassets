@@ -7,6 +7,18 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
+ <div>
+    <%= f.label :first_name %>:
+    <%= f.text_field :first_name, :size => 40 %>
+  </div>
+  <div>
+    <%= f.label :last_name %>:
+    <%= f.text_field :last_name, :size => 40 %>
+  </div>
+  <div>
+    <%= f.label :email %>:
+    <%= f.text_field :email, :size => 40 %>
+  </div>
 	<p>
 		<%= f.label :admin %><br />
 		<%= f.check_box(:admin) %>

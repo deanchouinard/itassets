@@ -17,3 +17,84 @@ Migrating to CreateLookups (20100326133104)
   [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326133104')[0m
   [4;35;1mSQL (29.0ms)[0m   [0mCOMMIT[0m
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+Migrating to CreateSessions (20100310024205)
+Migrating to CreateUsers (20100311022224)
+Migrating to CreateSites (20100317021114)
+Migrating to AddAdminToUser (20100318023039)
+Migrating to CreateOffices (20100319020156)
+Migrating to CreateComputers (20100326022311)
+Migrating to ChangeTypeColumn (20100326025909)
+Migrating to CreateLookups (20100326133104)
+Migrating to CreateSoftwares (20100326180327)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+Migrating to CreateSessions (20100310024205)
+Migrating to CreateUsers (20100311022224)
+Migrating to CreateSites (20100317021114)
+Migrating to AddAdminToUser (20100318023039)
+Migrating to CreateOffices (20100319020156)
+Migrating to CreateComputers (20100326022311)
+Migrating to ChangeTypeColumn (20100326025909)
+Migrating to CreateLookups (20100326133104)
+Migrating to CreateSoftwares (20100326180327)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (39.3ms)[0m   [0;1mCREATE TABLE "softwares" ("id" serial primary key, "publisher" character varying(80) NOT NULL, "title_version" character varying(80) NOT NULL, "purchase_date" date, "comments" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mINSERT INTO "softwares" ("created_at", "comments", "updated_at", "purchase_date", "publisher", "title_version") VALUES('2010-03-26 18:09:41.693912', NULL, '2010-03-26 18:09:41.693912', NULL, E'Microsoft', E'Office 2003 Standard') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "softwares" ("created_at", "comments", "updated_at", "purchase_date", "publisher", "title_version") VALUES('2010-03-26 18:09:41.712927', NULL, '2010-03-26 18:09:41.712927', NULL, E'Microsoft', E'Office 2007 Standard') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "softwares" ("created_at", "comments", "updated_at", "purchase_date", "publisher", "title_version") VALUES('2010-03-26 18:09:41.714499', NULL, '2010-03-26 18:09:41.714499', NULL, E'Adobe', E'Acrobat 9 Standard') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326180327')[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+Migrating to CreateSessions (20100310024205)
+Migrating to CreateUsers (20100311022224)
+Migrating to CreateSites (20100317021114)
+Migrating to AddAdminToUser (20100318023039)
+Migrating to CreateOffices (20100319020156)
+Migrating to CreateComputers (20100326022311)
+Migrating to ChangeTypeColumn (20100326025909)
+Migrating to CreateLookups (20100326133104)
+Migrating to CreateSoftwares (20100326180327)
+Migrating to CreateComputerAllocations (20100326190242)
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (37.8ms)[0m   [0;1mCREATE TABLE "computer_allocations" ("id" serial primary key, "computer_id" integer NOT NULL, "user_id" integer NOT NULL, "allocated" date, "returned" date, "comments" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326190242')[0m
+  [4;36;1mSQL (11.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+Migrating to CreateSessions (20100310024205)
+Migrating to CreateUsers (20100311022224)
+Migrating to CreateSites (20100317021114)
+Migrating to AddAdminToUser (20100318023039)
+Migrating to CreateOffices (20100319020156)
+Migrating to CreateComputers (20100326022311)
+Migrating to ChangeTypeColumn (20100326025909)
+Migrating to CreateLookups (20100326133104)
+Migrating to CreateSoftwares (20100326180327)
+Migrating to CreateComputerAllocations (20100326190242)
+Migrating to AddFieldsToUser (20100326204228)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "users" ADD COLUMN "first_name" character varying(40)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "users" ADD COLUMN "last_name" character varying(40)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "users" ADD COLUMN "email" character varying(40)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326204228')[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m

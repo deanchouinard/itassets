@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  computer_id: 1
+  user_id: 1
+  allocated: 2010-03-26
+  returned: 2010-03-26
+  comments: MyText
+
+two:
+  computer_id: 1
+  user_id: 1
+  allocated: 2010-03-26
+  returned: 2010-03-26
+  comments: MyText

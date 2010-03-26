@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :computer_allocations
+
+  map.resources :softwares
+
   map.resources :lookups
 
   map.resources :computers

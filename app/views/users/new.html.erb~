@@ -10,8 +10,20 @@
     <%= f.label :name %>:
     <%= f.text_field :name, :size => 40 %>
   </div>
+  <div>
+    <%= f.label :first_name %>:
+    <%= f.text_field :first_name, :size => 80 %>
+  </div>
+  <div>
+    <%= f.label :last_name %>:
+    <%= f.text_field :last_name, :size => 80 %>
+  </div>
+  <div>
+    <%= f.label :email %>:
+    <%= f.text_field :email, :size => 40 %>
+  </div>
 	<div>
-		<%= f.label :admin %>
+		<%= f.label :admin %>:
 		<%= f.check_box(:admin, {}, true, false) %>
 	</div>
   <div>
