@@ -17,6 +17,12 @@ class ComputerAllocationsController < ApplicationController
   # GET /computer_allocations/1.xml
   def show
     @computer_allocation = ComputerAllocation.find(params[:id])
+    @computer_display_str = @computer_allocation.computer_id.to_s +
+      " " + @computer_allocation.computer.manufacturer +
+			" " + @computer_allocation.computer.form_type +
+			" " + @computer_allocation.computer.os
+    
+    @user_display_str = User.display_str(@computer_allocation.user_id)
 
     respond_to do |format|
       format.html # show.html.erb

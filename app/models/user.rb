@@ -41,9 +41,9 @@ class User < ActiveRecord::Base
 	end
 	
 	def self.load_sel_list
-		self.find(:all).map {|us| [us.name, us.id]}
+		self.find(:all).map {|us| ["#{us.first_name} #{us.last_name} (#{ us.name})", us.id]}
 	end
-	
+
 	def self.display_str(id)
 		user = self.find(id)
 		user.first_name + " " +

@@ -1,14 +1,11 @@
 <p>
   <b>Computer:</b>
-  <%=h @computer_allocation.computer_id %> <br />
-  <%=h @computer_allocation.computer.manufacturer.strip +
-			" " + @computer_allocation.computer.form_type.strip +
-			" " + @computer_allocation.computer.os.strip %>
+  <%=h @computer_display_str  %>
 </p>
 
 <p>
   <b>User:</b>
-  <%=h User.display_str(@computer_allocation.user_id) %> <br />
+  <%=h @user_display_str %>
 </p>
 
 <p>
