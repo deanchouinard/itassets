@@ -5,11 +5,11 @@
 
   <p>
     <%= f.label :computer_id %><br />
-    <%= f.text_field :computer_id %>
+    <%= f.select(:computer_id, @computer_list) %>
   </p>
   <p>
     <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+    <%= f.select(:user_id, @user_list) %>
   </p>
   <p>
     <%= f.label :allocated %><br />

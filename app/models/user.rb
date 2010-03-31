@@ -46,11 +46,9 @@ class User < ActiveRecord::Base
 
 	def self.display_str(id)
 		user = self.find(id)
-		user.first_name + " " +
-       user.last_name + " (" +
-       user.name + ")"
+    "#{user.first_name} #{user.last_name} (#{ user.name})"
 	end
-	
+
 private
 	def password_non_blank
 		errors.add(:password, "Missing password") if hashed_password.blank?

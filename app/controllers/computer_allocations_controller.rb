@@ -44,6 +44,8 @@ class ComputerAllocationsController < ApplicationController
   # GET /computer_allocations/1/edit
   def edit
     @computer_allocation = ComputerAllocation.find(params[:id])
+
+    
   end
 
   # POST /computer_allocations

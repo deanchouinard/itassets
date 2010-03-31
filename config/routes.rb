@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :ticket_actions
+
+  map.resources :tickets
+
   map.resources :computer_allocations
 
   map.resources :softwares

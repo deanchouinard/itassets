@@ -1,0 +1,34 @@
+<h1>Listing tickets</h1>
+
+<table>
+  <tr>
+    <th>Computer allocation</th>
+    <th>Add user</th>
+    <th>Ticket type</th>
+    <th>Contact name</th>
+    <th>Contact phone</th>
+    <th>Contact email</th>
+    <th>Ticket desc</th>
+    <th>Release date</th>
+  </tr>
+
+<% @tickets.each do |ticket| %>
+  <tr>
+    <td><%=h ticket.computer_allocation_id %></td>
+    <td><%=h ticket.add_user_id %></td>
+    <td><%=h ticket.ticket_type %></td>
+    <td><%=h ticket.contact_name %></td>
+    <td><%=h ticket.contact_phone %></td>
+    <td><%=h ticket.contact_email %></td>
+    <td><%=h ticket.ticket_desc %></td>
+    <td><%=h ticket.release_date %></td>
+    <td><%= link_to 'Show', ticket %></td>
+    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+    <td><%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ticket', new_ticket_path %>

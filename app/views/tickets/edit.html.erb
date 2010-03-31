@@ -1,0 +1,44 @@
+<h1>Editing ticket</h1>
+
+<% form_for(@ticket) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :computer_allocation_id %><br />
+    <%= f.text_field :computer_allocation_id %>
+  </p>
+  <p>
+    <%= f.label :add_user_id %><br />
+    <%= f.text_field :add_user_id %>
+  </p>
+  <p>
+    <%= f.label :ticket_type %><br />
+    <%= f.text_field :ticket_type %>
+  </p>
+  <p>
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name %>
+  </p>
+  <p>
+    <%= f.label :contact_phone %><br />
+    <%= f.text_field :contact_phone %>
+  </p>
+  <p>
+    <%= f.label :contact_email %><br />
+    <%= f.text_field :contact_email %>
+  </p>
+  <p>
+    <%= f.label :ticket_desc %><br />
+    <%= f.text_area :ticket_desc %>
+  </p>
+  <p>
+    <%= f.label :release_date %><br />
+    <%= f.date_select :release_date %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ticket %> |
+<%= link_to 'Back', tickets_path %>

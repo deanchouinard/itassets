@@ -1,0 +1,24 @@
+<h1>Listing ticket_actions</h1>
+
+<table>
+  <tr>
+    <th>Ticket</th>
+    <th>Add user</th>
+    <th>Action desc</th>
+  </tr>
+
+<% @ticket_actions.each do |ticket_action| %>
+  <tr>
+    <td><%=h ticket_action.ticket_id %></td>
+    <td><%=h ticket_action.add_user_id %></td>
+    <td><%=h ticket_action.action_desc %></td>
+    <td><%= link_to 'Show', ticket_action %></td>
+    <td><%= link_to 'Edit', edit_ticket_action_path(ticket_action) %></td>
+    <td><%= link_to 'Destroy', ticket_action, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ticket_action', new_ticket_action_path %>

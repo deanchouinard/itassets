@@ -1,0 +1,43 @@
+<p>
+  <b>Computer allocation:</b>
+  <%=h @ticket.computer_allocation_id %>
+</p>
+
+<p>
+  <b>Add user:</b>
+  <%=h @ticket.add_user_id %>
+</p>
+
+<p>
+  <b>Ticket type:</b>
+  <%=h @ticket.ticket_type %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%=h @ticket.contact_name %>
+</p>
+
+<p>
+  <b>Contact phone:</b>
+  <%=h @ticket.contact_phone %>
+</p>
+
+<p>
+  <b>Contact email:</b>
+  <%=h @ticket.contact_email %>
+</p>
+
+<p>
+  <b>Ticket desc:</b>
+  <%=h @ticket.ticket_desc %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%=h @ticket.release_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

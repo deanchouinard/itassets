@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326204228) do
+ActiveRecord::Schema.define(:version => 20100330212847) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
@@ -91,6 +91,27 @@ ActiveRecord::Schema.define(:version => 20100326204228) do
     t.string   "title_version", :limit => 80, :null => false
     t.date     "purchase_date"
     t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ticket_actions", :force => true do |t|
+    t.integer  "ticket_id"
+    t.integer  "add_user_id"
+    t.text     "action_desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tickets", :force => true do |t|
+    t.integer  "computer_allocation_id"
+    t.integer  "add_user_id"
+    t.string   "ticket_type",            :limit => 20
+    t.string   "contact_name",           :limit => 40
+    t.string   "contact_phone",          :limit => 15
+    t.string   "contact_email",          :limit => 40
+    t.text     "ticket_desc"
+    t.date     "release_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

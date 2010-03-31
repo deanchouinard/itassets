@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  computer_allocation_id: 1
+  add_user_id: 1
+  ticket_type: MyString
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email: MyString
+  ticket_desc: MyText
+  release_date: 2010-03-30
+
+two:
+  computer_allocation_id: 1
+  add_user_id: 1
+  ticket_type: MyString
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email: MyString
+  ticket_desc: MyText
+  release_date: 2010-03-30

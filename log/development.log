@@ -98,3 +98,48 @@ Migrating to AddFieldsToUser (20100326204228)
   [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326204228')[0m
   [4;36;1mSQL (6.3ms)[0m   [0;1mCOMMIT[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+Migrating to CreateSessions (20100310024205)
+Migrating to CreateUsers (20100311022224)
+Migrating to CreateSites (20100317021114)
+Migrating to AddAdminToUser (20100318023039)
+Migrating to CreateOffices (20100319020156)
+Migrating to CreateComputers (20100326022311)
+Migrating to ChangeTypeColumn (20100326025909)
+Migrating to CreateLookups (20100326133104)
+Migrating to CreateSoftwares (20100326180327)
+Migrating to CreateComputerAllocations (20100326190242)
+Migrating to AddFieldsToUser (20100326204228)
+Migrating to CreateTickets (20100330211244)
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (49.6ms)[0m   [0;1mCREATE TABLE "tickets" ("id" serial primary key, "computer_allocation_id" integer, "add_user_id" integer, "ticket_type" character varying(20), "contact_name" character varying(40), "contact_phone" character varying(15), "contact_email" character varying(40), "ticket_desc" text, "release_date" date, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330211244')[0m
+  [4;36;1mSQL (16.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20100303021950)
+Migrating to AddTestData (20100303024542)
+Migrating to CreateSessions (20100310024205)
+Migrating to CreateUsers (20100311022224)
+Migrating to CreateSites (20100317021114)
+Migrating to AddAdminToUser (20100318023039)
+Migrating to CreateOffices (20100319020156)
+Migrating to CreateComputers (20100326022311)
+Migrating to ChangeTypeColumn (20100326025909)
+Migrating to CreateLookups (20100326133104)
+Migrating to CreateSoftwares (20100326180327)
+Migrating to CreateComputerAllocations (20100326190242)
+Migrating to AddFieldsToUser (20100326204228)
+Migrating to CreateTickets (20100330211244)
+Migrating to CreateTicketActions (20100330212847)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (147.2ms)[0m   [0;1mCREATE TABLE "ticket_actions" ("id" serial primary key, "ticket_id" integer, "add_user_id" integer, "action_desc" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330212847')[0m
+  [4;36;1mSQL (12.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
