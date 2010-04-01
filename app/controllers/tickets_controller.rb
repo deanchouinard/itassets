@@ -93,6 +93,10 @@ class TicketsController < ApplicationController
   end
 
   def load_lookups
-    @computer_allocation_list = Computer_Allocations.load_sel_list
+    @computer_allocation_list = ComputerAllocation.load_sel_list
+    @user_list = User.load_sel_list
+    @ticket_type_list = Lookup.get_lu_values("TICKETTYPE")
+
+  end
     
 end
