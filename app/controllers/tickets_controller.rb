@@ -17,7 +17,10 @@ class TicketsController < ApplicationController
   # GET /tickets/1.xml
   def show
     @ticket = Ticket.find(params[:id])
+    @computer_allocation_display_str = ComputerAllocation.display_str(@ticket.computer_allocation_id)
+     @user_display_str = User.display_str(@ticket.add_user_id)
 
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @ticket }

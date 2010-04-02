@@ -14,8 +14,8 @@
 
 <% @tickets.each do |ticket| %>
   <tr>
-    <td><%=h ticket.computer_allocation_id %></td>
-    <td><%=h ticket.add_user_id %></td>
+    <td><%=h ComputerAllocation.display_str(ticket.computer_allocation_id) %></td>
+    <td><%=h User.display_str(ticket.add_user_id) %></td>
     <td><%=h ticket.ticket_type %></td>
     <td><%=h ticket.contact_name %></td>
     <td><%=h ticket.contact_phone %></td>

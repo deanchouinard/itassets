@@ -5,15 +5,15 @@
 
   <p>
     <%= f.label :computer_allocation_id %><br />
-    <%= f.text_field :computer_allocation_id %>
+    <%= f.select(:computer_allocation_id, @computer_allocation_list) %>
   </p>
   <p>
     <%= f.label :add_user_id %><br />
-    <%= f.text_field :add_user_id %>
+    <%= f.select(:add_user_id, @user_list) %>
   </p>
   <p>
     <%= f.label :ticket_type %><br />
-    <%= f.text_field :ticket_type %>
+    <%= f.select(:ticket_type, @ticket_type_list) %>
   </p>
   <p>
     <%= f.label :contact_name %><br />
