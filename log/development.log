@@ -143,3 +143,218 @@ Migrating to CreateTicketActions (20100330212847)
   [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330212847')[0m
   [4;36;1mSQL (12.2ms)[0m   [0;1mCOMMIT[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-05 22:12:15) [GET]
+  Parameters: {"id"=>"ta_add"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find TicketAction with ID=ta_add):
+  app/controllers/ticket_actions_controller.rb:18:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-05 22:27:25) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 59ms (View: 41, DB: 4) | 200 OK [http://localhost/tickets]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-05 22:27:31) [GET]
+  Parameters: {"method"=>"ta_add"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.3ms)[0m   [0;1mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 26ms (View: 9, DB: 3) | 200 OK [http://localhost/ticket_actions?method=ta_add]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-05 22:27:42) [GET]
+  Parameters: {"method"=>"ta_add"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.3ms)[0m   [0;1mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 21ms (View: 3, DB: 3) | 200 OK [http://localhost/ticket_actions?method=ta_add]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-05 22:28:01) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.4ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 47ms (View: 29, DB: 4) | 200 OK [http://localhost/tickets]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-05 22:28:04) [GET]
+  Parameters: {"id"=>"ta_add"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.2ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find TicketAction with ID=ta_add):
+  app/controllers/ticket_actions_controller.rb:18:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.5ms)
+Rendered rescues/_request_and_response (43.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-06 22:20:49) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.3ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 62ms (View: 34, DB: 12) | 200 OK [http://localhost/tickets]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-06 22:20:56) [GET]
+  Parameters: {"ticket_id"=>"1"}
+
+SyntaxError (/home/dean/ruby/itassets/app/controllers/ticket_actions_controller.rb:30: syntax error, unexpected tIVAR, expecting ')'
+    @ticket_action = @ticket.ticket_actions.build
+                  ^):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-06 22:21:24) [GET]
+  Parameters: {"ticket_id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.3ms)[0m   [0;1mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 20ms (View: 3, DB: 3) | 200 OK [http://localhost/tickets/1/ticket_actions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#new (for 127.0.0.1 at 2010-04-06 22:21:46) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+
+ActiveRecord::RecordNotFound (Couldn't find Ticket without an ID):
+  app/controllers/ticket_actions_controller.rb:29:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.1ms)
+Rendered rescues/_request_and_response (11.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-06 22:22:09) [GET]
+  Parameters: {"ticket_id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 24ms (View: 3, DB: 3) | 200 OK [http://localhost/tickets/1/ticket_actions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-06 22:24:53) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.5ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.6ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 53ms (View: 32, DB: 5) | 200 OK [http://localhost/tickets]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#new (for 127.0.0.1 at 2010-04-06 22:24:57) [GET]
+  Parameters: {"ticket_id"=>"1"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (1.2ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/new
+Completed in 39ms (View: 10, DB: 4) | 200 OK [http://localhost/tickets/1/ticket_actions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#new (for 127.0.0.1 at 2010-04-06 22:27:05) [GET]
+  Parameters: {"ticket_id"=>"1"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/new
+Completed in 32ms (View: 7, DB: 3) | 200 OK [http://localhost/tickets/1/ticket_actions/new]

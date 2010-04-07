@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :ticket_actions
 
-  map.resources :tickets
+  map.resources :tickets, :has_many => :ticket_actions
 
   map.resources :computer_allocations
 

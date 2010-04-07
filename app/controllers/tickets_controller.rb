@@ -18,7 +18,7 @@ class TicketsController < ApplicationController
   def show
     @ticket = Ticket.find(params[:id])
     @computer_allocation_display_str = ComputerAllocation.display_str(@ticket.computer_allocation_id)
-     @user_display_str = User.display_str(@ticket.add_user_id)
+    @user_display_str = User.display_str(@ticket.add_user_id)
 
     
     respond_to do |format|

@@ -1,10 +1,11 @@
 class TicketActionsController < ApplicationController
   before_filter :set_title
+  before_filter :find_ticket
   
   # GET /ticket_actions
   # GET /ticket_actions.xml
   def index
-    @ticket_actions = TicketAction.all
+    @ticket_actions = @ticket.ticket_actions
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +16,7 @@ class TicketActionsController < ApplicationController
   # GET /ticket_actions/1
   # GET /ticket_actions/1.xml
   def show
-    @ticket_action = TicketAction.find(params[:id])
+    @ticket_action = @ticket.ticket_actions.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,13 +27,25 @@ class TicketActionsController < ApplicationController
   # GET /ticket_actions/new
   # GET /ticket_actions/new.xml
   def new
-    @ticket_action = TicketAction.new
+
+    @ticket_action = @ticket.ticket_actions.build
 
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @ticket_action }
     end
   end
+
+  # ta_add
+  # def ta_add
+  #   @ticket_action = TicketAction.new
+  #   logger.debug(params.to_yaml)
+    
+  #   respond_to do |format|
+  #     format.html # ta_add.html.erb
+  #     format.xml  { render :xml => @ticket_action }
+  #   end
+  # end
 
   # GET /ticket_actions/1/edit
   def edit
@@ -90,5 +103,8 @@ class TicketActionsController < ApplicationController
   def set_title
     @page_title = "Ticket Actions"
   end
-  
+
+  def find_ticket
+    @ticket = Ticket.find(params[:ticket_id])
+  end
 end

@@ -25,6 +25,7 @@
     <td><%= link_to 'Show', ticket %></td>
     <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
     <td><%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Add Action/Notes', new_ticket_ticket_action_path(ticket) %></td>
   </tr>
 <% end %>
 </table>
