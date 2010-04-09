@@ -1,11 +1,11 @@
 class TicketActionsController < ApplicationController
   before_filter :set_title
-  before_filter :find_ticket
+
   
   # GET /ticket_actions
   # GET /ticket_actions.xml
   def index
-    @ticket_actions = @ticket.ticket_actions
+    @ticket_actions = TicketAction.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +16,9 @@ class TicketActionsController < ApplicationController
   # GET /ticket_actions/1
   # GET /ticket_actions/1.xml
   def show
-    @ticket_action = @ticket.ticket_actions.find(params[:id])
+    @ticket_action = TicketAction.find(params[:id])
+    @ticket_display_str = Ticket.display_str(@ticket_action.ticket_id)
+    @user_display_str = User.display_str(@ticket_action.add_user_id)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,9 +29,12 @@ class TicketActionsController < ApplicationController
   # GET /ticket_actions/new
   # GET /ticket_actions/new.xml
   def new
-
+    @ticket = Ticket.find(params[:ticket_id])
     @ticket_action = @ticket.ticket_actions.build
-
+    @ticket_display_str = Ticket.display_str(@ticket_action.ticket_id)
+    @user_display_str = User.display_str(session[:user_id])
+    @ticket_action.add_user_id = session[:user_id]
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @ticket_action }
@@ -55,7 +60,9 @@ class TicketActionsController < ApplicationController
   # POST /ticket_actions
   # POST /ticket_actions.xml
   def create
-    @ticket_action = TicketAction.new(params[:ticket_action])
+    @ticket = Ticket.find(params[:ticket_action][:ticket_id])
+#    logger.debug(@ticket.to_yaml)
+    @ticket_action = @ticket.ticket_actions.build(params[:ticket_action])
 
     respond_to do |format|
       if @ticket_action.save
@@ -104,7 +111,5 @@ class TicketActionsController < ApplicationController
     @page_title = "Ticket Actions"
   end
 
-  def find_ticket
-    @ticket = Ticket.find(params[:ticket_id])
-  end
+
 end
