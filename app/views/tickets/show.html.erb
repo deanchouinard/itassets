@@ -38,6 +38,23 @@
   <%=h @ticket.release_date %>
 </p>
 
+<p>
+  <b>Actions:</b>
+  <table>
+  <% @ticket.ticket_actions.each do |ta| %>
+  <tr>
+    <td>
+      <%= ta.action_desc %>
+    </td>
+    <td>
+      <%= User.display_str(ta.add_user_id) %>
+    </td>
+    <td>
+      <%= ta.updated_at.strftime("%m-%d-%Y, %I:%M") %>
+    </td>
+  </tr>
+  <% end %>
+  </table>
 
-<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Edit', edit_ticket_path(@ticket) %>
 <%= link_to 'Back', tickets_path %>
