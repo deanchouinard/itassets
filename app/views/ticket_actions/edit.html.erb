@@ -5,11 +5,14 @@
 
   <p>
     <%= f.label :ticket_id %><br />
-    <%= f.text_field :ticket_id %>
+    <%= f.hidden_field :ticket_id %>
+    <%= @ticket_display_str %>
+
   </p>
   <p>
     <%= f.label :add_user_id %><br />
-    <%= f.text_field :add_user_id %>
+    <%= f.hidden_field :add_user_id %>
+    <%= @user_display_str %>
   </p>
   <p>
     <%= f.label :action_desc %><br />

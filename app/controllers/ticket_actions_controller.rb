@@ -32,8 +32,9 @@ class TicketActionsController < ApplicationController
     @ticket = Ticket.find(params[:ticket_id])
     @ticket_action = @ticket.ticket_actions.build
     @ticket_display_str = Ticket.display_str(@ticket_action.ticket_id)
-    @user_display_str = User.display_str(session[:user_id])
     @ticket_action.add_user_id = session[:user_id]
+    @user_display_str = User.display_str(@ticket_action.add_user_id)
+
     
     respond_to do |format|
       format.html # new.html.erb
@@ -55,6 +56,9 @@ class TicketActionsController < ApplicationController
   # GET /ticket_actions/1/edit
   def edit
     @ticket_action = TicketAction.find(params[:id])
+    @ticket_display_str = Ticket.display_str(@ticket_action.ticket_id)
+    @user_display_str = User.display_str(@ticket_action.add_user_id)
+
   end
 
   # POST /ticket_actions

@@ -41,6 +41,7 @@
 <p>
   <b>Actions:</b>
   <table>
+    <tr><th>Action</th><th>Add User</th><th>Date</th></tr>
   <% @ticket.ticket_actions.each do |ta| %>
   <tr>
     <td>
@@ -50,7 +51,7 @@
       <%= User.display_str(ta.add_user_id) %>
     </td>
     <td>
-      <%= ta.updated_at.strftime("%m-%d-%Y, %I:%M") %>
+      <%= ta.updated_at.localtime.strftime("%m-%d-%Y  %I:%M %p") %>
     </td>
   </tr>
   <% end %>

@@ -3265,3 +3265,538 @@ Rendering tickets/show
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
 Completed in 99ms (View: 20, DB: 5) | 200 OK [http://localhost/tickets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-04-13 22:03:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.3ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering tickets/show
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions".ticket_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Completed in 56ms (View: 19, DB: 5) | 200 OK [http://localhost/tickets/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-04-13 22:03:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.3ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering tickets/show
+  [4;36;1mTicketAction Load (0.5ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions".ticket_id = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Completed in 52ms (View: 17, DB: 4) | 200 OK [http://localhost/tickets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-04-13 22:04:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.3ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering tickets/show
+  [4;35;1mTicketAction Load (0.5ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions".ticket_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Completed in 57ms (View: 19, DB: 5) | 200 OK [http://localhost/tickets/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-04-13 22:04:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering tickets/show
+  [4;36;1mTicketAction Load (0.5ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions".ticket_id = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Completed in 58ms (View: 21, DB: 6) | 200 OK [http://localhost/tickets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-13 22:05:40) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 42ms (View: 24, DB: 4) | 200 OK [http://localhost/tickets]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-04-13 22:05:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering tickets/show
+  [4;36;1mTicketAction Load (0.4ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions".ticket_id = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Completed in 53ms (View: 13, DB: 6) | 200 OK [http://localhost/tickets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#new (for 127.0.0.1 at 2010-04-13 22:07:07) [GET]
+  Parameters: {"ticket_id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.3ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.3ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/new
+Completed in 46ms (View: 7, DB: 4) | 200 OK [http://localhost/tickets/1/ticket_actions/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#new (for 127.0.0.1 at 2010-04-13 22:17:05) [GET]
+  Parameters: {"ticket_id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/new
+Completed in 50ms (View: 10, DB: 4) | 200 OK [http://localhost/tickets/1/ticket_actions/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#create (for 127.0.0.1 at 2010-04-13 22:17:29) [POST]
+  Parameters: {"ticket_action"=>{"ticket_id"=>"1", "action_desc"=>"This is to be a longer note. Just to see how it formats in the ta list.", "add_user_id"=>"1"}, "commit"=>"Create", "authenticity_token"=>"yCNUHoR5PcWJrTEu7NNaIVABIFdz4PLJBRfokb+tTBI="}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.3ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "ticket_actions" ("created_at", "updated_at", "ticket_id", "add_user_id", "action_desc") VALUES('2010-04-14 02:17:29.078749', '2010-04-14 02:17:29.078749', 1, 1, E'This is to be a longer note. Just to see how it formats in the ta list.') RETURNING "id"[0m
+  [4;36;1mSQL (14.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/ticket_actions/9
+Completed in 45ms (DB: 17) | 302 Found [http://localhost/ticket_actions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-13 22:17:29) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.3ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 9) [0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.3ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/show
+Completed in 43ms (View: 4, DB: 4) | 200 OK [http://localhost/ticket_actions/9]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-13 22:17:34) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.4ms)[0m   [0;1mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 49ms (View: 31, DB: 3) | 200 OK [http://localhost/ticket_actions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-13 22:17:43) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.4ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 87ms (View: 26, DB: 4) | 200 OK [http://localhost/tickets]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-04-13 22:17:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (2.0ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.3ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering tickets/show
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions".ticket_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 52ms (View: 14, DB: 6) | 200 OK [http://localhost/tickets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-13 22:17:59) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 51ms (View: 31, DB: 3) | 200 OK [http://localhost/ticket_actions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#edit (for 127.0.0.1 at 2010-04-13 22:18:01) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 9) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/edit
+Completed in 26ms (View: 8, DB: 3) | 200 OK [http://localhost/ticket_actions/9/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#update (for 127.0.0.1 at 2010-04-13 22:18:23) [PUT]
+  Parameters: {"ticket_action"=>{"ticket_id"=>"1", "action_desc"=>"This is to be a longer note. Just to see how it formats in the ta list. What would happen if I made it really long. And longer.", "add_user_id"=>"1"}, "commit"=>"Update", "authenticity_token"=>"yCNUHoR5PcWJrTEu7NNaIVABIFdz4PLJBRfokb+tTBI=", "id"=>"9"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTicketAction Update (0.2ms)[0m   [0mUPDATE "ticket_actions" SET "updated_at" = '2010-04-14 02:18:23.469230', "action_desc" = E'This is to be a longer note. Just to see how it formats in the ta list. What would happen if I made it really long. And longer.' WHERE "id" = 9[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/ticket_actions/9
+Completed in 28ms (DB: 8) | 302 Found [http://localhost/ticket_actions/9]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-13 22:18:23) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.3ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 9) [0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/show
+Completed in 47ms (View: 4, DB: 6) | 200 OK [http://localhost/ticket_actions/9]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-13 22:18:26) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.4ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 42ms (View: 24, DB: 4) | 200 OK [http://localhost/tickets]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-04-13 22:18:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.3ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/companies
+Rendering tickets/show
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions".ticket_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 51ms (View: 14, DB: 4) | 200 OK [http://localhost/tickets/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-13 22:19:27) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 49ms (View: 31, DB: 3) | 200 OK [http://localhost/ticket_actions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#edit (for 127.0.0.1 at 2010-04-13 22:26:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 1) [0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/edit
+Completed in 50ms (View: 11, DB: 4) | 200 OK [http://localhost/ticket_actions/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#update (for 127.0.0.1 at 2010-04-13 22:26:19) [PUT]
+  Parameters: {"ticket_action"=>{"ticket_id"=>"1", "action_desc"=>"Just of fix of a typo", "add_user_id"=>"6"}, "commit"=>"Update", "authenticity_token"=>"yCNUHoR5PcWJrTEu7NNaIVABIFdz4PLJBRfokb+tTBI=", "id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTicketAction Update (0.2ms)[0m   [0mUPDATE "ticket_actions" SET "updated_at" = '2010-04-14 02:26:19.644461', "action_desc" = E'Just of fix of a typo' WHERE "id" = 1[0m
+  [4;36;1mSQL (9.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/ticket_actions/1
+Completed in 79ms (DB: 12) | 302 Found [http://localhost/ticket_actions/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-13 22:26:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.3ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 1) [0m
+  [4;35;1mTicket Load (0.3ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/show
+Completed in 44ms (View: 4, DB: 4) | 200 OK [http://localhost/ticket_actions/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-13 22:26:22) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.6ms)[0m   [0;1mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 52ms (View: 33, DB: 3) | 200 OK [http://localhost/ticket_actions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#edit (for 127.0.0.1 at 2010-04-13 22:26:31) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.6ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 8) [0m
+  [4;35;1mTicket Load (0.3ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.3ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/edit
+Completed in 46ms (View: 8, DB: 4) | 200 OK [http://localhost/ticket_actions/8/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#update (for 127.0.0.1 at 2010-04-13 22:26:36) [PUT]
+  Parameters: {"ticket_action"=>{"ticket_id"=>"1", "action_desc"=>"eight edits", "add_user_id"=>"1"}, "commit"=>"Update", "authenticity_token"=>"yCNUHoR5PcWJrTEu7NNaIVABIFdz4PLJBRfokb+tTBI=", "id"=>"8"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicketAction Load (0.3ms)[0m   [0;1mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 8) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTicketAction Update (0.2ms)[0m   [0;1mUPDATE "ticket_actions" SET "updated_at" = '2010-04-14 02:26:37.015640', "action_desc" = E'eight edits' WHERE "id" = 8[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/ticket_actions/8
+Completed in 31ms (DB: 11) | 302 Found [http://localhost/ticket_actions/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-13 22:26:37) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 8) [0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/show
+Completed in 44ms (View: 4, DB: 4) | 200 OK [http://localhost/ticket_actions/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-13 22:26:38) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 51ms (View: 32, DB: 3) | 200 OK [http://localhost/ticket_actions]
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-13 22:27:14) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 8) [0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/show
+Completed in 109ms (View: 4, DB: 22) | 200 OK [http://localhost/ticket_actions/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-13 22:27:18) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 52ms (View: 33, DB: 3) | 200 OK [http://localhost/ticket_actions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#edit (for 127.0.0.1 at 2010-04-13 22:27:20) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 9) [0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/edit
+Completed in 46ms (View: 8, DB: 4) | 200 OK [http://localhost/ticket_actions/9/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#show (for 127.0.0.1 at 2010-04-13 22:27:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.3ms)[0m   [0mSELECT * FROM "ticket_actions" WHERE ("ticket_actions"."id" = 9) [0m
+  [4;36;1mTicket Load (0.4ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/show
+Completed in 92ms (View: 4, DB: 7) | 200 OK [http://localhost/ticket_actions/9]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketActionsController#index (for 127.0.0.1 at 2010-04-13 22:27:26) [GET]
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicketAction Load (0.4ms)[0m   [0mSELECT * FROM "ticket_actions" [0m
+Rendering template within layouts/companies
+Rendering ticket_actions/index
+Completed in 51ms (View: 32, DB: 4) | 200 OK [http://localhost/ticket_actions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-13 22:32:04) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mTicket Load (0.4ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;35;1mComputer Load (0.3ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 42ms (View: 24, DB: 4) | 200 OK [http://localhost/tickets]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#edit (for 127.0.0.1 at 2010-04-13 22:32:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mComputerAllocation Load (0.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" [0m
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mLookup Load (0.5ms)[0m   [0mSELECT lu_value FROM "lookups" WHERE (lu_key = E'TICKETTYPE'
+		 and lu_active = true) [0m
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering tickets/edit
+Completed in 98ms (View: 61, DB: 4) | 200 OK [http://localhost/tickets/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-13 22:32:20) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mTicket Load (0.4ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/companies
+Rendering tickets/index
+  [4;35;1mComputerAllocation Load (0.3ms)[0m   [0mSELECT * FROM "computer_allocations" WHERE ("computer_allocations"."id" = 1) [0m
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 44ms (View: 25, DB: 3) | 200 OK [http://localhost/tickets]
