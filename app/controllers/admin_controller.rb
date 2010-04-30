@@ -19,6 +19,8 @@ class AdminController < ApplicationController
 
   def index
 		@user = User.find(session[:user_id])
+    @user_display = "#{@user.first_name} #{@user.last_name} ( #{@user.name} )"
+
 		# on the login, user is found, and we redirect to index; then we find the user again
 		# and get the object so we can display his user name on the page.
   end
