@@ -48,3 +48,22 @@ Issue or trouble report from a User.
 Ticket Action
 =============
 Events or actions taken on a ticket.
+
+=====
+Setup
+=====
+The default user is Alex and the password is grey.
+* Define your Lookup values. Lookup values are used to populate many
+drop down lists on the forms. They system comes with some already defined
+so you can easily see how to create new values. You can quickly add these
+as you need them.
+* Define a Site, which is a physical address. Ex., 2 Park Place, New York,
+NY 55500.
+* Define a Company.
+* Make an Office by matching up a Site and Company. You can create multiple
+combinations of Sites and Companies to suite your organizational circumstances.
+* Create a User for yourself and make it an Administrator. You can then
+remove the Alex/grey User.
+* Define your Computers
+* Create Users for all your users.
+* Create computer allocations by combining Users and Computers
