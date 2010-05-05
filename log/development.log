@@ -4896,3 +4896,121 @@ Processing SitesController#index (for 127.0.0.1 at 2010-05-03 22:38:46) [GET]
 Rendering template within layouts/companies
 Rendering sites/index
 Completed in 359ms (View: 16, DB: 234) | 200 OK [http://localhost/sites]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SitesController#index (for 127.0.0.1 at 2010-05-04 21:59:58) [GET]
+  [4;36;1mUser Load (62.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSite Load (15.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/companies
+Rendering sites/index
+Completed in 2078ms (View: 281, DB: 266) | 200 OK [http://localhost/sites]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2010-05-04 22:21:18) [GET]
+  [4;36;1mUser Load (62.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mComputer Load (15.6ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendering template within layouts/companies
+Rendering computers/index
+Completed in 672ms (View: 156, DB: 375) | 200 OK [http://localhost/computers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2010-05-04 22:21:57) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mLookup Load (93.8ms)[0m   [0mSELECT lu_value FROM "lookups" WHERE (lu_key = E'COMPUTERTYPE'
+		 and lu_active = true) [0m
+  [4;36;1mLookup Load (0.0ms)[0m   [0;1mSELECT lu_value FROM "lookups" WHERE (lu_key = E'COMPUTERMANF'
+		 and lu_active = true) [0m
+  [4;35;1mLookup Load (0.0ms)[0m   [0mSELECT lu_value FROM "lookups" WHERE (lu_key = E'COMPUTEROS'
+		 and lu_active = true) [0m
+
+Rendering template within layouts/companies
+Rendering computers/new
+Completed in 891ms (View: 719, DB: 94) | 200 OK [http://localhost/computers/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SoftwaresController#index (for 127.0.0.1 at 2010-05-04 22:36:20) [GET]
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSoftware Load (187.5ms)[0m   [0mSELECT * FROM "softwares" [0m
+Rendering template within layouts/companies
+Rendering softwares/index
+Completed in 406ms (View: 156, DB: 203) | 200 OK [http://localhost/softwares]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SoftwaresController#new (for 127.0.0.1 at 2010-05-04 22:36:25) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/companies
+Rendering softwares/new
+Completed in 188ms (View: 47, DB: 16) | 200 OK [http://localhost/softwares/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ComputerAllocationsController#index (for 127.0.0.1 at 2010-05-04 22:36:32) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mComputerAllocation Load (31.3ms)[0m   [0;1mSELECT * FROM "computer_allocations" [0m
+Rendering template within layouts/companies
+Rendering computer_allocations/index
+Completed in 203ms (View: 31, DB: 31) | 200 OK [http://localhost/computer_allocations]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ComputerAllocationsController#new (for 127.0.0.1 at 2010-05-04 22:36:35) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mComputer Load (0.0ms)[0m   [0;1mSELECT * FROM "computers" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/companies
+Rendering computer_allocations/new
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/computer_allocations/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SoftwaresController#index (for 127.0.0.1 at 2010-05-04 22:37:34) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSoftware Load (0.0ms)[0m   [0mSELECT * FROM "softwares" [0m
+Rendering template within layouts/companies
+Rendering softwares/index
+Completed in 156ms (View: 47, DB: 0) | 200 OK [http://localhost/softwares]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SoftwaresController#show (for 127.0.0.1 at 2010-05-04 22:37:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSoftware Load (0.0ms)[0m   [0mSELECT * FROM "softwares" WHERE ("softwares"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering softwares/show
+Completed in 266ms (View: 125, DB: 0) | 200 OK [http://localhost/softwares/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SoftwaresController#index (for 127.0.0.1 at 2010-05-04 22:37:41) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSoftware Load (15.6ms)[0m   [0mSELECT * FROM "softwares" [0m
+Rendering template within layouts/companies
+Rendering softwares/index
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/softwares]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SoftwaresController#edit (for 127.0.0.1 at 2010-05-04 22:37:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mSoftware Load (0.0ms)[0m   [0mSELECT * FROM "softwares" WHERE ("softwares"."id" = 1) [0m
+Rendering template within layouts/companies
+Rendering softwares/edit
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/softwares/1/edit]
