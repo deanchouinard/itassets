@@ -5,7 +5,7 @@
 
   <p>
     <%= f.label :publisher %><br />
-    <%= f.text_field :publisher %>
+    <%= f.select(:publisher, @soft_pub_list) %>
   </p>
   <p>
     <%= f.label :title_version %><br />

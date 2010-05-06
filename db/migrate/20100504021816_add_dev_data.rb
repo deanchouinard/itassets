@@ -15,43 +15,71 @@ class AddDevData < ActiveRecord::Migration
    	Company.create(:code => 'CM', :description => 'Cat Mountain')
   	Company.create(:code => 'MF', :description => 'Mindfire')
 
-    company = Company.find(:first, :condition => "code = 'CM'")
-    site = Site.find(:first, :condition => "code ='DEFAULT'")
+    company = Company.find(:first, :conditions => "code = 'CM'")
+    site = Site.find(:first, :conditions => "code ='DEFAULT'")
     
     Office.delete_all
     Office.create(:code => 'MAIN', :description => 'Main Office',
                   :company_id => company.id, :site_id => site.id)
 
-    Lookups.delete_all
-    Lookups.create(:lu_key => 'COMPUTERMANF', :lu_value => 'Lenovo',
+    Lookup.delete_all
+    Lookup.create(:lu_key => 'COMPUTERMANF', :lu_value => 'Lenovo',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTERMANF', :lu_value => 'HP',
+    Lookup.create(:lu_key => 'COMPUTERMANF', :lu_value => 'HP',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTERMANF', :lu_value => 'Toshiba',
+    Lookup.create(:lu_key => 'COMPUTERMANF', :lu_value => 'Toshiba',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTERTYPE', :lu_value => 'Desktop',
+    Lookup.create(:lu_key => 'COMPUTERTYPE', :lu_value => 'Desktop',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTERTYPE', :lu_value => 'Laptop',
+    Lookup.create(:lu_key => 'COMPUTERTYPE', :lu_value => 'Laptop',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTERTYPE', :lu_value => 'Server',
+    Lookup.create(:lu_key => 'COMPUTERTYPE', :lu_value => 'Server',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTEROS', :lu_value => 'Windows XP',
+    Lookup.create(:lu_key => 'COMPUTEROS', :lu_value => 'Windows XP',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTEROS', :lu_value => 'Windows Server 2003',
+    Lookup.create(:lu_key => 'COMPUTEROS', :lu_value => 'Windows Server 2003',
                    :lu_active => true)
-    Lookups.create(:lu_key => 'COMPUTEROS', :lu_value => 'Linux',
+    Lookup.create(:lu_key => 'COMPUTEROS', :lu_value => 'Linux',
+                   :lu_active => true)
+    Lookup.create(:lu_key => 'SOFTPUB', :lu_value => 'Microsoft',
+                   :lu_active => true)
+    Lookup.create(:lu_key => 'SOFTPUB', :lu_value => 'Adobe',
+                   :lu_active => true)
+    Lookup.create(:lu_key => 'TICKETTYPE', :lu_value => 'Hardware',
+                   :lu_active => true)
+    Lookup.create(:lu_key => 'TICKETTYPE', :lu_value => 'Software',
+                   :lu_active => true)
+    Lookup.create(:lu_key => 'TICKETTYPE', :lu_value => 'Misc',
                    :lu_active => true)
 
-    Computers.delete_all
-    Computers.create(:manufacturer => 'Lenovo', model => 'Thinkpad T61',
+    Computer.delete_all
+    Computer.create(:manufacturer => 'Lenovo', :model => 'Thinkpad T61',
                      :form_type => 'Laptop', :os => 'Windows XP')
 
-    computer = Computers.find(:first)
-    user = Users.find(:first, :conditions => "name = 'joe'")
+    computer = Computer.find(:first)
+    user = User.find(:first, :conditions => "name = 'joe'")
     
-    ComputerAllocations.delete_all
-    ComputerAllocations.create(:computer_id => computer.id, :user_id => user.id,
+    ComputerAllocation.delete_all
+    ComputerAllocation.create(:computer_id => computer.id, :user_id => user.id,
                                :allocated => Time.now) 
+
+    Software.delete_all
+    Software.create(:publisher => 'Microsoft', :title_version => 'Office 2003 Standard',
+                     :purchase_date => Time.now)
+
+    computer_allocation = ComputerAllocation.find(:first)
+    
+    Ticket.delete_all
+    Ticket.create(:computer_allocation_id => computer_allocation.id, :add_user_id => user.id,
+                   :ticket_type => 'Hardware', :contact_name => 'Bill Nope',
+                   :ticket_desc => "Can't find on switch")
+
+    ticket = Ticket.find(:first)
+
+    TicketAction.delete_all
+    TicketAction.create(:ticket_id => ticket.id, :add_user_id => ticket.add_user_id,
+                         :action_desc => "Turned computer on")
+    
   end
 
   def self.down
@@ -59,8 +87,11 @@ class AddDevData < ActiveRecord::Migration
     Site.delete_all
     Company.delete_all
     Office.delete_all
-    Lookups.delete_all
-    Computers.delete_all
-    ComputerAllocations.delete_all
+    Lookup.delete_all
+    Computer.delete_all
+    ComputerAllocation.delete_all
+    Software.delete_all
+    Ticket.delete_all
+    TicketAction.delete_all
   end
 end

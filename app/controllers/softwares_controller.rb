@@ -1,5 +1,7 @@
 class SoftwaresController < ApplicationController
 	before_filter :set_title
+  before_filter :load_lookups, :only => [ :new, :edit ]
+  
   # GET /softwares
   # GET /softwares.xml
   def index
@@ -87,4 +89,9 @@ class SoftwaresController < ApplicationController
 	def set_title
 		@page_title = "Software"
 	end
+
+  def load_lookups
+ 		@soft_pub_list = Lookup.get_lu_values("SOFTPUB")
+  end
+  
 end
