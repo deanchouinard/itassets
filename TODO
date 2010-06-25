@@ -1,13 +1,8 @@
-add lookups to computer edit; need to preserve value
+X add lookups to computer edit; need to preserve value
 add lookup to software edit; preserve value
 add display/lookup to office edit; preserve value
 
-how to show empty dates; dates that haven't been set yet, like date ticket released or end of computer allocation
-  assiging NIL in a .create set the date to blank, but the edit form
-  puts a date in it and saves it; need to set the form date to blank and
-  preserve it unless it is changed
-
-	set date defaut to NULL in database?
+set date defaut to NULL in database?
 
 add id display to computer allocation list
 add id display to ticket action list
