@@ -1,15 +1,16 @@
 X add lookups to computer edit; need to preserve value
-add lookup to software edit; preserve value
-add display/lookup to office edit; preserve value
+X add lookup to software edit; preserve value
+X add display/lookup to office edit; preserve value
 
 set date defaut to NULL in database?
 
 add id display to computer allocation list
 add id display to ticket action list
 
-better listings; pagination
+
 
 add quantity field to sofwares
+add license key, etc to softwares
 
 add a User list so can pick user in system that ticket is for;
 that way can implement ticket status view when user logs in
@@ -18,3 +19,6 @@ format and validate phone numbers
 
 validate email addresses
 
+use CSS and tables to make better show display
+ "" index display
+better listings; pagination
