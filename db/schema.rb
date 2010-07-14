@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100504021816) do
+ActiveRecord::Schema.define(:version => 20100714015706) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
@@ -19,13 +19,14 @@ ActiveRecord::Schema.define(:version => 20100504021816) do
   end
 
   create_table "computer_allocations", :force => true do |t|
-    t.integer  "computer_id", :null => false
-    t.integer  "user_id",     :null => false
+    t.integer  "computer_id",                 :null => false
+    t.integer  "user_id",                     :null => false
     t.date     "allocated"
     t.date     "returned"
     t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "computer_name", :limit => 20
   end
 
   create_table "computers", :force => true do |t|

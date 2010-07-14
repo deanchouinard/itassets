@@ -222,4 +222,17 @@ h1 {
 .itassets-form div {
 	margin: 0.5em 0;
 }
+
+.header {
+  text-align: left;
+}
+
+.detail {
+  text-align: left;
+}
+
+th, td {
+  padding: 5px;
+  border-spacing: 5px
+}
  

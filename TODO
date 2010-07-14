@@ -2,7 +2,7 @@ X add lookups to computer edit; need to preserve value
 X add lookup to software edit; preserve value
 X add display/lookup to office edit; preserve value
 
-set date defaut to NULL in database?
+set date default to NULL in database?
 
 add id display to computer allocation list
 add id display to ticket action list
@@ -22,3 +22,7 @@ validate email addresses
 use CSS and tables to make better show display
  "" index display
 better listings; pagination
+
+add warranty and on-site support info to computers table
+
+add computer name to computer allocations table

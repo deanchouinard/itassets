@@ -8,4 +8,9 @@ class Computer < ActiveRecord::Base
 			 co.form_type.strip + " " +
 			 co.os.strip, co.id]}
 	end
+	
+	def self.display_str( id )
+	  co = self.find(id)
+    "#{co.manufacturer} #{co.form_type} (#{co.os})"  
+  end
 end

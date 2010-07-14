@@ -1,19 +1,21 @@
 <h1>Listing computer_allocations</h1>
 
 <table>
-  <tr>
+  <tr class="header" >
     <th>Computer</th>
     <th>User</th>
     <th>Allocated</th>
+    <th>Computer Name</th>
     <th>Returned</th>
     <th>Comments</th>
   </tr>
 
 <% @computer_allocations.each do |computer_allocation| %>
-  <tr>
-    <td><%=h computer_allocation.computer_id %></td>
-    <td><%=h computer_allocation.user_id %></td>
+  <tr class="detail" >
+    <td><%=h Computer.display_str(computer_allocation.computer_id) %></td>
+    <td><%=h User.display_str(computer_allocation.user_id) %></td>
     <td><%=h computer_allocation.allocated %></td>
+    <td><%=h computer_allocation.computer_name %></td>
     <td><%=h computer_allocation.returned %></td>
     <td><%=h computer_allocation.comments %></td>
     <td><%= link_to 'Show', computer_allocation %></td>
