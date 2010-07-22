@@ -1,17 +1,20 @@
 <h1>Listing computer_allocations</h1>
 
-<table>
-  <tr class="header" >
-    <th>Computer</th>
-    <th>User</th>
-    <th>Allocated</th>
-    <th>Computer Name</th>
-    <th>Returned</th>
-    <th>Comments</th>
+<table id="list-table">
+  <tr>
+    <th scope="col">Computer</th>
+    <th scope="col">User</th>
+    <th scope="col">Allocated</th>
+    <th scope="col">Computer Name</th>
+    <th scope="col">Returned</th>
+    <th scope="col">Comments</th>
+    <th> </th>
+    <th> </th>
+    <th> </th>
   </tr>
 
 <% @computer_allocations.each do |computer_allocation| %>
-  <tr class="detail" >
+  <tr>
     <td><%=h Computer.display_str(computer_allocation.computer_id) %></td>
     <td><%=h User.display_str(computer_allocation.user_id) %></td>
     <td><%=h computer_allocation.allocated %></td>
