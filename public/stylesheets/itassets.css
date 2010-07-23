@@ -143,12 +143,12 @@ h1 {
 /* Adds */
 
 #banner {
-  background: #9c9;
+  background: #d0dafd;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #339;
   text-align: center;
 }
 
@@ -157,7 +157,7 @@ h1 {
 }
 
 #columns {
-  background: #141;
+  background: #b9c9fe;
 }
 
 #main {
@@ -173,11 +173,11 @@ h1 {
   padding-left: 1em;
   padding-bottom: 1em;
   width: 12em;
-  background: #141;
+  background: #b9c9fe;
 }
 
 #side a {
-  color: #bfb;
+  color: #039;
   font-size: small;
 }
 

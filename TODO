@@ -19,16 +19,19 @@ format and validate phone numbers
 
 validate email addresses
 
-use CSS and tables to make better show display
- "" index display
+X use CSS and tables to make better show display
+X "" index display
 better listings; pagination
 
 add warranty and on-site support info to computers table
 
 add computer name to computer allocations table
 
-add company link to computer and softwares to show who bought and owns hardware or license
+X add company link to computer and softwares to show who bought and owns hardware or license
+X alter computer and software tables so company_id can't be NULL
 
-add company link to users to designate what company user works at
+add company/office link to users to designate what company user works at
+
+add office link in computer allocaton to indicate where computer is located
 
 baloon help

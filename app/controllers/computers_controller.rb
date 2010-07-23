@@ -96,7 +96,7 @@ class ComputersController < ApplicationController
 		@form_type_list = Lookup.get_lu_values("COMPUTERTYPE")
 		@manf_list = Lookup.get_lu_values("COMPUTERMANF")
 		@os_list = Lookup.get_lu_values("COMPUTEROS")
-		
+		@company_list = Company.load_sel_list
 		# logger.debug @form_type_list
 	end
 		                              

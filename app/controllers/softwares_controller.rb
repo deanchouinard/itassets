@@ -92,6 +92,7 @@ class SoftwaresController < ApplicationController
 
   def load_lookups
  		@soft_pub_list = Lookup.get_lu_values("SOFTPUB")
+ 		@company_list = Company.load_sel_list
   end
   
 end

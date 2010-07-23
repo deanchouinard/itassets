@@ -2,6 +2,7 @@
 
 <table class="list-table">
   <tr>
+    <th>Company</th>
     <th>Publisher</th>
     <th>Title version</th>
     <th>Purchase date</th>
@@ -11,6 +12,7 @@
 
 <% @softwares.each do |software| %>
   <tr>
+    <td><%=h software.company.description %></td>
     <td><%=h software.publisher %></td>
     <td><%=h software.title_version %></td>
     <td><%=h software.purchase_date %></td>

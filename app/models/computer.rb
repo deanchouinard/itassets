@@ -1,6 +1,7 @@
 class Computer < ActiveRecord::Base
 	has_many :computer_allocations
 	has_many :users, :through => :computer_allocations
+	belongs_to :company
 	
 	def self.load_sel_list
 		self.find(:all).map { |co|

@@ -2,6 +2,7 @@
 
 <table class="list-table">
   <tr>
+    <th>Company</th>
     <th>Manufacturer</th>
     <th>Model</th>
     <th>Description</th>
@@ -20,6 +21,7 @@
 
 <% @computers.each do |computer| %>
   <tr>
+    <td><%=h computer.company.description %></td>
     <td><%=h computer.manufacturer %></td>
     <td><%=h computer.model %></td>
     <td><%=h computer.description %></td>

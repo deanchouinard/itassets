@@ -2,7 +2,11 @@
 
 <% form_for(@computer) do |f| %>
   <%= f.error_messages %>
-
+ 
+  <p>
+    <%= f.label :company_id %><br />
+    <%= f.select(:company_id, @company_list) %>
+  </p>
   <p>
     <%= f.label :manufacturer %><br />
     <%= f.select(:manufacturer, @manf_list) %>
