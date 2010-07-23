@@ -1,10 +1,9 @@
-<h1>Listing lookups</h1>
-
-<table id="list-table">
+<table class="list-table" width="400">
   <tr>
     <th>Key</th>
     <th>Value</th>
     <th>Active?</th>
+    <th> </th>
   </tr>
 
 <% @lookups.each do |lookup| %>
@@ -12,9 +11,10 @@
     <td><%=h lookup.lu_key %></td>
     <td><%=h lookup.lu_value %></td>
     <td><%=h lookup.lu_active %></td>
-    <td><%= link_to 'Show', lookup %></td>
-    <td><%= link_to 'Edit', edit_lookup_path(lookup) %></td>
-    <td><%= link_to 'Destroy', lookup, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', lookup %><br/>
+      <%= link_to 'Edit', edit_lookup_path(lookup) %><br/>
+      <%= link_to 'Destroy', lookup, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -1,7 +1,7 @@
 <h1>Sites</h1>
 <p>A site is an actual location -- an address. </p>
 
-<table>
+<table class="list-table">
   <tr>
     <th>Code</th>
     <th>Address1</th>
@@ -9,6 +9,7 @@
     <th>City</th>
     <th>State</th>
     <th>Zipcode</th>
+    <th/>
   </tr>
 
 <% @sites.each do |site| %>
@@ -19,9 +20,10 @@
     <td><%=h site.city %></td>
     <td><%=h site.state %></td>
     <td><%=h site.zipcode %></td>
-    <td><%= link_to 'Show', site %></td>
-    <td><%= link_to 'Edit', edit_site_path(site) %></td>
-    <td><%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', site %><br/>
+      <%= link_to 'Edit', edit_site_path(site) %><br/>
+      <%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -1,67 +1,72 @@
-<p>
-  <b>Manufacturer:</b>
-  <%=h @computer.manufacturer %>
-</p>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
+  <tr>  
+    <td class="show-table-label">Manufacturer</td>
+    <td><%=h @computer.manufacturer %> </td>
+  </tr>
 
-<p>
-  <b>Model:</b>
-  <%=h @computer.model %>
-</p>
+  <tr>
+    <td class="show-table-label">Model</td>
+    <td><%=h @computer.model %> </td>
+  </tr>
 
-<p>
-  <b>Description:</b>
-  <%=h @computer.description %>
-</p>
+  <tr>
+    <td class="show-table-label">Description</td>
+    <td><%=h @computer.description %> </td>
+  </tr>
 
-<p>
-  <b>Type:</b>
-  <%=h @computer.form_type %>
-</p>
+  <tr>
+    <td class="show-table-label">Type</td>
+    <td><%=h @computer.form_type %> </td>
+  </tr>
 
-<p>
-  <b>Serial number:</b>
-  <%=h @computer.serial_number %>
-</p>
+  <tr>
+    <td class="show-table-label">Serial number</td>
+    <td><%=h @computer.serial_number %> </td>
+  </tr>
 
-<p>
-  <b>Cpu:</b>
-  <%=h @computer.cpu %>
-</p>
+  <tr>
+    <td class="show-table-label">Cpu</td>
+    <td><%=h @computer.cpu %> </td>
+  </tr>
 
-<p>
-  <b>Ram:</b>
-  <%=h @computer.ram %>
-</p>
+  <tr>
+    <td class="show-table-label">Ram</td>
+    <td><%=h @computer.ram %> </td>
+  </tr>
 
-<p>
-  <b>Hdd:</b>
-  <%=h @computer.hdd %>
-</p>
+  <tr>
+    <td class="show-table-label">Hdd</td>
+    <td><%=h @computer.hdd %> </td>
+  </tr>
 
-<p>
-  <b>Optical:</b>
-  <%=h @computer.optical %>
-</p>
+  <tr>
+    <td class="show-table-label">Optical</td>
+    <td><%=h @computer.optical %> </td>
+  </tr>
 
-<p>
-  <b>Os:</b>
-  <%=h @computer.os %>
-</p>
+  <tr>
+    <td class="show-table-label">Os</td>
+    <td><%=h @computer.os %> </td>
+  </tr>
 
-<p>
-  <b>Service tag:</b>
-  <%=h @computer.service_tag %>
-</p>
+  <tr>
+    <td class="show-table-label">Service tag</td>
+    <td><%=h @computer.service_tag %> </td>
+  </tr>
 
-<p>
-  <b>Purchase date:</b>
-  <%=h @computer.purchase_date %>
-</p>
+  <tr>
+    <td class="show-table-label">Purchase date</td>
+    <td><%=h @computer.purchase_date %> </td>
+  </tr>
 
-<p>
-  <b>Comments:</b>
-  <%=h @computer.comments %>
-</p>
+  <tr>
+    <td class="show-table-label">Comments</td>
+    <td><%=h @computer.comments %> </td>
+  </tr>
+</table>  
 
 
 <%= link_to 'Edit', edit_computer_path(@computer) %> |

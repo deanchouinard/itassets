@@ -1,11 +1,12 @@
 <h1>Listing softwares</h1>
 
-<table>
+<table class="list-table">
   <tr>
     <th>Publisher</th>
     <th>Title version</th>
     <th>Purchase date</th>
     <th>Comments</th>
+    <th/>
   </tr>
 
 <% @softwares.each do |software| %>
@@ -14,9 +15,10 @@
     <td><%=h software.title_version %></td>
     <td><%=h software.purchase_date %></td>
     <td><%=h software.comments %></td>
-    <td><%= link_to 'Show', software %></td>
-    <td><%= link_to 'Edit', edit_software_path(software) %></td>
-    <td><%= link_to 'Destroy', software, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', software %><br/>
+      <%= link_to 'Edit', edit_software_path(software) %><br/>
+      <%= link_to 'Destroy', software, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

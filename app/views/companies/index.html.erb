@@ -1,16 +1,14 @@
-<div id="itassets-list">
-	<h1>Listing companies</h1>
- 	<table>
+<h1>Listing companies</h1>
+<table class="list-table" width="250">
+  	<tr>
+  	  <th>Code</th>
+  	  <th>Description</th>
+  	  <th> </th>
+  	</tr>
 	<% @companies.each do |company| %>
-  	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-  		
-	    <td class="list-description">
-  	  	<dl>
-    			<dt><%=h company.code %></dt>
-    			<dd><%=h company.description %></dd>
-    		</dl>
-    	</td>
-    
+  	<tr>
+	    <td><%=h company.code %></td>
+    	<td><%=h company.description %></td
     	<td class="list-actions">
     		<%= link_to 'Show', company %><br/>
     		<%= link_to 'Edit', edit_company_path(company) %><br/>
@@ -18,8 +16,7 @@
   		</td>
   	</tr>
 	<% end %>
-	</table>
-</div>
+</table>
 
 <br />
 

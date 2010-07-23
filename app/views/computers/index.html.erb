@@ -1,6 +1,6 @@
 <h1>Listing computers</h1>
 
-<table>
+<table class="list-table">
   <tr>
     <th>Manufacturer</th>
     <th>Model</th>
@@ -15,6 +15,7 @@
     <th>Service tag</th>
     <th>Purchase date</th>
     <th>Comments</th>
+    <th/>
   </tr>
 
 <% @computers.each do |computer| %>
@@ -32,9 +33,10 @@
     <td><%=h computer.service_tag %></td>
     <td><%=h computer.purchase_date %></td>
     <td><%=h computer.comments %></td>
-    <td><%= link_to 'Show', computer %></td>
-    <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
-    <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', computer %><br/>
+      <%= link_to 'Edit', edit_computer_path(computer) %><br/>
+      <%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

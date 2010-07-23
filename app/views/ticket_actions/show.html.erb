@@ -1,20 +1,25 @@
-<p>
-  <b>Ticket:</b>
-  <%=h @ticket_action.ticket_id %>
-  <%= @ticket_display_str %>
-</p>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
+  
+  <tr>  
+    <td class="show-table-label">Ticket</td>
+    <td><%=h @ticket_action.ticket_id %>
+      <%= @ticket_display_str %> </td>
+  </tr>
 
-<p>
-  <b>Add user:</b>
-  <%=h @ticket_action.add_user_id %>
-  <%= @user_display_str %>
-</p>
+  <tr>
+    <td class="show-table-label">Add user</td>
+    <td><%=h @ticket_action.add_user_id %>
+      <%= @user_display_str %> </td>
+  </tr>
 
-<p>
-  <b>Action desc:</b>
-  <%=h @ticket_action.action_desc %>
-</p>
-
+  <tr>
+    <td class="show-table-label">Action desc</td>
+    <td><%=h @ticket_action.action_desc %> </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_ticket_action_path(@ticket_action) %> |
 <%= link_to 'Back', ticket_actions_path %>

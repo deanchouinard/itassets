@@ -1,33 +1,37 @@
-<p>
-  <b>Code:</b>
-  <%=h @site.code %>
-</p>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
+ <tr>  
+    <td class="show-table-label">Code </td>
+    <td> <%=h @site.code %> </td>
+  </tr>
 
-<p>
-  <b>Address1:</b>
-  <%=h @site.address1 %>
-</p>
+  <tr>
+    <td class="show-table-label">Address1 </td>
+    <td><%=h @site.address1 %> </td>
+  </tr>
 
-<p>
-  <b>Address2:</b>
-  <%=h @site.address2 %>
-</p>
+  <tr>
+    <td class="show-table-label">Address2 </td>
+    <td><%=h @site.address2 %> </td>
+  </tr>
 
-<p>
-  <b>City:</b>
-  <%=h @site.city %>
-</p>
+  <tr>
+    <td class="show-table-label">City</td>
+    <td><%=h @site.city %> </td>
+  </tr>
 
-<p>
-  <b>State:</b>
-  <%=h @site.state %>
-</p>
+  <tr>
+    <td class="show-table-label">State</td>
+    <td><%=h @site.state %> </td>
+  </tr>
 
-<p>
-  <b>Zipcode:</b>
-  <%=h @site.zipcode %>
-</p>
-
+  <tr>
+    <td class="show-table-label">Zipcode</td>
+    <td><%=h @site.zipcode %> </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>

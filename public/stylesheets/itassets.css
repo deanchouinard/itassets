@@ -246,8 +246,8 @@ th, td {
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 12px;
-	margin: 45px;
-	width: 800px;
+	margin: 15px;
+/*	width: 700px; */
 	text-align: left;
 	border-collapse: collapse;
 }
@@ -287,8 +287,8 @@ th, td {
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 12px;
-	margin: 45px;
-	width: 480px;
+	margin: 15px;
+/*	width: 480px; */
 	text-align: left;
 	border-collapse: collapse;
 }

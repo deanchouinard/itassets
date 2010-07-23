@@ -1,23 +1,27 @@
-<p>
-  <b>Publisher:</b>
-  <%=h @software.publisher %>
-</p>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
+  <tr>
+    <td class="show-table-label">Publisher</td>
+    <td><%=h @software.publisher %> </td>
+  </tr>
 
-<p>
-  <b>Title version:</b>
-  <%=h @software.title_version %>
-</p>
+  <tr>
+    <td class="show-table-label">Title version</td>
+    <td><%=h @software.title_version %> </td>
+  </tr>
 
-<p>
-  <b>Purchase date:</b>
-  <%=h @software.purchase_date %>
-</p>
+  <tr>
+    <td class="show-table-label">Purchase date</td>
+    <td><%=h @software.purchase_date %> </td>
+  </tr>
 
-<p>
-  <b>Comments:</b>
-  <%=h @software.comments %>
-</p>
-
+  <tr>
+    <td class="show-table-label">Comments</td>
+    <td><%=h @software.comments %> </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_software_path(@software) %> |
 <%= link_to 'Back', softwares_path %>

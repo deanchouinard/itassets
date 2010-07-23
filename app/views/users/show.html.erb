@@ -1,29 +1,30 @@
-<p>
-  <b>Login Name:</b>
-  <%=h @user.name %>
-</p>
- <div>
-    <b>First Name:</b>
-    <%=h @user.first_name %>
-  </div>
-  <div>
-    <b>Last Name:</b>
-    <%=h @user.last_name %>
-  </div>
-  <div>
-    <b>Email:</b>
-    <%=h @user.email %>
-  </div>
-<p>
-  <b>Hashed password:</b>
-  <%=h @user.hashed_password %>
-</p>
-
-<p>
-  <b>Salt:</b>
-  <%=h @user.salt %>
-</p>
-
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>  
+  
+  <tr>
+    <td>Login Name</td>
+    <td><%=h @user.name %> </td.>
+  </tr>
+  
+  <tr>
+    <td>First Name</td>
+    <td><%=h @user.first_name %> </td>
+  </tr>
+  <tr>
+    <td>Last Name</td>
+    <td><%=h @user.last_name %> </td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><%=h @user.email %> </td>
+  </tr>
+  <tr>
+    <td>Admin?</td>
+    <td><%=h @user.admin.to_s %> </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -1,61 +1,64 @@
-<p>
-  <b>Computer allocation:</b>
-  <%=h @computer_allocation_display_str %>
-</p>
-
-<p>
-  <b>Add user:</b>
-  <%=h @user_display_str %>
-</p>
-
-<p>
-  <b>Ticket type:</b>
-  <%=h @ticket.ticket_type %>
-</p>
-
-<p>
-  <b>Contact name:</b>
-  <%=h @ticket.contact_name %>
-</p>
-
-<p>
-  <b>Contact phone:</b>
-  <%=h @ticket.contact_phone %>
-</p>
-
-<p>
-  <b>Contact email:</b>
-  <%=h @ticket.contact_email %>
-</p>
-
-<p>
-  <b>Ticket desc:</b>
-  <%=h @ticket.ticket_desc %>
-</p>
-
-<p>
-  <b>Release date:</b>
-  <%=h @ticket.release_date %>
-</p>
-
-<p>
-  <b>Actions:</b>
-  <table>
-    <tr><th>Action</th><th>Add User</th><th>Date</th></tr>
-  <% @ticket.ticket_actions.each do |ta| %>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>  
   <tr>
-    <td>
-      <%= ta.action_desc %>
-    </td>
-    <td>
-      <%= User.display_str(ta.add_user_id) %>
-    </td>
-    <td>
-      <%= ta.updated_at.localtime.strftime("%m-%d-%Y  %I:%M %p") %>
-    </td>
+    <td class="show-table-label">Computer allocation</td>
+    <td><%=h @computer_allocation_display_str %> </td>
   </tr>
+
+  <tr>
+    <td class="show-table-label">Add user</td>
+    <td><%=h @user_display_str %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Ticket type</td>
+    <td><%=h @ticket.ticket_type %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Contact name</td>
+    <td><%=h @ticket.contact_name %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Contact phone</td>
+    <td><%=h @ticket.contact_phone %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Contact email</td>
+    <td><%=h @ticket.contact_email %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Ticket desc</td>
+    <td><%=h @ticket.ticket_desc %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Release date</td>
+    <td><%=h @ticket.release_date %> </td>
+  </tr>
+</table>
+
+<h3>Actions</h2>
+<table class="list-table">
+  <tr>
+    <th>Action</th>
+    <th>Add User</th>
+    <th>Date</th>
+  </tr>
+  
+  <% @ticket.ticket_actions.each do |ta| %>
+    <tr>
+      <td><%= ta.action_desc %> </td>
+      <td><%= User.display_str(ta.add_user_id) %> </td>
+      <td><%= ta.updated_at.localtime.strftime("%m-%d-%Y  %I:%M %p") %> </td>
+    </tr>
   <% end %>
-  </table>
+</table>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %>
 <%= link_to 'Back', tickets_path %>

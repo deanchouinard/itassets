@@ -1,6 +1,6 @@
 <h1>Listing tickets</h1>
 
-<table>
+<table class="list-table">
   <tr>
     <th>Computer allocation</th>
     <th>Add user</th>
@@ -10,6 +10,7 @@
     <th>Contact email</th>
     <th>Ticket desc</th>
     <th>Release date</th>
+    <th/>
   </tr>
 
 <% @tickets.each do |ticket| %>
@@ -22,10 +23,11 @@
     <td><%=h ticket.contact_email %></td>
     <td><%=h ticket.ticket_desc %></td>
     <td><%=h ticket.release_date %></td>
-    <td><%= link_to 'Show', ticket %></td>
-    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-    <td><%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to 'Add Action/Notes', new_ticket_ticket_action_path(ticket) %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', ticket %><br/>
+      <%= link_to 'Edit', edit_ticket_path(ticket) %><br/>
+      <%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %><br/>
+      <%= link_to 'Add Action/Notes', new_ticket_ticket_action_path(ticket) %></td>
   </tr>
 <% end %>
 </table>
