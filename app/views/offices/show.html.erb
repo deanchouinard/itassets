@@ -1,24 +1,28 @@
-<p>
-  <b>Code:</b>
-  <%=h @office.code %>
-</p>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
 
-<p>
-  <b>Description:</b>
-  <%=h @office.description %>
-</p>
+  <tr>
+    <td class="show-table-label">Code <td/>
+    <td> <%=h @office.code %> </td>
+  </tr>
+  
+  <tr>
+    <td class="show-table-label">Description </td>
+    <td> <%=h @office.description %> </td>
+  </tr>
 
-<p>
-  <b>Company:</b>
-  <%=h @office.company_id %>
-	<%=h @office.company.description %>
-</p>
+  <tr>
+    <td class="show-table-label">Company </td>
+    <td> <%=h @office.company.description %> </td>
+  </tr>
 
-<p>
-  <b>Site:</b>
-  <%=h @office.site_id %>
-	<%=h @office.site.code %>
-</p>
+  <tr>
+    <td class="show-table-label">Site </td>
+	  <td> <%=h @office.site.code %> </td>
+  </tr>
+</table>
 
 
 <%= link_to 'Edit', edit_office_path(@office) %> |

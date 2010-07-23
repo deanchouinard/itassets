@@ -1,13 +1,18 @@
-<p>
-  <b>Code:</b>
-  <%=h @company.code %>
-</p>
+<table class="show-table">
+  <colgroup>
+    <col class="oce-first" />
+  </colgroup>
 
-<p>
-  <b>Description:</b>
-  <%=h @company.description %>
-</p>
+  <tr>
+    <td class="show-table-label">Code </td>
+    <td> <%=h @company.code %> </td>
+  </tr>
 
+  <tr>
+    <td class="show-table-label">Description </td>
+    <td> <%=h @company.description %> </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

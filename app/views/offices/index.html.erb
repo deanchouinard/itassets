@@ -1,24 +1,24 @@
 <h1>Listing offices</h1>
 
-<table>
+<table class="list-table">
   <tr>
     <th>Code</th>
     <th>Description</th>
     <th>Company</th>
     <th>Site</th>
+    <th> </th>
   </tr>
 
 <% @offices.each do |office| %>
   <tr>
     <td><%=h office.code %></td>
     <td><%=h office.description %></td>
-    <td><%=h office.company_id %></td>
 		<td><%=h office.company.description %></td>
-    <td><%=h office.site_id %></td>
     <td><%=h office.site.code %></td>
-    <td><%= link_to 'Show', office %></td>
-    <td><%= link_to 'Edit', edit_office_path(office) %></td>
-    <td><%= link_to 'Destroy', office, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', office %><br/>
+      <%= link_to 'Edit', edit_office_path(office) %><br/>
+      <%= link_to 'Destroy', office, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

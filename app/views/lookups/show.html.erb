@@ -1,18 +1,23 @@
-<p>
-  <b>Lu key:</b>
-  <%=h @lookup.lu_key %>
-</p>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
+  
+  <tr>
+    <td class="show-table-label">Key </td>
+    <td> <%=h @lookup.lu_key %> </td>
+  </tr>
 
-<p>
-  <b>Lu value:</b>
-  <%=h @lookup.lu_value %>
-</p>
+  <tr>
+    <td class="show-table-label">Value </td>
+    <td > <%=h @lookup.lu_value %> </td>
+  </tr>
 
-<p>
-  <b>Lu active:</b>
-  <%=h @lookup.lu_active %>
-</p>
-
+  <tr>
+    <td class="show-table-label">Active? </td>
+    <td> <%=h @lookup.lu_active %> </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_lookup_path(@lookup) %> |
 <%= link_to 'Back', lookups_path %>

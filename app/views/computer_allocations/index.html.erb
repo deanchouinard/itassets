@@ -9,8 +9,6 @@
     <th scope="col">Returned</th>
     <th scope="col">Comments</th>
     <th> </th>
-    <th> </th>
-    <th> </th>
   </tr>
 
 <% @computer_allocations.each do |computer_allocation| %>
@@ -21,9 +19,10 @@
     <td><%=h computer_allocation.computer_name %></td>
     <td><%=h computer_allocation.returned %></td>
     <td><%=h computer_allocation.comments %></td>
-    <td><%= link_to 'Show', computer_allocation %></td>
-    <td><%= link_to 'Edit', edit_computer_allocation_path(computer_allocation) %></td>
-    <td><%= link_to 'Destroy', computer_allocation, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', computer_allocation %><br/>
+      <%= link_to 'Edit', edit_computer_allocation_path(computer_allocation) %><br/>
+      <%= link_to 'Destroy', computer_allocation, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

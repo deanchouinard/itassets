@@ -242,7 +242,7 @@ th, td {
   line-height: 1.6em;
 }*/
 
-#list-table
+.list-table
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 12px;
@@ -252,7 +252,7 @@ th, td {
 	border-collapse: collapse;
 }
 
-#list-table th
+.list-table th
 {
 	font-size: 13px;
 	font-weight: normal;
@@ -263,7 +263,7 @@ th, td {
 	color: #039;
 }
 
-#list-table td
+.list-table td
 {
 	padding: 8px;
 	background: #e8edff; 
@@ -271,8 +271,59 @@ th, td {
 	color: #669;
 	border-top: 1px solid transparent;
 }
-#list-table tr:hover td
+.list-table tr:hover td
 {
 	background: #d0dafd;
 	color: #339;
 }
+
+.list-table .list-actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+.show-table
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.show-table th
+{
+	font-size: 14px;
+	font-weight: normal;
+	padding: 12px 15px;
+	color: #039;
+}
+
+.show-table td
+{
+	padding: 10px 15px;
+	color: #669;
+	border-top: 1px solid #e8edff;
+}
+
+.oce-first
+{
+	text-align: right; /* didn't work? */
+	background: #d0dafd;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+
+}
+
+.show-table tr:hover td
+{
+	color: #339;
+	background: #eff2ff;
+}
+
+.show-table-label {
+  text-align: right;
+}
+

@@ -1,33 +1,39 @@
 <table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
+
+  <tr >
+    <td class="show-table-label">Computer </td>
+    <td> <%=h @computer_display_str  %> </td>
+  </tr>
+
   <tr>
-  <td class="show-table-label">Computer:</td>
-  <td> <%=h @computer_display_str  %> </td>
+    <td class="show-table-label">User </td>
+    <td> <%=h @user_display_str %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label"> Allocated </td>
+    <td> <%=h @computer_allocation.allocated %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Computer Name </td>
+    <td> <%=h @computer_allocation.computer_name %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Returned </td>
+    <td> <%=h @computer_allocation.returned %> </td>
+  </tr>
+
+  <tr>
+    <td class="show-table-label">Comments </td>
+    <td> <%=h @computer_allocation.comments %> </td>
+  </tr>
+
 </table>
-
-<p>
-  <b>User:</b>
-  <%=h @user_display_str %>
-</p>
-
-<p>
-  <b>Allocated:</b>
-  <%=h @computer_allocation.allocated %>
-</p>
-
-<p>
-  <b>Computer Name:</b>
-  <%=h @computer_allocation.computer_name %>
-</p>
-
-<p>
-  <b>Returned:</b>
-  <%=h @computer_allocation.returned %>
-</p>
-
-<p>
-  <b>Comments:</b>
-  <%=h @computer_allocation.comments %>
-</p>
 
 
 <%= link_to 'Edit', edit_computer_allocation_path(@computer_allocation) %> |
