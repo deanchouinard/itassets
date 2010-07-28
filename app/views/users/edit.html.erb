@@ -3,7 +3,12 @@
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
 
-  <p>
+   <p>
+    <%= f.label :office_id %><br />
+    <%= f.select(:office_id, @office_list) %>
+  </p>
+  
+   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>

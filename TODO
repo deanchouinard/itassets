@@ -25,7 +25,7 @@ better listings; pagination
 
 add warranty and on-site support info to computers table
 
-add computer name to computer allocations table
+X add computer name to computer allocations table
 
 X add company link to computer and softwares to show who bought and owns hardware or license
 X alter computer and software tables so company_id can't be NULL
@@ -33,5 +33,9 @@ X alter computer and software tables so company_id can't be NULL
 add company/office link to users to designate what company user works at
 
 add office link in computer allocaton to indicate where computer is located
+
+update dev data for above changes
+
+make add views similar to user add view
 
 baloon help

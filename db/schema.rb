@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100723220041) do
+ActiveRecord::Schema.define(:version => 20100728021608) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(:version => 20100723220041) do
     t.string   "first_name",      :limit => 40
     t.string   "last_name",       :limit => 40
     t.string   "email",           :limit => 40
+    t.integer  "office_id"
   end
 
 end

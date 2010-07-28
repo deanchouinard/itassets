@@ -7,6 +7,10 @@
 	<legend>Enter User Details</legend>
 
   <div>
+    <%= f.label :office_id %>:
+    <%= f.select(:office_id, @office_list) %>
+  </div>
+  <div>
     <%= f.label :name %>:
     <%= f.text_field :name, :size => 40 %>
   </div>

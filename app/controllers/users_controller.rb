@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 	before_filter :set_title
+	before_filter :load_lookups, :only => [:new, :edit]
+	
   # GET /users
   # GET /users.xml
   def index
@@ -16,6 +18,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
+    @office_display_str = Office.display_str( @user.office_id )
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
@@ -92,5 +96,10 @@ class UsersController < ApplicationController
 	def set_title
 		@page_title = "Users"
 	end
+	
+	def load_lookups
+    @office_list = Office.load_sel_list
+
+  end
 	
 end
