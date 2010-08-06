@@ -1,0 +1,28 @@
+<p>
+  <b>Tape:</b>
+  <%=h @tape_move.tape_id %>
+</p>
+
+<p>
+  <b>Destination:</b>
+  <%=h @tape_move.destination %>
+</p>
+
+<p>
+  <b>Out:</b>
+  <%=h @tape_move.out %>
+</p>
+
+<p>
+  <b>Return:</b>
+  <%=h @tape_move.return %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @tape_move.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_tape_move_path(@tape_move) %> |
+<%= link_to 'Back', tape_moves_path %>

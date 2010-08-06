@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tape_moves
+
+  map.resources :tapes
+
   map.resources :ticket_actions
 
   map.resources :tickets, :has_many => :ticket_actions

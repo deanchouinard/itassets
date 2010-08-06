@@ -1,0 +1,32 @@
+<h1>Editing tape_move</h1>
+
+<% form_for(@tape_move) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tape_id %><br />
+    <%= f.text_field :tape_id %>
+  </p>
+  <p>
+    <%= f.label :destination %><br />
+    <%= f.text_field :destination %>
+  </p>
+  <p>
+    <%= f.label :out %><br />
+    <%= f.date_select :out %>
+  </p>
+  <p>
+    <%= f.label :return %><br />
+    <%= f.date_select :return %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tape_move %> |
+<%= link_to 'Back', tape_moves_path %>

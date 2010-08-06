@@ -1,0 +1,21 @@
+<h1>Listing tapes</h1>
+
+<table class="list-table">
+  <tr>
+    <th>Label</th>
+    <th />
+  </tr>
+
+<% @tapes.each do |tape| %>
+  <tr>
+    <td><%=h tape.label %></td>
+    <td class="list-actions"><%= link_to 'Show', tape %><br />
+    <%= link_to 'Edit', edit_tape_path(tape) %><br />
+    <%= link_to 'Destroy', tape, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tape', new_tape_path %>

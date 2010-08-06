@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tape_id: 1
+  destination: MyString
+  out: 2010-08-05
+  return: 2010-08-05
+  notes: MyText
+
+two:
+  tape_id: 1
+  destination: MyString
+  out: 2010-08-05
+  return: 2010-08-05
+  notes: MyText
