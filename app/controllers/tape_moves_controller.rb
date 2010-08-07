@@ -28,7 +28,9 @@ class TapeMovesController < ApplicationController
   # GET /tape_moves/new.xml
   def new
     @tape_move = TapeMove.new
-
+    logger.debug("hello")
+    logger.debug(params.to_yaml)
+    @tape = Tape.find(params[:tape.id])
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @tape_move }

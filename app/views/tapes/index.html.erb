@@ -9,9 +9,11 @@
 <% @tapes.each do |tape| %>
   <tr>
     <td><%=h tape.label %></td>
-    <td class="list-actions"><%= link_to 'Show', tape %><br />
-    <%= link_to 'Edit', edit_tape_path(tape) %><br />
-    <%= link_to 'Destroy', tape, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="list-actions"><%= link_to 'Show', tape %>
+    <%= link_to 'Edit', edit_tape_path(tape) %>
+    <%= link_to 'Destroy', tape, :confirm => 'Are you sure?', :method => :delete %><br />
+    <%= link_to 'Add Move', new_tape_tape_move_url(tape.id) %>
+  </td>
   </tr>
 <% end %>
 </table>
