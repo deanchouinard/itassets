@@ -5,11 +5,11 @@
 
   <p>
     <%= f.label :tape_id %><br />
-    <%= f.text_field :tape_id %>
+    <%= f.select(:tape_id, @tape_list) %>
   </p>
   <p>
     <%= f.label :destination %><br />
-    <%= f.text_field :destination %>
+    <%= f.select(:destination, @tape_dest_list) %>
   </p>
   <p>
     <%= f.label :out %><br />
@@ -17,7 +17,7 @@
   </p>
   <p>
     <%= f.label :return %><br />
-    <%= f.date_select :return %>
+    <%= f.date_select :return, :include_blank => true %>
   </p>
   <p>
     <%= f.label :notes %><br />

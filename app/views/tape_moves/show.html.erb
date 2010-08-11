@@ -1,28 +1,33 @@
-<p>
-  <b>Tape:</b>
-  <%=h @tape_move.tape_id %>
-</p>
+<table class="show-table">
+  <colgroup>
+    	<col class="oce-first" />
+  </colgroup>
+  
+  <tr>
+    <td class="show-table-label">Tape</td>
+    <td><%=h @tape_move.tape.label %> </td>
+  </tr>
 
-<p>
-  <b>Destination:</b>
-  <%=h @tape_move.destination %>
-</p>
+  <tr>
+    <td class="show-table-label">Destination</td>
+    <td><%=h @tape_move.destination %> </td>
+  </tr>
 
-<p>
-  <b>Out:</b>
-  <%=h @tape_move.out %>
-</p>
+  <tr>
+    <td class="show-table-label">Out</td>
+    <td><%=h @tape_move.out %> </td>
+  </tr>
 
-<p>
-  <b>Return:</b>
-  <%=h @tape_move.return %>
-</p>
+  <tr>
+    <td class="show-table-label">Return</td>
+    <td><%=h @tape_move.return %> </td>
+  </tr>
 
-<p>
-  <b>Notes:</b>
-  <%=h @tape_move.notes %>
-</p>
-
+  <tr>
+    <td class="show-table-label">Notes</td>
+    <td><%=h @tape_move.notes %> </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_tape_move_path(@tape_move) %> |
 <%= link_to 'Back', tape_moves_path %>

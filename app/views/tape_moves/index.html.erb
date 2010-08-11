@@ -1,17 +1,18 @@
 <h1>Listing tape_moves</h1>
 
-<table>
+<table class="list-table">
   <tr>
     <th>Tape</th>
     <th>Destination</th>
     <th>Out</th>
     <th>Return</th>
     <th>Notes</th>
+    <th />
   </tr>
 
 <% @tape_moves.each do |tape_move| %>
   <tr>
-    <td><%=h tape_move.tape_id %></td>
+    <td><%=h tape_move.tape.label %></td>
     <td><%=h tape_move.destination %></td>
     <td><%=h tape_move.out %></td>
     <td><%=h tape_move.return %></td>

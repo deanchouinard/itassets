@@ -34,10 +34,10 @@ X add company/office link to users to designate what company user works at
 
 add office link in computer allocaton to indicate where computer is located
 
-update dev data for above changes
+X update seed data for above changes
 
 make add views similar to user add view
 
-add tapes and tape transactions to system
+X add tapes and tape transactions to system
 
 baloon help
