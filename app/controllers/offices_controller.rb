@@ -101,8 +101,8 @@ class OfficesController < ApplicationController
     # @site_list = @sites.map {|si| [si.code, si.id]}
 		# logger.debug @site_list.to_yaml
     
-		@site_list = Site.all.map {|si| [si.code, si.id]}
-		@company_list = Company.all.map {|co| [co.description, co.id]}
+		@site_list = Site.load_sel_list
+		@company_list = Company.load_sel_list
 	end
 	
 end

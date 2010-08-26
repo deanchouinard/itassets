@@ -8,7 +8,7 @@ class Company < ActiveRecord::Base
 	validates_uniqueness_of :code
 	
   def self.load_sel_list
-    Company.find(:all).map {|co| ["#{co.code} #{co.description}", co.id]}
+    Company.find(:all).map {|co| ["#{co.code} | #{co.description}", co.id]}
   end
 
 end

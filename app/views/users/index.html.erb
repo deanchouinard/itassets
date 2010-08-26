@@ -1,21 +1,21 @@
 <h1>Listing users</h1>
 <table class="list-table">
   <tr>
-    <th>Office Name</th>
     <th>Login Name</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Email</th>
+    <th>Office Name</th>
     <th>Admin?</th>
     <th/>
   </tr>
 	<% @users.each do |user| %>
 		<tr>
-      <td><%=h Office.display_str( user.office_id ) %> </td.>
 			<td><%=h user.name %> </td>
 			<td><%=h user.first_name %> </td>
 			<td><%=h user.last_name %> </td>
 			<td><%=h user.email %> </td>
+      <td><%=h Office.display_str( user.office_id ) %> </td.>
 			<td><%=h user.admin.to_s %> </td>
 			<td class="list-actions">
 				<%= link_to 'Show', user %><br />

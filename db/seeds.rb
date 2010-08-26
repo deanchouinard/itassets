@@ -108,5 +108,5 @@
     
     TapeMove.delete_all
     tape = Tape.find(:first)
-    TapeMove.create(:tape_id => tape.id, :destination => "IM Boston"), :out => Time.now,
+    TapeMove.create(:tape_id => tape.id, :destination => "IM Boston", :out => Time.now,
                     :notes => "First move")
