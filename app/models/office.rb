@@ -10,6 +10,6 @@ class Office < ActiveRecord::Base
 
   def self.display_str(id)
     of = self.find(id)
-    "#{of.site.code} #{of.company.description}"
+    "#{of.description} #{of.company.description}"
   end
 end

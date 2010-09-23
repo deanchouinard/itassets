@@ -4,29 +4,29 @@
   </colgroup>  
   
   <tr>
-    <td>Office Name</td>
+    <td class="show-table-label">Office Name</td>
     <td><%=h @office_display_str %> </td.>
   </tr>
 
   <tr>
-    <td>Login Name</td>
+    <td class="show-table-label">Login Name</td>
     <td><%=h @user.name %> </td.>
   </tr>
   
   <tr>
-    <td>First Name</td>
+    <td class="show-table-label">First Name</td>
     <td><%=h @user.first_name %> </td>
   </tr>
   <tr>
-    <td>Last Name</td>
+    <td class="show-table-label">Last Name</td>
     <td><%=h @user.last_name %> </td>
   </tr>
   <tr>
-    <td>Email:</td>
+    <td class="show-table-label">Email:</td>
     <td><%=h @user.email %> </td>
   </tr>
   <tr>
-    <td>Admin?</td>
+    <td class="show-table-label">Admin?</td>
     <td><%=h @user.admin.to_s %> </td>
   </tr>
 </table>
