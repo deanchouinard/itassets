@@ -44,7 +44,7 @@ class ComputersController < ApplicationController
   # POST /computers.xml
   def create
     @computer = Computer.new(params[:computer])
-		logger.debug params[:computer].to_yaml
+		# logger.debug params[:computer].to_yaml
 		
     respond_to do |format|
       if @computer.save

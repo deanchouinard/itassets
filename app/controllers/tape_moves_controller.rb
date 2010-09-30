@@ -28,8 +28,8 @@ class TapeMovesController < ApplicationController
   # GET /tape_moves/new.xml
   def new
     @tape_move = TapeMove.new
-    logger.debug("hello")
-    logger.debug(params.to_yaml)
+    # logger.debug("hello")
+    # logger.debug(params.to_yaml)
     @tape = Tape.find(params[:tape_id])
     @tape_move.tape_id = @tape.id
     

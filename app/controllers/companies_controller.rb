@@ -44,7 +44,7 @@ class CompaniesController < ApplicationController
   # POST /companies.xml
   def create
     @company = Company.new(params[:company])
-    logger.debug @company.code
+    # logger.debug @company.code
     @company.code.upcase!
     
     respond_to do |format|
@@ -64,9 +64,9 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find(params[:id])
     
-		logger.debug "Hello"
-    logger.debug params.to_yaml
-    logger.debug "Hello"
+		# logger.debug "Hello"
+    # logger.debug params.to_yaml
+    # logger.debug "Hello"
     # logger.debug params["company"]["code"].upcase!
     # params["company"["code"]].to_upper!
     code_to_upper(params)
