@@ -5,6 +5,7 @@
     <th>Company</th>
     <th>Manufacturer</th>
     <th>Model</th>
+    <th>Manf. Type/ID</th>
     <th>Description</th>
     <th>Type</th>
     <th>Serial number</th>
@@ -15,15 +16,15 @@
     <th>Os</th>
     <th>Service tag</th>
     <th>Purchase date</th>
-    <th>Comments</th>
     <th/>
   </tr>
 
 <% @computers.each do |computer| %>
   <tr>
-    <td><%=h computer.company.description %></td>
+    <td><%=h computer.company.code %></td>
     <td><%=h computer.manufacturer %></td>
     <td><%=h computer.model %></td>
+    <td><%=h computer.manf_type %></td>
     <td><%=h computer.description %></td>
     <td><%=h computer.form_type %></td>
     <td><%=h computer.serial_number %></td>
@@ -34,7 +35,6 @@
     <td><%=h computer.os %></td>
     <td><%=h computer.service_tag %></td>
     <td><%=h computer.purchase_date %></td>
-    <td><%=h computer.comments %></td>
     <td class="list-actions">
       <%= link_to 'Show', computer %><br/>
       <%= link_to 'Edit', edit_computer_path(computer) %><br/>

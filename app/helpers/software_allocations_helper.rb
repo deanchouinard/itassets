@@ -1,0 +1,2 @@
+module SoftwareAllocationsHelper
+end

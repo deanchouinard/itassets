@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100811020412) do
+ActiveRecord::Schema.define(:version => 20101209190403) do
 
   create_table "companies", :force => true do |t|
     t.string   "code"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20100811020412) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "company_id",                  :null => false
+    t.string   "manf_type",     :limit => 20
   end
 
   create_table "lookups", :force => true do |t|
@@ -88,14 +89,20 @@ ActiveRecord::Schema.define(:version => 20100811020412) do
     t.datetime "updated_at"
   end
 
-  create_table "softwares", :force => true do |t|
-    t.string   "publisher",     :limit => 80, :null => false
-    t.string   "title_version", :limit => 80, :null => false
+  create_table "software_allocations", :force => true do |t|
+    t.integer  "user_id"
     t.date     "purchase_date"
     t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "company_id",                  :null => false
+    t.integer  "software_id"
+  end
+
+  create_table "softwares", :force => true do |t|
+    t.string   "publisher",     :limit => 80, :null => false
+    t.string   "title_version", :limit => 80, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tape_moves", :force => true do |t|

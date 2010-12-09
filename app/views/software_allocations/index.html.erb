@@ -1,0 +1,28 @@
+<h1>Listing software_allocations</h1>
+
+<table class="list-table">
+  <tr>
+    <th>Software</th>
+    <th>User</th>
+    <th>Purchase date</th>
+    <th>Comments</th>
+    <th />
+  </tr>
+
+<% @software_allocations.each do |software_allocation| %>
+  <tr>
+    <td><%=h software_allocation.software.title_version %></td>
+    <td><%=h User.display_str(software_allocation.user_id) %></td>
+    <td><%=h software_allocation.purchase_date %></td>
+    <td><%=h software_allocation.comments %></td>
+    <td class="list-actions">
+      <%= link_to 'Show', software_allocation %><br/>
+      <%= link_to 'Edit', edit_software_allocation_path(software_allocation) %><br/>
+      <%= link_to 'Destroy', software_allocation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New software_allocation', new_software_allocation_path %>

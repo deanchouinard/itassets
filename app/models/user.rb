@@ -3,6 +3,8 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
 	has_many :computer_allocations
 	has_many :computers, :through => :computer_allocations
+	has_many :software_allocations
+	has_many :softwares, :through => :software_allocations
 	belongs_to :office
 	
 	validates_presence_of			:name

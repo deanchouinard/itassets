@@ -7,19 +7,22 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 
     Site.delete_all
-    Site.create(:code => 'DEFAULT', :address1 => '2 Park Place',
+    Site.create(:code => 'BOS', :address1 => '2 State Street',
                 :address2 => 'Suite 204',
                 :city => 'Boston', :state => 'MA', :zipcode => '02777')
+    Site.create(:code => 'NY', :address1 => '2 Park Place',
+                :address2 => 'Suite 204',
+                :city => 'New York', :state => 'NY', :zipcode => '07213')
 
   	Company.delete_all
    	Company.create(:code => 'CM', :description => 'Cat Mountain')
   	Company.create(:code => 'MF', :description => 'Mindfire')
 
     company = Company.find(:first, :conditions => "code = 'CM'")
-    site = Site.find(:first, :conditions => "code ='DEFAULT'")
+    site = Site.find(:first, :conditions => "code ='BOS'")
     
     Office.delete_all
-    Office.create(:code => 'MAIN', :description => 'Main Office',
+    Office.create(:code => 'CM-BOS', :description => 'Cat Mountain - Boston',
                   :company_id => company.id, :site_id => site.id)
 
     office = Office.find(:first)
@@ -68,7 +71,7 @@
 
     company = Company.find(:first)
     Computer.delete_all
-    Computer.create(:manufacturer => 'Lenovo', :model => 'Thinkpad T61',
+    Computer.create(:manufacturer => 'Lenovo', :model => 'Thinkpad T61', :manf_type => '43147NU',
                     :description => 'Standard laptop setup',
                     :form_type => 'Laptop', :serial_number => 'WP876FFDDS3D4',
                     :cpu => '2.4 GHz', :ram => '2GB', :hdd => '250GB',
@@ -85,8 +88,12 @@
                               :comments => 'First allocation', :computer_name => "BOS-ACC-01") 
 
     Software.delete_all
-    Software.create(:publisher => 'Microsoft', :title_version => 'Office 2003 Standard',
-                    :purchase_date => Time.now, :company_id => company.id)
+    Software.create(:publisher => 'Microsoft', :title_version => 'Office 2003 Standard')
+    software = Software.find(:first)
+    
+    SoftwareAllocation.delete_all
+    SoftwareAllocation.create( :software_id => software.id, :user_id => user.id,
+                    :purchase_date => Time.now, :comments => 'No comments')
 
     computer_allocation = ComputerAllocation.find(:first)
     

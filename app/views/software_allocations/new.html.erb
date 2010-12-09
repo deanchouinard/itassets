@@ -1,0 +1,27 @@
+<h1>New software_allocation</h1>
+
+<% form_for(@software_allocation) do |f| %>
+  <%= f.error_messages %>
+
+   <p>
+    <%= f.label :software_id, 'Software' %><br />
+    <%= f.select(:software_id, @software_list) %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.select(:user_id, @user_list) %>
+  </p>
+  <p>
+    <%= f.label :purchase_date %><br />
+    <%= f.date_select :purchase_date %>
+  </p>
+  <p>
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', software_allocations_path %>

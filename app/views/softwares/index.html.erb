@@ -1,22 +1,16 @@
-<h1>Listing softwares</h1>
+<h1>Listing software</h1>
 
 <table class="list-table">
   <tr>
-    <th>Company</th>
     <th>Publisher</th>
     <th>Title version</th>
-    <th>Purchase date</th>
-    <th>Comments</th>
     <th/>
   </tr>
 
 <% @softwares.each do |software| %>
   <tr>
-    <td><%=h software.company.description %></td>
     <td><%=h software.publisher %></td>
     <td><%=h software.title_version %></td>
-    <td><%=h software.purchase_date %></td>
-    <td><%=h software.comments %></td>
     <td class="list-actions">
       <%= link_to 'Show', software %><br/>
       <%= link_to 'Edit', edit_software_path(software) %><br/>

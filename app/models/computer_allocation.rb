@@ -8,7 +8,7 @@ class ComputerAllocation < ActiveRecord::Base
 
   def self.display_str(id)
     ca = self.find(id)
-    "#{ca.computer.manufacturer} #{ca.computer.form_type} #{ca.computer.os}"
+    "#{ca.computer.manufacturer} #{ca.computer.model} #{ca.computer.serial_number}"
   end
   
 end

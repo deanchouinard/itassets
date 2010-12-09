@@ -4,24 +4,12 @@
   <%= f.error_messages %>
  
   <p>
-    <%= f.label :company_id %><br />
-    <%= f.select(:company_id, @company_list) %>
-  </p>
-  <p>
     <%= f.label :publisher %><br />
     <%= f.select(:publisher, @soft_pub_list) %>
   </p>
   <p>
     <%= f.label :title_version %><br />
     <%= f.text_field :title_version %>
-  </p>
-  <p>
-    <%= f.label :purchase_date %><br />
-    <%= f.date_select :purchase_date %>
-  </p>
-  <p>
-    <%= f.label :comments %><br />
-    <%= f.text_area :comments %>
   </p>
   <p>
     <%= f.submit 'Update' %>

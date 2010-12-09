@@ -3,10 +3,6 @@
     	<col class="oce-first" />
   </colgroup>
   <tr>
-    <td class="show-table-label">Company</td>
-    <td><%=h @software.company.description %> </td>
-  </tr>
-  <tr>
     <td class="show-table-label">Publisher</td>
     <td><%=h @software.publisher %> </td>
   </tr>
@@ -16,15 +12,6 @@
     <td><%=h @software.title_version %> </td>
   </tr>
 
-  <tr>
-    <td class="show-table-label">Purchase date</td>
-    <td><%=h @software.purchase_date %> </td>
-  </tr>
-
-  <tr>
-    <td class="show-table-label">Comments</td>
-    <td><%=h @software.comments %> </td>
-  </tr>
 </table>
 
 <%= link_to 'Edit', edit_software_path(@software) %> |

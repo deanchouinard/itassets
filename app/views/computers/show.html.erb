@@ -15,6 +15,11 @@
     <td class="show-table-label">Model</td>
     <td><%=h @computer.model %> </td>
   </tr>
+  
+  <tr>
+    <td class="show-table-label">Manf. Type/ID</td>
+    <td><%=h @computer.manf_type %> </td>
+  </tr>
 
   <tr>
     <td class="show-table-label">Description</td>
@@ -68,7 +73,7 @@
 
   <tr>
     <td class="show-table-label">Comments</td>
-    <td><%=h @computer.comments %> </td>
+    <td><%=h(@computer.comments).gsub(/\n/, '<br/>') %> </td>
   </tr>
 </table>  
 

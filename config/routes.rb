@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :software_allocations
+
   map.resources :tape_moves
 
   map.resources :tapes, :has_many => :tape_moves
