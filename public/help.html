@@ -3,21 +3,22 @@
 <html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <title>IT Assets</title>
+  <title>IT Assets Help</title>
 </head>
 
 <body>
+<h2>IT Assets Help</h2>
 
-<h3>Site</h3>
+<h3 id="site-help">Site</h3>
 <p>A Site is a physical location -- an address.
   </p>
 
-<h3>Company</h3>
+<h3 id="company-help">Company</h3>
 <p>
 A Company is the name of a company.
 </p>
 
-<h3>Office</h3>
+<h3 id="office-help">Office</h3>
 <p>
 An Office is the combination of a Site and Company. This is the mechanism
 that allows you to configure a company at multiple sites and/or multiple companies
@@ -28,7 +29,7 @@ at one site.
   ownership of assets.
   </p>
 
-<h3>User</h3>
+<h3 id="user-help">User</h3>
 User defines the users of the system. They can be:
 <ul>
   <li>Administrators
@@ -40,7 +41,7 @@ User defines the users of the system. They can be:
   it to a company and location.
   </p>
   
-<h3>Lookup</h3>
+<h3 id="lookup-help">Lookup</h3>
 <p>
 The Lookup facility enables you to define choices for many of the drop down lists in the system.
 </p>
@@ -61,7 +62,7 @@ The Lookup facility enables you to define choices for many of the drop down list
   </p>
   
   
-<h3>Computer</h3>
+<h3 id="computer-help">Computer</h3>
 <p>
 Computer defines the physical computer hardware in your system. They are usually servers,
 desktops, or laptops; but, can be expanded to include switches, routers, or any other piece
@@ -75,47 +76,72 @@ of hardware you want to track by using the Lookup facility.
 </p>
 
 
-<h3>Computer Allocation</h3>
+<h3 id="computer-allocation-help">Computer Allocation</h3>
 <p>
 Computer allocations allow you to assign hardware to a specific user. Through the user
 you know the location of the hardware.
 </p>
 
-<h3>Software</h3>
+<h3 id="software-help">Software</h3>
 <p>
 Software defines software products.
 </p>
 
-<h3>Software Allocations</h3>
+<h3 id="software-allocation-help">Software Allocations</h3>
 <p>
   Software Allocations allow you to assign software to specific users.
   </p>
   
 
-<h3 name="ticket-help">Ticket</h3>
+<h3 id="ticket-help">Ticket</h3>
+<p>
+A Ticket is a technical support help request from a user.
+</p>
 
-======
-Issue or trouble report from a User.
+<h3 id="ticket-action-help">Ticket Action</h3>
+<p>
+A Ticket Action records events or actions taken on behalf of a ticket.
+</p>
 
-Ticket Action
-=============
-Events or actions taken on a ticket.
-
-=====
-Setup
-=====
-The default user is Alex and the password is grey.
-* Define your Lookup values. Lookup values are used to populate many
+<h3 id="tape-help">Tape</h3>
+<p>
+  A Tape is a physical backup tape.
+  </p>
+  
+<h3 id="tape-move-help">Tape Move</h3>
+<p>
+  A Tape Move records the movement of tapes to and from storage sites so physical tapes
+  can be located.
+  </p>
+  
+<h2 id="system-setup-help">Setup</h2>
+<p>
+  The system comes loaded with seed data so you can see what a typical database
+  looks like and proceed to enter your own data from there. Eventually, you can
+  delete the seed data.
+</p>
+<p>
+  However, if you need to set a system up from scratch the following procedure
+  documents that process.
+</p>
+<ol>
+  <li>The default user is Alex and the password is grey.
+  <li>Define your Lookup values. Lookup values are used to populate many
 drop down lists on the forms. They system comes with some already defined
 so you can easily see how to create new values. You can quickly add these
 as you need them.
-* Define a Site, which is a physical address. Ex., 2 Park Place, New York,
+  <li>Define a Site, which is a physical address. Ex., 2 Park Place, New York,
 NY 55500.
-* Define a Company.
-* Make an Office by matching up a Site and Company. You can create multiple
+  <li>Define a Company.
+  <li>Make an Office by matching up a Site and Company. You can create multiple
 combinations of Sites and Companies to suite your organizational circumstances.
-* Create a User for yourself and make it an Administrator. You can then
+  <li>Create a User for yourself and make it an Administrator. You can then
 remove the Alex/grey User.
-* Define your Computers
-* Create Users for all your users.
-* Create computer allocations by combining Users and Computers
+  <li>Define your Computers
+  <li>Create Users for all your users.
+  <li>Create computer allocations by combining Users and Computers
+
+</ol>
+
+</body>
+</html>

@@ -6,6 +6,13 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>IT Assets</title>
   <%= stylesheet_link_tag 'itassets', :media => "all" %>
+  
+  <script type="text/javascript">
+    function showHelp() {
+      window.open("/help.html", 'Help', 'height=400,width=500,status=no,menubar=no,location=no,toolbar=no,scrollbars=1');
+    }
+  </script>
+  
 </head>
 <body id="store">
   <div id="banner">
@@ -13,10 +20,11 @@
   </div>
   <div id="columns">
     <div id="side">
-      <%= link_to 'Home', :controller => 'admin', :action => 'index' %> <br />
-      <a href="http://www....">FAQ</a><br />
-      <a href="http://www....">News</a><br />
-  
+      <a href="/index.html">Home</a><br />
+      <%= link_to 'Admin', :controller => 'admin', :action => 'index' %> <br />
+      <%= link_to_function "Help", "showHelp()" %> <br />
+      <a href="/news.html">News</a><br />
+
 			<% if session[:user_id] %>
 				<br />
 				<%= link_to 'Sites', :controller => 'sites' %> <br />
@@ -45,4 +53,8 @@
     </div>
   </div>
 </body>
+
+
+
+
 </html>
