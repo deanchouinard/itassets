@@ -11,7 +11,7 @@
                 :address2 => 'Suite 204',
                 :city => 'Boston', :state => 'MA', :zipcode => '02777')
     Site.create(:code => 'NY', :address1 => '2 Park Place',
-                :address2 => 'Suite 204',
+                :address2 => 'Suite 405',
                 :city => 'New York', :state => 'NY', :zipcode => '07213')
 
   	Company.delete_all
