@@ -8,8 +8,8 @@
   <%= stylesheet_link_tag 'itassets', :media => "all" %>
   
   <script type="text/javascript">
-    function showHelp() {
-      window.open("/help.html", 'Help', 'height=400,width=500,status=no,menubar=no,location=no,toolbar=no,scrollbars=1');
+    function showHelp( pageTitle ) {
+      window.open("/help.html" + "#" + pageTitle + "-help", 'Help', 'height=400,width=500,status=0,menubar=0,location=0,toolbar=no,scrollbars=1');
     }
   </script>
   
@@ -22,7 +22,7 @@
     <div id="side">
       <a href="/index.html">Home</a><br />
       <%= link_to 'Admin', :controller => 'admin', :action => 'index' %> <br />
-      <%= link_to_function "Help", "showHelp()" %> <br />
+      <%= link_to_function "Help", "showHelp( 'tapes' )" %> <br />
       <a href="/news.html">News</a><br />
 
 			<% if session[:user_id] %>

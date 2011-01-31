@@ -5,7 +5,8 @@
 
   <p>
     <%= f.label :lu_key %><br />
-    <%= f.text_field :lu_key %>
+    <% @lu_key_list << "Add New Key"%>
+    <%= f.select(:lu_key, @lu_key_list) %>
   </p>
   <p>
     <%= f.label :lu_value %><br />

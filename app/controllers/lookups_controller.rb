@@ -1,5 +1,7 @@
 class LookupsController < ApplicationController
 	before_filter :set_title
+	before_filter :load_lookups, :only => [:new, :edit]
+	
   # GET /lookups
   # GET /lookups.xml
   def index
@@ -87,4 +89,9 @@ class LookupsController < ApplicationController
 	def set_title
 		@page_title = "Lookups"
 	end
+	
+	def load_lookups
+	  @lu_key_list = Lookup.get_lu_keys()
+	end
+	  
 end
