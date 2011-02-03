@@ -1,12 +1,14 @@
+<%= javascript_include_tag "sel_controller.js" %>
+
 <h1>New lookup</h1>
 
-<% form_for(@lookup) do |f| %>
+<% form_for(@lookup, :html => {:name => "new_lookup"}) do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :lu_key %><br />
     <% @lu_key_list << "Add New Key"%>
-    <%= f.select(:lu_key, @lu_key_list) %>
+    <%= f.select(:lu_key, @lu_key_list, {}, {:onChange => "sel_controller()"}) %>
   </p>
   <p>
     <%= f.label :lu_value %><br />
