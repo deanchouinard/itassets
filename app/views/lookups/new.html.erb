@@ -6,16 +6,20 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :lu_key %><br />
-    <% @lu_key_list << "Add New Key"%>
+    <%= f.label :lu_key, "Key" %><br />
     <%= f.select(:lu_key, @lu_key_list, {}, {:onChange => "sel_controller()"}) %>
   </p>
   <p>
-    <%= f.label :lu_value %><br />
+    <%= label_tag "New Key" %><br />
+    <%= text_field_tag( :new_key, params[:new_key], :size => 20) %>
+  </p>
+  
+  <p>
+    <%= f.label :lu_value, "Value" %><br />
     <%= f.text_field :lu_value %>
   </p>
   <p>
-    <%= f.label :lu_active %><br />
+    <%= f.label :lu_active, "Active" %><br />
     <%= f.check_box :lu_active %>
   </p>
   <p>

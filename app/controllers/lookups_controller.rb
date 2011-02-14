@@ -29,6 +29,8 @@ class LookupsController < ApplicationController
   def new
     @lookup = Lookup.new
 
+    @new_key = " "
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @lookup }
@@ -44,6 +46,11 @@ class LookupsController < ApplicationController
   # POST /lookups.xml
   def create
     @lookup = Lookup.new(params[:lookup])
+    
+    if !params[:new_key].blank?
+#      params[:lu_key] = params[:new_key].upcase
+      @lookup.lu_key = params[:new_key].upcase
+    end
 
     respond_to do |format|
       if @lookup.save
@@ -92,6 +99,7 @@ class LookupsController < ApplicationController
 	
 	def load_lookups
 	  @lu_key_list = Lookup.get_lu_keys()
+	  @lu_key_list << "Add New Key"
 	end
 	  
 end
