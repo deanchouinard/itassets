@@ -39,8 +39,8 @@ test:
   encoding: unicode
   database: itassets_test
   pool: 5
-  username: itassets
-  password:
+  username: dean
+  password: dean
 
 production:
   adapter: postgresql

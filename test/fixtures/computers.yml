@@ -4,7 +4,7 @@ one:
   manufacturer: MyString
   model: MyString
   description: MyString
-  type: MyString
+  form_type: MyString
   serial_number: MyString
   cpu: MyString
   ram: MyString
@@ -14,12 +14,13 @@ one:
   service_tag: MyString
   purchase_date: 2010-03-25
   comments: MyText
+  company_id: 1
 
 two:
   manufacturer: MyString
   model: MyString
   description: MyString
-  type: MyString
+  form_type: MyString
   serial_number: MyString
   cpu: MyString
   ram: MyString
@@ -29,3 +30,4 @@ two:
   service_tag: MyString
   purchase_date: 2010-03-25
   comments: MyText
+  company_id: 2

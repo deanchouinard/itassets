@@ -4,8 +4,10 @@ one:
   name: MyString
   hashed_password: MyString
   salt: MyString
+  office_id: 1
 
 two:
   name: MyString
   hashed_password: MyString
   salt: MyString
+  office_id: 2

@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class LookupTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
+  test "invalid with empty attributes" do
+    lookup = Lookup.new
+    assert !lookup.valid?
+    assert lookup.errors.invalid?(:lu_key)
+    assert lookup.errors.invalid?(:lu_value)
+  end
+  
   test "the truth" do
     assert true
   end
