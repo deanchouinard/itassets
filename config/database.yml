@@ -13,8 +13,8 @@ development:
   encoding: unicode
   database: itassets_development
   pool: 5
-  username: dean
-  password: dean
+  username: itassets
+  password: itassets
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -39,8 +39,8 @@ test:
   encoding: unicode
   database: itassets_test
   pool: 5
-  username: dean
-  password: dean
+  username: itassets
+  password: itassets
 
 production:
   adapter: postgresql
