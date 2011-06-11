@@ -11,11 +11,13 @@ gem 'pg'
 
 group :development do
   gem 'rspec-rails'
+  gem 'annotate-models'
 end
 
 group :test do
   gem 'rspec'
   gem 'webrat'
+  gem 'spork', '0.8.5'
 end
 
 # Use unicorn as the web server

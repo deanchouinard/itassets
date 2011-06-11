@@ -1,3 +1,16 @@
+# == Schema Information
+# Schema version: 20101209190403
+#
+# Table name: lookups
+#
+#  id         :integer         not null, primary key
+#  lu_key     :string(80)      not null
+#  lu_value   :string(80)      not null
+#  lu_active  :boolean         default(TRUE)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Lookup < ActiveRecord::Base
   validates_presence_of :lu_key, :lu_value
   

@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20101209190403
+#
+# Table name: offices
+#
+#  id          :integer         not null, primary key
+#  code        :string(16)
+#  description :string(255)
+#  company_id  :integer
+#  site_id     :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 class Office < ActiveRecord::Base
 	belongs_to :company
 	belongs_to :site

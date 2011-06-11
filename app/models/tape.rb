@@ -1,3 +1,14 @@
+# == Schema Information
+# Schema version: 20101209190403
+#
+# Table name: tapes
+#
+#  id         :integer         not null, primary key
+#  label      :string(20)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Tape < ActiveRecord::Base
   has_many :tape_moves
   

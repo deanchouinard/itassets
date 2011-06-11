@@ -1,3 +1,15 @@
+# == Schema Information
+# Schema version: 20101209190403
+#
+# Table name: companies
+#
+#  id          :integer         not null, primary key
+#  code        :string(255)
+#  description :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 class Company < ActiveRecord::Base
 	has_many :offices
 	has_many :sites, :through => :offices

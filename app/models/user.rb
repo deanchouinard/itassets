@@ -1,3 +1,21 @@
+# == Schema Information
+# Schema version: 20101209190403
+#
+# Table name: users
+#
+#  id              :integer         not null, primary key
+#  name            :string(255)
+#  hashed_password :string(255)
+#  salt            :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#  admin           :boolean
+#  first_name      :string(40)
+#  last_name       :string(40)
+#  email           :string(40)
+#  office_id       :integer         not null
+#
+
 require 'digest/sha1'
 # a comment
 class User < ActiveRecord::Base
@@ -37,7 +55,9 @@ class User < ActiveRecord::Base
 		user
 	end
 	
-	def after_destroy
+	# 6/10/11 change to self because of warnings that Base#after_destroy has
+	# been depreciated during spec tests
+	def self.after_destroy
 		if User.count.zero?
 			raise "Can't delete last user"
 		end

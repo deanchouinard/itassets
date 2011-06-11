@@ -28,6 +28,7 @@ GEM
       activemodel (= 3.0.7)
       activesupport (= 3.0.7)
     activesupport (3.0.7)
+    annotate-models (1.0.4)
     arel (2.0.10)
     builder (2.1.2)
     diff-lcs (1.1.2)
@@ -75,6 +76,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
+    spork (0.8.5)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -88,8 +90,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate-models
   pg
   rails (= 3.0.7)
   rspec
   rspec-rails
+  spork (= 0.8.5)
   webrat
