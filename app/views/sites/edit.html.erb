@@ -1,7 +1,7 @@
 <h1>Editing site</h1>
 
 <% form_for(@site) do |f| %>
-  <%= f.error_messages %>
+  <%= render 'shared/error_messages', :object => f.object %>
 
   <p>
     <%= f.label :code %><br />

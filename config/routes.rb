@@ -1,5 +1,11 @@
 Itassets::Application.routes.draw do
 
+  get "pages/home"
+
+  get "pages/contact"
+  get "pages/about"
+  get "pages/help"
+
   match 'admin/login',  :to => 'admin#login'
   match '/admin',   :to => 'admin#index'
   match '/admin/logout',  :to => 'admin#logout'

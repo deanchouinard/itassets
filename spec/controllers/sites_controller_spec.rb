@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe SitesController do
+  render_views
   
   before(:each) do
     @site = Factory(:site)

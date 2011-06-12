@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   
-	before_filter :authorize, :except => :login
+#	before_filter :authorize, :except => :login
   helper :all # include all helpers, all the time
 #    protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
