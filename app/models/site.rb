@@ -20,7 +20,11 @@ class Site < ActiveRecord::Base
 	
 	attr_accessible :code, :address1, :address2, :city, :state, :zipcode
 	
-	validates :code, :address1, :city, :state, :zipcode, :presence => true
+	validates :code, :presence => true,
+	                 :length => { :maximum => 8 },
+	                 :uniqueness => true
+	                 
+	validates :address1, :city, :state, :zipcode, :presence => true
 	
 	def self.load_sel_list
 		self.find(:all).map { |si| ["#{si.code} | #{si.address1}, #{si.city}, #{si.state}", si.id] }
