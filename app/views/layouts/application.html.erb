@@ -1,60 +1,20 @@
 <!DOCTYPE html>
 <head>
-  <title>IT Assets | <%=  @title %></title>
+  <title> <%= title %></title>
   <%= csrf_meta_tag %>
-  
-  <%= stylesheet_link_tag 'itassets', :media => "all" %>
-  
-  <script type="text/javascript">
-    function showHelp( pageTitle ) {
-      window.open("/help.html" + "#" + pageTitle + "-help", 'Help', 'height=400,width=500,status=0,menubar=0,location=0,toolbar=no,scrollbars=1');
-    }
-  </script>
+  <%= render 'layouts/stylesheets' %>
   
 </head>
-<body id="store">
-  <div id="banner">
-    <%= @page_title || "IT Assets" %>
-  </div>
-  <div id="columns">
-    <div id="side">
-      <a href="/index.html">Home</a><br />
-      <%= link_to 'Admin', :controller => 'admin', :action => 'index' %> <br />
-      <%= link_to_function "Help", "showHelp( 'tapes' )" %> <br />
-      <a href="/news.html">News</a><br />
-
-			<% if session[:user_id] %>
-				<br />
-				<%= link_to 'Sites', :controller => 'sites' %> <br />
-				<%= link_to 'Companies', :controller => 'companies' %> <br />
-				<%= link_to 'Offices', :controller => 'offices' %> <br />
-				<%= link_to 'Users', :controller => 'users' %> <br />
-				<%= link_to 'Computers', :controller => 'computers' %> <br />
-				<%= link_to 'Lookups', :controller => 'lookups' %> <br />
-				<%= link_to 'Software', :controller => 'softwares' %> <br />
-				<%= link_to 'Software Allocations', :controller => 'software_allocations' %> <br />
-				<%= link_to 'Computer Allocations', :controller => 'computer_allocations' %> <br />
-				<%= link_to 'Tickets', :controller => 'tickets' %> <br />
-				<%= link_to 'Ticket Actions', :controller => 'ticket_actions' %> <br />
-				<%= link_to 'Tapes', :controller => 'tapes' %> <br />
-				<%= link_to 'Tape Moves', :controller => 'tape_moves' %> <br />
-				<br />
-				<%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
-			<% end %>
-		</div>
-    <div id="main">
-			<% if flash[:notice] -%>
-				<div id="notice"><%= flash[:notice] %></div>
-			<% end -%>
-
+<body>
+  <div class="container">
+    <%= render 'layouts/header' %>
+    <section class="round">
+ 
       <%= yield :layout %>
+    </section>
+    <%= render 'layouts/footer' %>
       
-      <%= debug(params)  if Rails.env.development? %>
-    </div>
+    <%= debug(params)  if Rails.env.development? %>
   </div>
 </body>
-
-
-
-
 </html>

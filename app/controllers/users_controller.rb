@@ -1,40 +1,21 @@
 class UsersController < ApplicationController
-	before_filter :set_title
-	before_filter :load_lookups, :only => [:new, :edit]
+#	before_filter :load_lookups, :only => [:new, :edit]
 	
-  # GET /users
-  # GET /users.xml
   def index
 		@users = User.find(:all, :order => :name)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @users }
-    end
   end
 
-  # GET /users/1
-  # GET /users/1.xml
   def show
     @user = User.find(params[:id])
+    @title = @user.name
 
-    @office_display_str = Office.display_str( @user.office_id )
+    #@office_display_str = Office.display_str( @user.office_id )
     
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @user }
-    end
   end
 
-  # GET /users/new
-  # GET /users/new.xml
   def new
+    @title = "Sign up"
     @user = User.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @user }
-    end
   end
 
   # GET /users/1/edit
@@ -42,20 +23,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  # POST /users
-  # POST /users.xml
   def create
     @user = User.new(params[:user])
-
-    respond_to do |format|
-      if @user.save
-        flash[:notice] = "User #{@user.name} was successfully created."
-        format.html { redirect_to(:action => 'index') }
-        format.xml  { render :xml => @user, :status => :created, :location => @user }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-      end
+    if @user.save
+      
+    else
+      @title = "Sign up"
+      render 'new'
     end
   end
 
@@ -92,10 +66,6 @@ class UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
-	
-	def set_title
-		@page_title = "Users"
-	end
 	
 	def load_lookups
     @office_list = Office.load_sel_list

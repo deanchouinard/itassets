@@ -10,6 +10,7 @@ end
 Factory.define :user do |user|
   user.name  "Alex"
   user.id 1
-  user.password "grey"
+  user.password "grey01"
+  user.email "alex@test.com"
   user.office_id 1
 end

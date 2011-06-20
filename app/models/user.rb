@@ -16,8 +16,8 @@
 #  office_id       :integer         not null
 #
 
-require 'digest/sha1'
-# a comment
+require 'digest'
+
 class User < ActiveRecord::Base
 	has_many :computer_allocations
 	has_many :computers, :through => :computer_allocations
@@ -25,34 +25,32 @@ class User < ActiveRecord::Base
 	has_many :softwares, :through => :software_allocations
 	belongs_to :office
 	
-	validates_presence_of			:name
-	validates_uniqueness_of	:name
+	attr_accessor :password
+	attr_accessible :name, :email, :password, :password_confirmation
 	
-	attr_accessor :password_confirmation
-	validates_confirmation_of :password
+	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	
-	validate :password_non_blank
+	validates :email, :presence => true,
+	                  :format => { :with => email_regex },
+	                  :uniqueness => { :case_sensitive => false }
+	                      
+	validates	:name,  :presence => true,
+	                  :uniqueness => true
+	                  
+	validates :password, :presence => true,
+	                      :confirmation => true,
+	                      :length => { :within => 6..40 }
+
+	before_save :encrypt_password
 	
-	def password
-		@password
+	def has_password?(submitted_password)
+	 encrypted_password == encrypt(submitted_password)
 	end
 	
-	def password=(pwd)
-		@password = pwd
-		return if pwd.blank?
-		create_new_salt
-		self.hashed_password = User.encrypted_password(self.password, self.salt)
-	end
-	
-	def self.authenticate(name, password)
-		user = self.find_by_name(name)
-		if user
-			expected_password = encrypted_password(password, user.salt)
-			if user.hashed_password != expected_password
-				user = nil
-			end
-		end
-		user
+	def self.authenticate(email, submitted_password)
+		user = find_by_email(email)
+		return nil if user.nil?
+		return user if user.has_password?(submitted_password)
 	end
 	
 	# 6/10/11 change to self because of warnings that Base#after_destroy has
@@ -73,16 +71,21 @@ class User < ActiveRecord::Base
 	end
 
 private
-	def password_non_blank
-		errors.add(:password, "Missing password") if hashed_password.blank?
-	end
-	
-	def self.encrypted_password(password, salt)
-		string_to_hash = password + "wibble" + salt
-		Digest::SHA1.hexdigest(string_to_hash)
-	end
-	
-	def create_new_salt
-		self.salt = self.object_id.to_s + rand.to_s
-	end
+  
+  def encrypt_password
+    self.salt = make_salt if new_record?
+    self.encrypted_password = encrypt(password)
+  end
+  
+  def encrypt(string)
+    secure_hash("#{salt}--#{string}")
+  end
+  
+  def make_salt
+    secure_hash("#{Time.now.utc}--#{password}")
+  end
+  
+  def secure_hash(string)
+    Digest::SHA2.hexdigest(string)
+  end
 end

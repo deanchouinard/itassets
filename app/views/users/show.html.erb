@@ -1,35 +1,14 @@
-<table class="show-table">
-  <colgroup>
-    	<col class="oce-first" />
-  </colgroup>  
-  
+<table class="profile">
   <tr>
-    <td class="show-table-label">Office Name</td>
-    <td><%=h @office_display_str %> </td.>
-  </tr>
-
-  <tr>
-    <td class="show-table-label">Login Name</td>
-    <td><%=h @user.name %> </td.>
-  </tr>
-  
-  <tr>
-    <td class="show-table-label">First Name</td>
-    <td><%=h @user.first_name %> </td>
-  </tr>
-  <tr>
-    <td class="show-table-label">Last Name</td>
-    <td><%=h @user.last_name %> </td>
-  </tr>
-  <tr>
-    <td class="show-table-label">Email:</td>
-    <td><%=h @user.email %> </td>
-  </tr>
-  <tr>
-    <td class="show-table-label">Admin?</td>
-    <td><%=h @user.admin.to_s %> </td>
+    <td class="main">
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </td>
+    
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @user.name %><br />
+      <strong>URL</strong> <%= link_to user_path(@user), @user %>
+    </td>
   </tr>
 </table>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

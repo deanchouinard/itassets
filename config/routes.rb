@@ -1,14 +1,16 @@
 Itassets::Application.routes.draw do
 
-  get "pages/home"
-
-  get "pages/contact"
-  get "pages/about"
-  get "pages/help"
+  match '/signup', :to => 'users#new'
+  
+  match '/contact', :to => 'pages#contact'
+  match '/about', :to => 'pages#about'
+  match '/help', :to =>  'pages#help'
 
   match 'admin/login',  :to => 'admin#login'
   match '/admin',   :to => 'admin#index'
   match '/admin/logout',  :to => 'admin#logout'
+  
+  root :to => 'pages#home'
   
   resources :software_allocations
 

@@ -1,46 +1,27 @@
-<div class="itassets-form">
+<h1>Sign up</h1>
 
-<% form_for(@user) do |f| %>
-  <%= f.error_messages %>
-
-	<fieldset>
-	<legend>Enter User Details</legend>
-
-  <div>
-    <%= f.label :office_id %>:
-    <%= f.select(:office_id, @office_list) %>
-  </div>
-  <div>
-    <%= f.label :name, 'Login Name' %>:
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages',  :object => f.object %>
+  
+  <div class="field">
+    <%= f.label :name %> <br/>
     <%= f.text_field :name, :size => 40 %>
   </div>
-  <div>
-    <%= f.label :first_name %>:
-    <%= f.text_field :first_name, :size => 40 %>
-  </div>
-  <div>
-    <%= f.label :last_name %>:
-    <%= f.text_field :last_name, :size => 40 %>
-  </div>
-  <div>
-    <%= f.label :email %>:
+  <div class="field">
+    <%= f.label :email %> <br/>
     <%= f.text_field :email, :size => 40 %>
   </div>
-	<div>
-		<%= f.label :admin %>:
-		<%= f.check_box(:admin, {}, true, false) %>
-	</div>
-  <div>
-    <%= f.label :password, 'Password' %>:
+  <div class="field">
+    <%= f.label :password, 'Password' %><br />
     <%= f.password_field :password, :size => 40 %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label :password_confirmation, 'Confirm' %>:
     <%= f.password_field :password_confirmation, :size => 40 %>
   </div>
-  <div>
-    <%= f.submit "Add User", :class => "submit" %>
+  <div class="action">
+    <%= f.submit "Sign up" %>
   </div>
 <% end %>
-</div>
+
 
