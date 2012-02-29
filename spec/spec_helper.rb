@@ -33,6 +33,10 @@ Spork.prefork do
     
     #Spork hack
     ActiveSupport::Dependencies.clear
+    
+    def test_sign_in(user)
+      controller.sign_in(user)
+    end
   end
 
 end
