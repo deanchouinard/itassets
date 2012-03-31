@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,7 +11,7 @@ gem 'pg'
 
 group :development do
   gem 'rspec-rails'
-  gem 'annotate-models'
+#  gem 'annotate-models'
 end
 
 group :test do
