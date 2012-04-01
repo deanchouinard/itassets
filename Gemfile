@@ -10,14 +10,14 @@ gem 'rails', '3.2.3'
 gem 'pg'
 
 group :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.9.0'
 #  gem 'annotate-models'
 end
 
 group :test do
-  gem 'rspec'
+#  gem 'rspec'
   gem 'webrat'
-  gem 'spork', '0.8.5'
+  gem 'spork', '0.9.0'
   gem 'factory_girl_rails'
 end
 

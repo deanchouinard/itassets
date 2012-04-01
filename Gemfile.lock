@@ -88,7 +88,7 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.9.0)
-    spork (0.8.5)
+    spork (0.9.0)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -111,7 +111,6 @@ DEPENDENCIES
   factory_girl_rails
   pg
   rails (= 3.2.3)
-  rspec
-  rspec-rails
-  spork (= 0.8.5)
+  rspec-rails (= 2.9.0)
+  spork (= 0.9.0)
   webrat

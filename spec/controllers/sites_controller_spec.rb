@@ -4,12 +4,12 @@ describe SitesController do
   render_views
   
   before(:each) do
-    @site = Factory(:site)
+    @site = FactoryGirl.create(:site)
     #     user = User.authenticate("Alex", "grey")
     # if user
     #   session[:user_id] = user.id
     # end
-    @user = Factory(:user)
+    @user = FactoryGirl.create(:user)
 		session[:user_id] = 1
   end
   

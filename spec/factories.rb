@@ -1,16 +1,18 @@
 
-Factory.define :site do |site|
-  site.code     "BOS"
-  site.address1 "20 State St"
-  site.city     "Boston"
-  site.state    "MA"
-  site.zipcode  "02345"
-end
-
-Factory.define :user do |user|
-  user.name  "Alex"
-  user.id 1
-  user.password "grey01"
-  user.email "alex@test.com"
-  user.office_id 1
+FactoryGirl.define do
+  factory :site do
+    code     "BOS"
+    address1 "20 State St"
+    city     "Boston"
+    state    "MA"
+    zipcode  "02345"
+  end
+  
+  factory :user do
+    name  "Alex"
+    id 1
+    password "grey01"
+    email "alex@test.com"
+    office_id 1
+  end
 end
