@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 	has_many :computers, :through => :computer_allocations
 	has_many :software_allocations
 	has_many :softwares, :through => :software_allocations
-	belongs_to :office
+	has_many :offices
 	
 	attr_accessor :password
 	attr_accessible :name, :email, :password, :password_confirmation

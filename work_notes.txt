@@ -1,0 +1,13 @@
+10/19/12
+--------
+
+getting familiar with itassets again; wrote out a simple description
+of what the program will do
+
+started working with the user screen; first goal is to add list of
+offices
+
+added user_id column to users table
+got offices to display on user profile page
+got named routes working to display a user offices
+

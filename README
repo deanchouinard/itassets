@@ -8,6 +8,18 @@ As an IT Director I ran across and used many IT inventory and trouble ticket
 systems. IT Assets brings together the best of those systems along with some
 insights I picked up along the way.
 
+After an account is created, you define an Office, which is a combination of
+a Site (physical location) and Company.
+
+You then add Employees and Computers located in the office and correlate the two
+in order to create your equipment inventory.
+
+If your organization has multiple offices you can define those as well giving
+you the capability to keep tract of equipment in multiple locations.
+
+A flexible reporting package allows you to generate reports of any
+combination of offices, sites, and companies.
+
 
 Site
 ====

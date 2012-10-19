@@ -4,11 +4,26 @@
       <h1>
         <%= @user.name %>
       </h1>
-    </td>
-    
     <td class="sidebar round">
-      <strong>Name</strong> <%= @user.name %><br />
-      <strong>URL</strong> <%= link_to user_path(@user), @user %>
+            <strong>Name</strong> <%= @user.name %><br />
+            <strong>URL</strong> <%= link_to user_path(@user), @user %>
     </td>
   </tr>
 </table>
+
+<table>
+  <% @offices.each do |office| %>
+  <tr>
+    	<td><%=h office.code %> </td>
+    	<td><%=h office.description %> </td>
+      <td><%=h Office.display_str( office.id ) %> </td.>
+    	<td class="list-actions">
+      				<%= link_to 'Show', office %><br />
+      				<%= link_to 'Edit', edit_office_path(office) %><br />
+      				<%= link_to 'Destroy', office, :confirm => 'Are you sure?', :method => :delete %><br />
+			</td>
+    </tr>
+  <% end %>
+      	
+        <%= @office_display_str %>
+</table>  

@@ -15,7 +15,7 @@
 class Office < ActiveRecord::Base
 	belongs_to :company
 	belongs_to :site
-	has_many :users
+	belongs_to :user
 	
 	def self.load_sel_list
     self.find(:all).map {|of| ["#{of.code} #{of.description} | #{of.company.description}, #{of.site.city},

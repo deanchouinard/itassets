@@ -1,12 +1,10 @@
 <h1>Editing office</h1>
+<%= form_for(@office) do |f| %>
 
-<% form_for(@office) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
+  <div class="field">
     <%= f.label :code %><br />
     <%= f.text_field :code %>
-  </p>
+  </div>
   <p>
     <%= f.label :description %><br />
     <%= f.text_field :description %>
@@ -26,3 +24,5 @@
 
 <%= link_to 'Show', @office %> |
 <%= link_to 'Back', offices_path %>
+
+<%#= f.error_messages %>

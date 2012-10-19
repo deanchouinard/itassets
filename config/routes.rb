@@ -1,6 +1,7 @@
 Itassets::Application.routes.draw do
 
-  resources :users
+  # resources :users
+  
   resources :sessions, :only => [:new, :create, :destroy]
 
   match '/signup', :to => 'users#new'
@@ -37,11 +38,16 @@ Itassets::Application.routes.draw do
 
   resources :computers
 
-  resources :offices
+  # resources :offices
 
   resources :sites
 
   resources :companies
+
+  resources :users do
+    resources :offices
+  end
+  
 
   # connect ':controller/:action/:id'
   # connect ':controller/:action/:id.:format'
