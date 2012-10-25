@@ -14,6 +14,7 @@ class Company < ActiveRecord::Base
 	has_many :offices
 	has_many :sites, :through => :offices
 	has_many :computers
+	belongs_to :user
 	
 	validates_presence_of :code, :description
 	validates_uniqueness_of :code

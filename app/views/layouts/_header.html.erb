@@ -2,12 +2,19 @@
 <%= link_to logo, root_path %>
   <nav class="round">
     <ul>
-      <li><%= link_to "Home", root_path %></li>
       <% if signed_in? %>
-      <li><%= link_to "Offices", user_offices_path(@user) %></li>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Offices", user_offices_path(current_user) %></li>
+      <li><%= link_to "Computers", user_offices_path(current_user) %></li>
+      <li><%= link_to "Employees", user_offices_path(current_user) %></li>
+      <li><%= link_to "Reports", user_offices_path(current_user) %></li>
+      <li><%= link_to "Offices", user_offices_path(current_user) %></li>
       <li><%= link_to "Users", users_path %></li>
       <li><%= link_to "Profile", current_user %></li>
       <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+      <% else %>
+      <li><%= link_to "Home", root_path %></li>
+      
       <% end %>  
       <li><%= link_to "Help", help_path %></li>
       <% if signed_in? %>

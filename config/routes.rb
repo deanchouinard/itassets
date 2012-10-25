@@ -42,11 +42,11 @@ Itassets::Application.routes.draw do
 
   resources :sites
 
-  resources :companies
-
+ 
   resources :users do
     resources :offices
-  end
+    resources :companies
+end
   
 
   # connect ':controller/:action/:id'

@@ -1,3 +1,11 @@
+10/22/12
+--------
+review hot keys for textmate
+create new offices, companies, and sites
+decided not to put companies and sites on main screen, but have them accessed
+through offices
+
+
 10/19/12
 --------
 
@@ -10,4 +18,5 @@ offices
 added user_id column to users table
 got offices to display on user profile page
 got named routes working to display a user offices
+
 

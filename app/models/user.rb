@@ -24,6 +24,9 @@ class User < ActiveRecord::Base
 	has_many :software_allocations
 	has_many :softwares, :through => :software_allocations
 	has_many :offices
+	has_many :sites
+	has_many :companies
+	has_many :employees
 	
 	attr_accessor :password
 	attr_accessible :name, :email, :password, :password_confirmation

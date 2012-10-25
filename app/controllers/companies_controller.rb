@@ -43,14 +43,15 @@ class CompaniesController < ApplicationController
   # POST /companies
   # POST /companies.xml
   def create
-    @company = Company.new(params[:company])
+    @company = current_user.companies.build(params[:company])
+    logger.debug params.to_yaml
     # logger.debug @company.code
     @company.code.upcase!
     
     respond_to do |format|
       if @company.save
         flash[:notice] = 'Company was successfully created.'
-        format.html { redirect_to(@company) }
+        format.html { redirect_to(current_user) }
         format.xml  { render :xml => @company, :status => :created, :location => @company }
       else
         format.html { render :action => "new" }
