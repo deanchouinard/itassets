@@ -13,11 +13,12 @@
   <p>
     <%= f.label :company_id %><br />
     <%= f.select(:company_id, @company_list) %>
-    <%= link_to 'Add Company', new_user_company_path(@user) %>
+    <%= link_to 'Add Company', new_company_path %>
   </p>
   <p>
     <%= f.label :site_id %><br />
 		<%= f.select(:site_id, @site_list) %>
+    <%= link_to 'Add Site', new_site_path %>
 
   </p>
   <p>
@@ -25,4 +26,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', user_offices_path(@user) %>
+<%= link_to 'Back', root_path %>

@@ -1,0 +1,5 @@
+<% unless @company_items.empty? %>
+  <table class="microposts">
+    <%= render :partial  => 'shared/company_item', :collection => @company_items %>
+  </table>
+<% end %>

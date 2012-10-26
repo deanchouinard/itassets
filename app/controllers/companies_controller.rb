@@ -51,7 +51,7 @@ class CompaniesController < ApplicationController
     respond_to do |format|
       if @company.save
         flash[:notice] = 'Company was successfully created.'
-        format.html { redirect_to(current_user) }
+        format.html { redirect_to(root_path) }
         format.xml  { render :xml => @company, :status => :created, :location => @company }
       else
         format.html { render :action => "new" }

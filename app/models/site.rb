@@ -15,8 +15,10 @@
 #
 
 class Site < ActiveRecord::Base
-	has_many :offices
-	has_many :companies, :through => :offices
+  belongs_to :user
+	
+	#has_many :offices
+	#has_many :companies, :through => :offices
 	
 	attr_accessible :code, :address1, :address2, :city, :state, :zipcode
 	

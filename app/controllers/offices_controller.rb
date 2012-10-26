@@ -5,7 +5,7 @@ class OfficesController < ApplicationController
   # GET /offices
   # GET /offices.xml
   def index
-    @offices = Office.all
+    @offices = current_user.offices
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,12 +47,12 @@ class OfficesController < ApplicationController
   # POST /offices
   # POST /offices.xml
   def create
-    @office = Office.new(params[:office])
+    @office = current_user.offices.build(params[:office])
 
     respond_to do |format|
       if @office.save
         flash[:notice] = 'Office was successfully created.'
-        format.html { redirect_to(@office) }
+        format.html { redirect_to(root_path) }
         format.xml  { render :xml => @office, :status => :created, :location => @office }
       else
         format.html { render :action => "new" }

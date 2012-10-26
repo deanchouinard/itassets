@@ -1,3 +1,5 @@
+tbody tr:nth-child(even) td, tbody tr.even td {background:none;}
+
 .container {
   width: 710px;
 }
@@ -179,10 +181,10 @@ table.microposts {
 	margin-top: 1em;
 }
 
-/* table.microposts tr {
-	height: 70px;
+table.microposts tr {
+	height: 30px;
 }
-*/
+
 
 table.microposts tr td.gravatar {
 	border-top: 1px solid #ccc;
@@ -211,7 +213,7 @@ div.user_info a {
 }
 
 div.user_info span.user_name {
-	position: absolute;
+	/* position: absolute; */
 }
 
 div.user_info span.microposts {
@@ -226,3 +228,18 @@ form.new_micropost textarea {
 	height: 4em;
 	margin-bottom: 0;
 }
+
+/* new home page tables */
+
+table.site-company {
+	margin-top: 1em;
+}
+
+table.site-company tr {
+	height: 10px;
+}
+
+table.site-company td.site-list {
+	vertical-align: top;
+}
+

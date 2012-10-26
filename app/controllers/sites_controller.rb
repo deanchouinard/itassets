@@ -18,10 +18,12 @@ class SitesController < ApplicationController
   end
 
   def create
-    @site = Site.new(params[:site])
+    @site = current_user.sites.build(params[:site])
+    @site.code.upcase!
+    
     if @site.save
       flash[:notice] = 'Site was successfully created.'
-      redirect_to(@site)
+      redirect_to(root_path)
     else
       render :action => "new"
     end

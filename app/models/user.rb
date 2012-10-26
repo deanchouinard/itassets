@@ -78,6 +78,17 @@ class User < ActiveRecord::Base
     "#{user.first_name} #{user.last_name} (#{ user.name})"
 	end
 
+  def office_list
+    offices
+  end
+  
+  def site_list
+    sites
+  end
+  
+  def company_list
+    companies
+  end
 private
   
   def encrypt_password

@@ -1,4 +1,33 @@
-<h1>IT Assets</h1>
+<% if signed_in? %>
+  <table class="profile" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">Offices</h1>
+        <%= render 'shared/office_list' %>
+      </td>
+      
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
+  <%= link_to "Add Office", new_office_path %>
+  <table class="site-company">
+    <tr>
+      <td class="site-list">
+        <h1>Sites</h1>
+        <%= render 'shared/site_list' %>
+      </td>
+      <td class="company-list">
+        <h1>Companies</h1>
+          <%= render 'shared/company_list' %>
+      </td>
+    </tr>
+  </table>
+  
+<% else %>
+
+  <h1>IT Assets</h1>
 
 <p>
 A database for your computer hardware and software assets.
@@ -29,3 +58,4 @@ A database for your computer hardware and software assets.
 
 <a href="/techdisc.html">Technical Discussion</a>
 
+<% end %>
