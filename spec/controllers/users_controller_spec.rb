@@ -4,14 +4,16 @@ describe UsersController do
   render_views
   
   describe "GET 'new'" do
+       
     it "should be successful" do
       get 'new'
       response.should be_success
     end
     
     it "should have the right title" do
-      get 'new'
-      response.should have_selector("title", :content => "Sign Up")
+      visit '/users/new'
+      page.should have_selector("title", text: "Sign Up")
+#      page.should have_content("Sign Up")
     end
   end
   
@@ -31,8 +33,11 @@ describe UsersController do
     end
     
     it "should have the right title" do
-      get :show, :id => @user
-      response.should have_selector("title", :content => @user.name)
+#      get :show, :id => @user
+      visit user_path(@user)
+      page.should have_selector("title", :content => @user.name)
+#      get :show, :id => @user
+#      response.should have_selector("title", :content => @user.name)
     end
   end
   
@@ -51,7 +56,9 @@ describe UsersController do
       
       it "should have the right title" do
         post :create, :user => @attr
-        response.should have_selector("title", :content => "Sign Up")
+        Rails.logger.debug "HELLO==================================="
+        Rails.logger.debug response.inspect
+        response.body.should have_selector("title", :content => " Sign Up")
       end
       
       it "should render the 'new' page" do

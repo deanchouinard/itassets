@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -17,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110620143419) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "computer_allocations", :force => true do |t|
@@ -67,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20110620143419) do
     t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "sessions", :force => true do |t|
@@ -88,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20110620143419) do
     t.string   "zipcode",    :limit => 10
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "software_allocations", :force => true do |t|

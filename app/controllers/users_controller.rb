@@ -9,7 +9,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @title = @user.name
 
-    @offices = Office.find_all_by_user_id( @user.id )
+    @offices = Office.where("user_id = ?", @user.id )
+
+#    @offices = Office.find_all_by_user_id( @user.id )
     #@office_display_str = Office.display_str( @offices.id )
     
   end
