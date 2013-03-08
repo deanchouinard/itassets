@@ -1,0 +1,5 @@
+<% unless @computer_items.empty? %>
+  <table class="microposts">
+    <%= render :partial  => 'shared/computer_item', :collection => @computer_items %>
+  </table>
+<% end %>

@@ -2,9 +2,10 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
     if signed_in?
-      @office_items = current_user.office_list
-      @site_items = current_user.site_list
-      @company_items = current_user.company_list
+#      @office_items = current_user.office_list
+      @office_items = current_user.offices
+      @site_items = current_user.sites
+      @company_items = current_user.companies
     end
   end
 

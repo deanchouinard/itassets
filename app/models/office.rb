@@ -17,6 +17,10 @@ class Office < ActiveRecord::Base
 	belongs_to :site
 	belongs_to :user
 	
+	has_many :computer_allocations
+	has_many :computers, :through => :computer_allocations
+	
+	
 	def self.load_sel_list
     self.find(:all).map {|of| ["#{of.code} #{of.description} | #{of.company.description}, #{of.site.city},
     #{of.site.state}", of.id]}

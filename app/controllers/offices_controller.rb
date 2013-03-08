@@ -21,6 +21,8 @@ class OfficesController < ApplicationController
 		# @site_code = Site.find(@office.site_id)
 		# @company_desc = Company.find(@office.company_id)
 		
+		@computer_items = @office.computers
+		
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @office }
