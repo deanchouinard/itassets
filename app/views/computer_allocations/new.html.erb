@@ -1,7 +1,6 @@
 <h1>New computer_allocation</h1>
 
-<% form_for(@computer_allocation) do |f| %>
-  <%= f.error_messages %>
+<%= form_for [ @office, @computer_allocation ] do |f| %>
 
   <p>
     <%= f.label :computer_id %><br />

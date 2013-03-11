@@ -30,7 +30,6 @@ Itassets::Application.routes.draw do
 #  resources :tickets, :has_many => :ticket_actions
   resources :tickets
 
-  resources :computer_allocations
 
   resources :softwares
 
@@ -44,7 +43,11 @@ Itassets::Application.routes.draw do
 
  
   resources :users 
-    resources :offices
+  
+  resources :offices do
+    resources :computer_allocations
+  end
+  
     resources :companies
 
   

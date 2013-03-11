@@ -30,7 +30,8 @@ class ComputerAllocationsController < ApplicationController
   # GET /computer_allocations/new
   # GET /computer_allocations/new.xml
   def new
-    @computer_allocation = ComputerAllocation.new
+    @office = Office.find(params[:office_id])
+    @computer_allocation = @office.computer_allocations.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -48,12 +49,19 @@ class ComputerAllocationsController < ApplicationController
   # POST /computer_allocations
   # POST /computer_allocations.xml
   def create
-    @computer_allocation = ComputerAllocation.new(params[:computer_allocation])
+    
+    test = current_user.office_id
+    logger.debug "Test #{test}"
+    logger.debug "Office #{@office.inspect}"
+    
+#    @computer_allocation = ComputerAllocation.new(params[:computer_allocation])
+    @office = Office.find(params[:office_id])
+    @computer_allocation = @office.computer_allocations.build(params[:computer_allocation])
 
     respond_to do |format|
       if @computer_allocation.save
         flash[:notice] = 'ComputerAllocation was successfully created.'
-        format.html { redirect_to(@computer_allocation) }
+        format.html { redirect_to(@office) }
         format.xml  { render :xml => @computer_allocation, :status => :created, :location => @computer_allocation }
       else
         format.html { render :action => "new" }
