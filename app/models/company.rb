@@ -20,8 +20,8 @@ class Company < ActiveRecord::Base
 	validates_presence_of :code, :description
 	validates_uniqueness_of :code
 	
-  def self.load_sel_list
-    Company.find(:all).map {|co| ["#{co.code} | #{co.description}", co.id]}
+  def self.load_sel_list( user_id )
+    Company.where("user_id = ?", user_id).map {|co| ["#{co.code} | #{co.description}", co.id]}
   end
 
 end

@@ -7,6 +7,8 @@
     <%= f.select(:computer_id, @computer_list) %>
   </p>
   <p>
+    <%= link_to 'New Computer', new_computer_path %>
+  <p>
     <%= f.label :user_id %><br />
     <%= f.select(:user_id, @user_list) %>
   </p>

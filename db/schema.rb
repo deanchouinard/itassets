@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20110620143419) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "computer_name", :limit => 20
+    t.integer  "office_id"
   end
 
   create_table "computers", :force => true do |t|
@@ -50,6 +51,15 @@ ActiveRecord::Schema.define(:version => 20110620143419) do
     t.datetime "updated_at"
     t.integer  "company_id",                  :null => false
     t.string   "manf_type",     :limit => 20
+  end
+
+  create_table "employees", :force => true do |t|
+    t.string   "first_name", :limit => 40
+    t.string   "last_name",  :limit => 40
+    t.string   "title",      :limit => 40
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "lookups", :force => true do |t|

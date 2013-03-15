@@ -1,3 +1,12 @@
+**3/15/2013**
+In new Office made sure Sites and Companies were filtered by current_user
+
+Added employees table, model, and controller
+
+**3/14/2013**
+Made sure computer allocation used current_user.id
+
+
 **3/9/2013**
 
 Had some trouble yesterday and this morning trying to figure out how to implement

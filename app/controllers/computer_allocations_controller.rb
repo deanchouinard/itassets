@@ -53,11 +53,13 @@ class ComputerAllocationsController < ApplicationController
     test = current_user.office_id
     logger.debug "Test #{test}"
     logger.debug "Office #{@office.inspect}"
+    logger.debug "User_id #{current_user.id}"
     
 #    @computer_allocation = ComputerAllocation.new(params[:computer_allocation])
     @office = Office.find(params[:office_id])
     @computer_allocation = @office.computer_allocations.build(params[:computer_allocation])
-
+    @computer_allocation.user_id = current_user.id
+    
     respond_to do |format|
       if @computer_allocation.save
         flash[:notice] = 'ComputerAllocation was successfully created.'

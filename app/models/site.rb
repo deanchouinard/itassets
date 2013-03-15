@@ -28,7 +28,7 @@ class Site < ActiveRecord::Base
 	                 
 	validates :address1, :city, :state, :zipcode, :presence => true
 	
-	def self.load_sel_list
-		self.find(:all).map { |si| ["#{si.code} | #{si.address1}, #{si.city}, #{si.state}", si.id] }
+	def self.load_sel_list ( user_id )
+		self.where("user_id =?", user_id).map { |si| ["#{si.code} | #{si.address1}, #{si.city}, #{si.state}", si.id] }
 	end
 end
