@@ -1,9 +1,8 @@
 # == Schema Information
-# Schema version: 20101209190403
 #
 # Table name: sites
 #
-#  id         :integer         not null, primary key
+#  id         :integer          not null, primary key
 #  code       :string(8)
 #  address1   :string(80)
 #  address2   :string(80)
@@ -12,6 +11,7 @@
 #  zipcode    :string(10)
 #  created_at :datetime
 #  updated_at :datetime
+#  user_id    :integer
 #
 
 class Site < ActiveRecord::Base

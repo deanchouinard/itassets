@@ -4,17 +4,17 @@ Itassets::Application.routes.draw do
   
   resources :sessions, :only => [:new, :create, :destroy]
 
-  match '/signup', :to => 'users#new'
-  match '/signin', :to => 'sessions#new'
-  match '/signout', :to => 'sessions#destroy'
+  match '/signup', :to => 'users#new', :via => [:get, :post]
+  match '/signin', :to => 'sessions#new', :via => [:get, :post]
+  match '/signout', :to => 'sessions#destroy', :via => [:get, :post]
   
-  match '/contact', :to => 'pages#contact'
-  match '/about', :to => 'pages#about'
-  match '/help', :to =>  'pages#help'
+  match '/contact', :to => 'pages#contact', :via => [:get, :post]
+  match '/about', :to => 'pages#about', :via => [:get, :post]
+  match '/help', :to =>  'pages#help', :via => [:get, :post]
 
-  match 'admin/login',  :to => 'admin#login'
-  match '/admin',   :to => 'admin#index'
-  match '/admin/logout',  :to => 'admin#logout'
+  match 'admin/login',  :to => 'admin#login', :via => [:get, :post]
+  match '/admin',   :to => 'admin#index', :via => [:get, :post]
+  match '/admin/logout',  :to => 'admin#logout', :via => [:get, :post]
   
   root :to => 'pages#home'
   

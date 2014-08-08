@@ -1,17 +1,17 @@
 # == Schema Information
-# Schema version: 20101209190403
 #
 # Table name: computer_allocations
 #
-#  id            :integer         not null, primary key
-#  computer_id   :integer         not null
-#  user_id       :integer         not null
+#  id            :integer          not null, primary key
+#  computer_id   :integer          not null
+#  user_id       :integer          not null
 #  allocated     :date
 #  returned      :date
 #  comments      :text
 #  created_at    :datetime
 #  updated_at    :datetime
 #  computer_name :string(20)
+#  office_id     :integer
 #
 
 class ComputerAllocation < ActiveRecord::Base

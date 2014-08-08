@@ -25,5 +25,7 @@ Itassets::Application.configure do
   
   # Added when trying to get rid of old css styles
   config.serve_static_assets = false
+  
+    config.eager_load = false
 end
 

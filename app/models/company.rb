@@ -1,13 +1,13 @@
 # == Schema Information
-# Schema version: 20101209190403
 #
 # Table name: companies
 #
-#  id          :integer         not null, primary key
+#  id          :integer          not null, primary key
 #  code        :string(255)
 #  description :string(255)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  user_id     :integer
 #
 
 class Company < ActiveRecord::Base

@@ -1,9 +1,8 @@
 # == Schema Information
-# Schema version: 20101209190403
 #
 # Table name: tape_moves
 #
-#  id          :integer         not null, primary key
+#  id          :integer          not null, primary key
 #  tape_id     :integer
 #  destination :string(40)
 #  out         :date

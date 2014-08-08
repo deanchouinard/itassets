@@ -1,9 +1,8 @@
 # == Schema Information
-# Schema version: 20101209190403
 #
 # Table name: ticket_actions
 #
-#  id          :integer         not null, primary key
+#  id          :integer          not null, primary key
 #  ticket_id   :integer
 #  add_user_id :integer
 #  action_desc :text

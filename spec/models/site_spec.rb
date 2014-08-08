@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: sites
+#
+#  id         :integer          not null, primary key
+#  code       :string(8)
+#  address1   :string(80)
+#  address2   :string(80)
+#  city       :string(30)
+#  state      :string(2)
+#  zipcode    :string(10)
+#  created_at :datetime
+#  updated_at :datetime
+#  user_id    :integer
+#
+
 require 'spec_helper'
 
 describe Site do

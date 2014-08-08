@@ -1,11 +1,10 @@
 # == Schema Information
-# Schema version: 20101209190403
 #
 # Table name: softwares
 #
-#  id            :integer         not null, primary key
-#  publisher     :string(80)      not null
-#  title_version :string(80)      not null
+#  id            :integer          not null, primary key
+#  publisher     :string(80)       not null
+#  title_version :string(80)       not null
 #  created_at    :datetime
 #  updated_at    :datetime
 #

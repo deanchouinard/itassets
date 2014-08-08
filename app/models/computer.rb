@@ -1,25 +1,24 @@
 # == Schema Information
-# Schema version: 20101209190403
 #
 # Table name: computers
 #
-#  id            :integer         not null, primary key
-#  manufacturer  :string(40)      not null
+#  id            :integer          not null, primary key
+#  manufacturer  :string(40)       not null
 #  model         :string(40)
 #  description   :string(255)
-#  form_type     :string(20)      not null
+#  form_type     :string(20)       not null
 #  serial_number :string(40)
 #  cpu           :string(20)
 #  ram           :string(10)
 #  hdd           :string(10)
 #  optical       :string(20)
-#  os            :string(20)      not null
+#  os            :string(20)       not null
 #  service_tag   :string(20)
 #  purchase_date :date
 #  comments      :text
 #  created_at    :datetime
 #  updated_at    :datetime
-#  company_id    :integer         not null
+#  company_id    :integer          not null
 #  manf_type     :string(20)
 #
 
