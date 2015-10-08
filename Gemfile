@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.2.3'
 
-gem 'rails', '4.1.4'
+gem 'rails', '4.2.4'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
@@ -11,11 +11,11 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'jquery-rails', '3.0.4'
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.1'
-  gem 'guard-rspec', '2.5.0'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
  # gem 'guard-spork', '1.2.0'  
-  gem 'spork-rails', '4.0.0'
-  gem 'guard-spork', '1.5.0'  
+  gem 'spork-rails'
+  gem 'guard-spork'
   gem 'childprocess', '0.3.6'
 end
 

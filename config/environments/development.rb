@@ -24,7 +24,7 @@ Itassets::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
   
   # Added when trying to get rid of old css styles
-  config.serve_static_assets = false
+  config.serve_static_files = false
   
     config.eager_load = false
 end

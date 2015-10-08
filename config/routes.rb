@@ -43,6 +43,9 @@ Itassets::Application.routes.draw do
 
  
   resources :users 
+
+  resources :computer_allocations
+
   
   resources :offices do
     resources :computer_allocations

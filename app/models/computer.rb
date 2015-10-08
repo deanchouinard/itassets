@@ -28,7 +28,7 @@ class Computer < ActiveRecord::Base
 	belongs_to :company
 	
 	def self.load_sel_list
-		self.find(:all).map { |co|
+		self.find_each.map { |co|
 			[co.manufacturer.strip + " " +
 			 co.model.strip + " " +
 			 co.serial_number.strip, co.id]}
