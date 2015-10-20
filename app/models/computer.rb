@@ -38,4 +38,6 @@ class Computer < ActiveRecord::Base
 	  co = self.find(id)
     "#{co.manufacturer} #{co.model} (#{co.serial_number})"  
   end
+
+  
 end

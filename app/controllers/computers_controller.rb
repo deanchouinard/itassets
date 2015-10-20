@@ -43,7 +43,7 @@ class ComputersController < ApplicationController
   # POST /computers
   # POST /computers.xml
   def create
-    @computer = Computer.new(params[:computer])
+    @computer = Computer.new(computer_params)
 		# logger.debug params[:computer].to_yaml
 		
     respond_to do |format|
@@ -96,8 +96,15 @@ class ComputersController < ApplicationController
 		@form_type_list = Lookup.get_lu_values("COMPUTERTYPE")
 		@manf_list = Lookup.get_lu_values("COMPUTERMANF")
 		@os_list = Lookup.get_lu_values("COMPUTEROS")
-		@company_list = Company.load_sel_list
+		@company_list = Company.load_sel_list(current_user.id)
 		# logger.debug @form_type_list
 	end
-		                              
+
+private
+
+  def computer_params
+    params.require(:computer).permit( :manufacturer, :model, :description, :form_type,
+        :serial_number, :cpu, :ram, :hdd, :optical, :os, :service_tag, :purchase_date,
+        :comments, :manf_type)
+  end		                              
 end
