@@ -105,6 +105,6 @@ private
   def computer_params
     params.require(:computer).permit( :manufacturer, :model, :description, :form_type,
         :serial_number, :cpu, :ram, :hdd, :optical, :os, :service_tag, :purchase_date,
-        :comments, :manf_type)
+        :comments, :manf_type, :company_id)
   end		                              
 end
